@@ -1,0 +1,42 @@
+name: Update Test Manifest
+
+on:
+  push:
+    paths:
+      - 'tests/*.json'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Generate Manifest
+        run: |
+          echo "[" > tests/test_manifest.json
+          first=true
+          for file in tests/*.json; do
+            if [ "$(basename "$file")" != "test_manifest.json" ]; then
+              if [ "$first" = true ]; then
+                first=false
+              else
+                echo "," >> tests/test_manifest.json
+              fi
+              # Basic extraction of name and filename using jq would be better but simple shell works for now
+              FILENAME=$(basename "$file")
+              NAME="${FILENAME%.*}"
+              # Create JSON object string
+              echo "{\"name\": \"$NAME\", \"filename\": \"$FILENAME\", \"qCount\": 0}" >> tests/test_manifest.json
+            fi
+          done
+          echo "]" >> tests/test_manifest.json
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add tests/test_manifest.json
+          git commit -m "Auto-update test manifest" || echo "No changes to commit"
+          git push
