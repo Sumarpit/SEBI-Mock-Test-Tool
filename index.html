@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SEBI Grade A Prep Tool</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        :root {
+            --primary: #0056b3; /* SEBI Blueish */
+            --accent: #ff9800;
+            --bg: #f4f7f6;
+            --card: #ffffff;
+            --text: #333;
+            --success: #28a745;
+            --danger: #dc3545;
+            --safe-area-bottom: env(safe-area-inset-bottom);
+        }
+
+        * { box-sizing: border-box; touch-action: manipulation; }
+        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); height: 100dvh; overflow: hidden; display: flex; flex-direction: column; }
+
+        /* Layout Containers */
+        #app-container { flex: 1; overflow-y: auto; position: relative; scroll-behavior: smooth; }
+        .view { display: none; padding: 20px; padding-bottom: 80px; animation: fadeIn 0.3s ease; }
+        .view.active { display: block; }
+        
+        /* Sticky Footer */
+        .sticky-footer {
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background: var(--card); box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            padding: 10px 15px calc(10px + var(--safe-area-bottom));
+            display: flex; justify-content: space-between; align-items: center;
+            z-index: 1000; height: auto;
+        }
+
+        /* Library Styles */
+        .tabs { display: flex; gap: 10px; margin-bottom: 15px; border-bottom: 2px solid #ddd; }
+        .tab { padding: 10px; cursor: pointer; opacity: 0.6; font-weight: bold; }
+        .tab.active { border-bottom: 3px solid var(--primary); opacity: 1; color: var(--primary); }
+        .search-bar { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 15px; }
+        .test-card { background: var(--card); padding: 15px; margin-bottom: 10px; border-radius: 8px; border-left: 5px solid var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.05); cursor: pointer; }
+        .drop-zone { border: 2px dashed #aaa; padding: 30px; text-align: center; border-radius: 10px; color: #666; margin-bottom: 20px; }
+
+        /* Exam Interface */
+        .question-header { display: flex; justify-content: space-between; font-size: 0.9em; color: #666; margin-bottom: 10px; }
+        .question-text { font-size: 1.1em; font-weight: 500; margin-bottom: 20px; line-height: 1.5; }
+        .option { padding: 12px 15px; background: #f8f9fa; border: 1px solid #ddd; margin-bottom: 8px; border-radius: 6px; cursor: pointer; transition: 0.2s; }
+        .option.selected { background: #e3f2fd; border-color: var(--primary); }
+        
+        /* Confidence Tags */
+        .confidence-strip { display: flex; gap: 5px; margin-top: 20px; overflow-x: auto; padding-bottom: 5px; }
+        .conf-btn { flex: 1; padding: 6px; font-size: 0.8em; border: 1px solid #ccc; background: white; border-radius: 4px; white-space: nowrap; text-align: center; }
+        .conf-btn.active { background: var(--text); color: white; border-color: var(--text); }
+
+        /* Timer Input */
+        .timer-input-group { display: flex; align-items: center; gap: 5px; }
+        .timer-input { width: 50px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px; }
+        
+        /* Controls */
+        .btn { padding: 10px 20px; border-radius: 6px; border: none; font-weight: bold; cursor: pointer; }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-outline { background: transparent; border: 1px solid var(--primary); color: var(--primary); }
+        .btn-danger { background: var(--danger); color: white; }
+
+        /* Palette */
+        #palette-sidebar {
+            position: fixed; top: 0; right: -280px; width: 280px; height: 100%;
+            background: var(--card); box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+            transition: right 0.3s ease; z-index: 1100; padding: 20px; overflow-y: auto;
+        }
+        #palette-sidebar.open { right: 0; }
+        .palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 15px; }
+        .p-item { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; background: #eee; border-radius: 4px; font-size: 0.8em; cursor: pointer; }
+        .p-item.attempted { background: var(--primary); color: white; }
+        .p-item.review { background: var(--accent); color: white; }
+
+        /* Analytics */
+        .stat-card { background: white; padding: 15px; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .stat-row { display: flex; justify-content: space-between; margin-bottom: 5px; }
+        .bar-container { height: 8px; background: #eee; border-radius: 4px; overflow: hidden; margin-top: 5px; }
+        .bar-fill { height: 100%; transition: width 0.5s; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <div id="app-container">
+        <div id="view-library" class="view active">
+            <h2>SEBI Grade A - Mock Library</h2>
+            <div class="drop-zone" id="drop-zone">Drag & Drop JSON here<br>or Click to Upload</div>
+            <input type="file" id="file-input" accept=".json" hidden>
+            
+            <div class="tabs">
+                <div class="tab active" onclick="switchTab('all')">All</div>
+                <div class="tab" onclick="switchTab('cloud')">Cloud</div>
+                <div class="tab" onclick="switchTab('local')">Local</div>
+            </div>
+            
+            <input type="text" class="search-bar" placeholder="Search tests..." onkeyup="filterTests(this.value)">
+            <div id="test-list"></div>
+        </div>
+
+        <div id="view-exam" class="view">
+            <div class="question-header">
+                <span id="q-topic">Topic: General</span>
+                <span>Q <span id="q-current">1</span> / <span id="q-total">0</span></span>
+            </div>
+            <div id="q-text" class="question-text"></div>
+            <div id="q-options"></div>
+
+            <div class="confidence-strip">
+                <div class="conf-btn" onclick="setConfidence('sure')">100% Sure</div>
+                <div class="conf-btn" onclick="setConfidence('logical')">Logical</div>
+                <div class="conf-btn" onclick="setConfidence('5050')">50:50</div>
+                <div class="conf-btn" onclick="setConfidence('guess')">Guess</div>
+            </div>
+        </div>
+
+        <div id="view-result" class="view">
+            <h2>Analysis</h2>
+            <div class="stat-card">
+                <h3>Score Summary</h3>
+                <div class="stat-row"><span>Score:</span> <b id="res-score">0</b></div>
+                <div class="stat-row"><span>Accuracy:</span> <b id="res-accuracy">0%</b></div>
+                <div class="stat-row"><span>Time:</span> <span id="res-time">00:00</span></div>
+            </div>
+            <div id="topic-analysis"></div>
+            <button class="btn btn-primary" style="width:100%" onclick="startReviewMode()">Review Mistakes & Doubts</button>
+            <br><br>
+            <button class="btn btn-outline" style="width:100%" onclick="goHome()">Back to Library</button>
+        </div>
+    </div>
+
+    <div id="palette-sidebar">
+        <h3>Question Palette <button onclick="togglePalette()" style="float:right">×</button></h3>
+        <div class="palette-grid" id="palette-grid"></div>
+    </div>
+
+    <div class="sticky-footer" id="footer-setup">
+        <div class="timer-input-group">
+            <input type="number" id="t-min" class="timer-input" value="60" placeholder="Min">
+            <span>m</span>
+        </div>
+        <button class="btn btn-primary" id="btn-start" disabled>Select Test</button>
+    </div>
+
+    <div class="sticky-footer" id="footer-exam" style="display:none;">
+        <button class="btn btn-outline" onclick="changeQ(-1)">Prev</button>
+        <div style="text-align:center" onclick="togglePalette()">
+            <div id="timer-display" style="font-weight:bold; font-size:1.1em">00:00</div>
+            <div style="font-size:0.7em; color:#666">Palette ▲</div>
+        </div>
+        <button class="btn btn-primary" onclick="changeQ(1)" id="btn-next">Next</button>
+    </div>
+
+<script>
+    // --- State Management ---
+    let state = {
+        questions: [],
+        currentIndex: 0,
+        answers: {}, // { index: { optIndex, confidence, timeSpent } }
+        timer: null,
+        timeLeft: 0,
+        examActive: false,
+        reviewMode: false
+    };
+    
+    let library = { cloud: [], local: [] };
+
+    // --- Init & Event Listeners ---
+    document.addEventListener('DOMContentLoaded', () => {
+        loadCloudTests();
+        setupDragDrop();
+        setupGestures();
+    });
+
+    // --- Library Logic ---
+    async function loadCloudTests() {
+        try {
+            const res = await fetch('tests/test_manifest.json');
+            if(res.ok) {
+                const files = await res.json();
+                library.cloud = files.map(f => ({ ...f, type: 'cloud' }));
+                renderLibrary();
+            }
+        } catch(e) { console.log('Offline or no cloud tests'); }
+    }
+
+    function renderLibrary(filter = 'all') {
+        const list = document.getElementById('test-list');
+        list.innerHTML = '';
+        const data = filter === 'all' ? [...library.local, ...library.cloud] : library[filter];
+        
+        data.forEach((test, idx) => {
+            const div = document.createElement('div');
+            div.className = 'test-card';
+            div.innerHTML = `<b>${test.name}</b><br><small>${test.qCount || '?'} Questions • ${test.type.toUpperCase()}</small>`;
+            div.onclick = () => loadTest(test);
+            list.appendChild(div);
+        });
+    }
+
+    async function loadTest(testMeta) {
+        let questions = [];
+        if(testMeta.type === 'cloud') {
+            const res = await fetch(`tests/${testMeta.filename}`);
+            questions = await res.json();
+        } else {
+            questions = testMeta.data;
+        }
+        
+        state.questions = questions;
+        document.getElementById('btn-start').innerText = "Start Test";
+        document.getElementById('btn-start').disabled = false;
+        document.getElementById('btn-start').onclick = startExam;
+        
+        // Pre-fill default timer based on Q count (approx 1 min per Q)
+        document.getElementById('t-min').value = Math.min(60, questions.length);
+    }
+
+    // --- Drag & Drop ---
+    function setupDragDrop() {
+        const zone = document.getElementById('drop-zone');
+        const input = document.getElementById('file-input');
+        
+        zone.onclick = () => input.click();
+        input.onchange = e => handleFile(e.target.files[0]);
+        
+        zone.ondragover = e => { e.preventDefault(); zone.style.borderColor = 'var(--primary)'; };
+        zone.ondragleave = () => { zone.style.borderColor = '#aaa'; };
+        zone.ondrop = e => {
+            e.preventDefault();
+            handleFile(e.dataTransfer.files[0]);
+        };
+    }
+
+    function handleFile(file) {
+        const reader = new FileReader();
+        reader.onload = e => {
+            const data = JSON.parse(e.target.result);
+            library.local.push({ name: file.name.replace('.json',''), type: 'local', data: data, qCount: data.length });
+            renderLibrary();
+        };
+        reader.readAsText(file);
+    }
+
+    // --- Exam Logic ---
+    function startExam() {
+        state.currentIndex = 0;
+        state.answers = {};
+        state.examActive = true;
+        state.reviewMode = false;
+        
+        const mins = parseInt(document.getElementById('t-min').value) || 60;
+        state.timeLeft = mins * 60;
+
+        document.getElementById('view-library').classList.remove('active');
+        document.getElementById('view-exam').classList.add('active');
+        document.getElementById('footer-setup').style.display = 'none';
+        document.getElementById('footer-exam').style.display = 'flex';
+        document.getElementById('q-total').innerText = state.questions.length;
+
+        startTimer();
+        renderQuestion();
+        renderPalette();
+    }
+
+    function renderQuestion() {
+        const q = state.questions[state.currentIndex];
+        const ans = state.answers[state.currentIndex] || {};
+
+        document.getElementById('q-topic').innerText = q.topic || 'General';
+        document.getElementById('q-current').innerText = state.currentIndex + 1;
+        document.getElementById('q-text').innerText = q.question; // Support HTML in JSON if needed use innerHTML
+
+        const optsDiv = document.getElementById('q-options');
+        optsDiv.innerHTML = '';
+        
+        q.options.forEach((opt, idx) => {
+            const div = document.createElement('div');
+            div.className = `option ${ans.optIndex === idx ? 'selected' : ''}`;
+            
+            // Result View Colors
+            if(!state.examActive) {
+                if(idx === q.correctIndex) div.style.borderColor = 'var(--success)'; // Correct
+                else if(ans.optIndex === idx) div.style.borderColor = 'var(--danger)'; // Wrong attempt
+            }
+
+            div.innerText = opt;
+            div.onclick = () => selectOption(idx);
+            optsDiv.appendChild(div);
+        });
+
+        // Confidence Buttons UI
+        document.querySelectorAll('.conf-btn').forEach(b => b.classList.remove('active'));
+        if(ans.confidence) {
+             const map = {'sure':0, 'logical':1, '5050':2, 'guess':3};
+             document.querySelectorAll('.conf-btn')[map[ans.confidence]].classList.add('active');
+        }
+
+        // Button Text
+        const nextBtn = document.getElementById('btn-next');
+        if(state.currentIndex === state.questions.length - 1) {
+            nextBtn.innerText = state.examActive ? 'Submit' : 'Finish';
+            nextBtn.onclick = state.examActive ? submitExam : goHome;
+        } else {
+            nextBtn.innerText = 'Next';
+            nextBtn.onclick = () => changeQ(1);
+        }
+    }
+
+    function selectOption(idx) {
+        if(!state.examActive) return;
+        if(!state.answers[state.currentIndex]) state.answers[state.currentIndex] = {};
+        state.answers[state.currentIndex].optIndex = idx;
+        renderQuestion(); // Re-render to show selection
+        updatePalette();
+    }
+
+    function setConfidence(level) {
+        if(!state.examActive) return;
+        if(!state.answers[state.currentIndex]) state.answers[state.currentIndex] = {};
+        state.answers[state.currentIndex].confidence = level;
+        renderQuestion();
+    }
+
+    function changeQ(dir) {
+        const newIndex = state.currentIndex + dir;
+        if(newIndex >= 0 && newIndex < state.questions.length) {
+            state.currentIndex = newIndex;
+            renderQuestion();
+        }
+    }
+
+    // --- Navigation & Palette ---
+    function togglePalette() {
+        document.getElementById('palette-sidebar').classList.toggle('open');
+    }
+
+    function renderPalette() {
+        const grid = document.getElementById('palette-grid');
+        grid.innerHTML = '';
+        state.questions.forEach((_, idx) => {
+            const div = document.createElement('div');
+            div.className = 'p-item';
+            div.innerText = idx + 1;
+            div.id = `p-item-${idx}`;
+            div.onclick = () => {
+                state.currentIndex = idx;
+                renderQuestion();
+                togglePalette();
+            };
+            grid.appendChild(div);
+        });
+        updatePalette();
+    }
+
+    function updatePalette() {
+        Object.keys(state.answers).forEach(idx => {
+            const el = document.getElementById(`p-item-${idx}`);
+            if(el) el.classList.add('attempted');
+        });
+    }
+
+    // --- Gestures (Swipe) ---
+    function setupGestures() {
+        let touchStartX = 0;
+        let touchStartY = 0;
+        const container = document.getElementById('view-exam');
+
+        container.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+        });
+
+        container.addEventListener('touchend', e => {
+            const touchEndX = e.changedTouches[0].screenX;
+            const touchEndY = e.changedTouches[0].screenY;
+            handleSwipe(touchStartX, touchStartY, touchEndX, touchEndY);
+        });
+    }
+
+    function handleSwipe(sx, sy, ex, ey) {
+        const diffX = sx - ex;
+        const diffY = sy - ey;
+
+        // Ensure swipe is horizontal and significant
+        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+            if (diffX > 0) changeQ(1); // Swipe Left -> Next
+            else changeQ(-1); // Swipe Right -> Prev
+        }
+    }
+
+    // --- Timer ---
+    function startTimer() {
+        clearInterval(state.timer);
+        state.timer = setInterval(() => {
+            state.timeLeft--;
+            const m = Math.floor(state.timeLeft / 60).toString().padStart(2, '0');
+            const s = (state.timeLeft % 60).toString().padStart(2, '0');
+            document.getElementById('timer-display').innerText = `${m}:${s}`;
+            
+            if(state.timeLeft <= 0) submitExam();
+        }, 1000);
+    }
+
+    // --- Analytics & Results ---
+    function submitExam() {
+        clearInterval(state.timer);
+        state.examActive = false;
+        
+        let score = 0;
+        let correct = 0;
+        let wrong = 0;
+        const topicStats = {};
+
+        state.questions.forEach((q, idx) => {
+            const ans = state.answers[idx];
+            // Initialize topic
+            if(!topicStats[q.topic]) topicStats[q.topic] = { total: 0, correct: 0 };
+            topicStats[q.topic].total++;
+
+            if(ans && ans.optIndex !== undefined) {
+                if(ans.optIndex === q.correctIndex) {
+                    score += 1;
+                    correct++;
+                    topicStats[q.topic].correct++;
+                    state.questions[idx].status = 'correct';
+                } else {
+                    score -= 0.25;
+                    wrong++;
+                    state.questions[idx].status = 'wrong';
+                }
+            } else {
+                state.questions[idx].status = 'skipped';
+            }
+        });
+
+        // Update UI
+        document.getElementById('view-exam').classList.remove('active');
+        document.getElementById('view-result').classList.add('active');
+        document.getElementById('footer-exam').style.display = 'none';
+
+        document.getElementById('res-score').innerText = score.toFixed(2);
+        document.getElementById('res-accuracy').innerText = ((correct / (correct+wrong) || 0) * 100).toFixed(0) + "%";
+        
+        // Render Topic Analysis
+        const topicDiv = document.getElementById('topic-analysis');
+        topicDiv.innerHTML = '<h3>Topic Breakdown</h3>';
+        Object.keys(topicStats).forEach(t => {
+            const s = topicStats[t];
+            const perc = (s.correct / s.total) * 100;
+            let color = perc > 75 ? 'var(--success)' : (perc > 40 ? 'var(--accent)' : 'var(--danger)');
+            
+            topicDiv.innerHTML += `
+                <div style="margin-bottom:10px">
+                    <div class="stat-row"><span>${t}</span> <small>${s.correct}/${s.total}</small></div>
+                    <div class="bar-container"><div class="bar-fill" style="width:${perc}%; background:${color}"></div></div>
+                </div>
+            `;
+        });
+    }
+
+    function startReviewMode() {
+        // Filter questions: Wrong OR Skipped OR (Correct but Low Confidence)
+        const reviewList = state.questions.filter((q, idx) => {
+            const ans = state.answers[idx];
+            const isWrong = q.status === 'wrong';
+            const isSkipped = q.status === 'skipped';
+            const isLowConf = ans && (ans.confidence === 'guess' || ans.confidence === '5050');
+            return isWrong || isSkipped || isLowConf;
+        });
+
+        if(reviewList.length === 0) { alert("Great job! Nothing significant to review."); return; }
+
+        state.questions = reviewList; // Swap to filtered list temporarily
+        state.currentIndex = 0;
+        document.getElementById('view-result').classList.remove('active');
+        document.getElementById('view-exam').classList.add('active');
+        document.getElementById('footer-exam').style.display = 'flex';
+        
+        // Hide Submit button logic, just Nav
+        renderQuestion();
+    }
+
+    function goHome() {
+        location.reload(); // Simple reset
+    }
+
+    // Helper functions
+    function switchTab(t) {
+        document.querySelectorAll('.tab').forEach(e => e.classList.remove('active'));
+        event.target.classList.add('active');
+        renderLibrary(t);
+    }
+</script>
+</body>
+</html>
