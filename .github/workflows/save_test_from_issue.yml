@@ -1,7 +1,7 @@
 name: Save Test from Issue
 on:
   issues:
-    types: [opened]
+    types: [opened, labeled]  # <--- Added 'labeled' so it works if you add the label later
 
 permissions:
   contents: write
@@ -17,15 +17,13 @@ jobs:
 
       - name: Save JSON to Tests Folder
         env:
-          # Use env vars to handle multiline JSON safely
           JSON_CONTENT: ${{ github.event.issue.body }}
           FILE_NAME: ${{ github.event.issue.title }}
         run: |
           mkdir -p tests
-          # Save the issue body (JSON) to a file named after the issue title
           echo "$JSON_CONTENT" > "tests/$FILE_NAME"
           
-          # Verify it's valid JSON (Optional safety check)
+          # Simple validation
           if jq -e . "tests/$FILE_NAME" >/dev/null 2>&1; then
             echo "Valid JSON detected."
           else
