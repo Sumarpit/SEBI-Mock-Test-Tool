@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>SEBI Grade A Tool (v30)</title>
+    <title>SEBI Grade A Tool (v32 - Dual Mode)</title>
     <link rel="manifest" href="manifest.json">
     <style>
         :root {
@@ -69,32 +69,43 @@
         .file-card.multi-selected .multi-check { display: flex; }
         .file-card.multi-selected .cloud-badge { display: none; } 
 
-        /* --- STICKY FOOTER --- */
+        /* --- STICKY FOOTER (UPDATED v32) --- */
         .fixed-footer {
             position: fixed; bottom: 0; left: 0; width: 100%;
             background: #fff; border-top: 1px solid #ccc;
             padding: 10px 15px;
-            display: flex; align-items: center; justify-content: space-between; gap: 10px;
+            display: grid; 
+            grid-template-columns: 0.85fr 1fr; /* Split for Mode Select */
+            gap: 10px;
+            align-items: center;
             box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
             z-index: 2000;
             padding-bottom: calc(10px + env(safe-area-inset-bottom));
         }
 
-        .footer-left { display: flex; flex-direction: column; gap: 2px; }
-        .footer-label { font-size: 0.75rem; font-weight: bold; color: #666; }
-        .time-row { display: flex; align-items: center; gap: 5px; }
-        .mini-input { width: 45px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; font-weight: bold; }
+        .footer-left { display: flex; flex-direction: column; gap: 5px; }
+        
+        /* NEW: Mode Select Dropdown */
+        .mode-select {
+            padding: 6px; border-radius: 4px; border: 1px solid var(--accent);
+            font-size: 0.8rem; font-weight: bold; color: var(--accent); background: #e3f2fd;
+            width: 100%;
+        }
+
+        .time-row { display: flex; align-items: center; gap: 3px; }
+        .mini-input { width: 38px; padding: 4px; text-align: center; border: 1px solid #ccc; border-radius: 4px; font-size: 0.95rem; font-weight: bold; }
         .colon { font-weight: bold; color: #888; }
 
-        .footer-right { flex: 1; display: flex; gap: 5px; justify-content: flex-end; }
+        .footer-right { display: flex; justify-content: flex-end; }
         
         .start-btn { 
-            flex: 1; max-width: 200px; height: 45px; 
+            width: 100%; height: 50px; 
             background: var(--accent); color: white; font-weight: bold; 
             border: none; border-radius: 6px; font-size: 1rem; cursor: pointer; 
+            text-transform: uppercase;
         }
         .start-btn:disabled { background: #ccc; cursor: not-allowed; }
-        .resume-btn { height: 45px; padding: 0 15px; background: #f39c12; color: white; border: none; border-radius: 6px; font-weight: bold; display: none; }
+        .resume-btn { width: 100%; height: 50px; background: #f39c12; color: white; border: none; border-radius: 6px; font-weight: bold; display: none; }
 
         /* HISTORY */
         .history-box { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
@@ -196,7 +207,7 @@
     <div class="container-box">
         
         <div class="filter-bar">
-            <input type="text" class="search-box" id="searchInput" placeholder="🔍 Search SEBI tests..." onkeyup="renderGrid()">
+            <input type="text" class="search-box" id="searchInput" placeholder="🔍 Search SEBI Mock Tests..." onkeyup="renderGrid()">
             <div class="tabs">
                 <button class="tab-btn active" onclick="setTab('all')">All</button>
                 <button class="tab-btn" onclick="setTab('local')">Local</button>
@@ -206,14 +217,14 @@
 
         <div class="library-box">
             <div class="lib-controls">
-                <h1 style="font-size:1.2rem;">SEBI Library</h1>
+                <h1 style="font-size:1.2rem;">SEBI Grade A Library</h1>
                 <div class="toggle-btn" id="multiToggle" onclick="toggleMultiSelect()">
                     <span class="icon">❑</span> Select Multiple
                 </div>
             </div>
             
             <label class="drop-zone" id="dropZone">
-                <p>📂 Click to Upload Local Files</p>
+                <p>📂 Upload Local JSON</p>
                 <input type="file" id="jsonFile" accept=".json" multiple>
             </label>
             
@@ -221,7 +232,7 @@
         </div>
 
         <div class="history-box">
-            <h3 style="text-align:center; margin-bottom:15px;">Recent Results</h3>
+            <h3 style="text-align:center; margin-bottom:15px;">Recent Performance</h3>
             <table id="history-table">
                 <thead><tr><th>Test</th><th>Score</th><th>Action</th></tr></thead>
                 <tbody id="history-list"></tbody>
@@ -233,11 +244,15 @@
 
     <div class="fixed-footer">
         <div class="footer-left">
-            <span class="footer-label">Duration (H:M:S)</span>
+            <select id="paperMode" class="mode-select">
+                <option value="1">Paper 1 (+1 / -0.25)</option>
+                <option value="2">Paper 2 (+2 / -0.5)</option>
+                <option value="auto">Auto (from JSON)</option>
+            </select>
             <div class="time-row">
-                <input type="number" id="hInput" class="mini-input" value="00" min="0">
+                <input type="number" id="hInput" class="mini-input" value="01" min="0">
                 <span class="colon">:</span>
-                <input type="number" id="mInput" class="mini-input" value="60" min="0" max="59">
+                <input type="number" id="mInput" class="mini-input" value="00" min="0" max="59">
                 <span class="colon">:</span>
                 <input type="number" id="sInput" class="mini-input" value="00" min="0" max="59">
             </div>
@@ -312,7 +327,8 @@
     <div class="result-container">
         <div style="text-align:center; margin-bottom:30px;">
             <h1>Analysis Report</h1>
-            <p id="res-fname" style="color:#666; margin-bottom:15px;"></p>
+            <p id="res-fname" style="color:#666; margin-bottom:5px;"></p>
+            <p id="res-mode" style="color:var(--accent); font-weight:bold; font-size:0.9rem; margin-bottom:15px;"></p>
             <div class="btn-group">
                 <button class="primary" onclick="returnToLibrary()">Back to Library</button>
                 <button class="review" id="smart-review-btn" onclick="startSmartReview()" style="display:none; background:#ffc107; color:#333; font-weight:bold;">Smart Review</button>
@@ -349,7 +365,6 @@
 </div>
 
 <script>
-    // --- SEBI CONFIG & VARIABLES ---
     const KEY = 'sebi_v1_data';
     const HIST = 'sebi_v1_hist';
     const LIB_KEY = 'sebi_v1_library';
@@ -390,14 +405,10 @@
         else if (touchEndX - touchStartX > 50) prevQ();
     }
 
-    // --- CLOUD LOGIC ---
     function loadCloudManifest() {
         fetch('test_manifest.json')
             .then(res => res.json())
-            .then(data => {
-                cloudList = data;
-                renderGrid();
-            })
+            .then(data => { cloudList = data; renderGrid(); })
             .catch(err => console.log('No cloud manifest found'));
     }
 
@@ -417,8 +428,8 @@
                 activeFile = fileName;
                 renderGrid();
                 
-                // Select Automatically
-                document.getElementById('start-btn').innerText = 'START: ' + fileName.replace(/\.json$/i,'').substring(0,10);
+                let shortName = fileName.replace(/\.json$/i,'').substring(0,10) + (fileName.length>10?'...':'');
+                document.getElementById('start-btn').innerText = 'START: ' + shortName;
                 document.getElementById('start-btn').disabled = false;
                 
             } catch(e) {
@@ -428,7 +439,6 @@
         }
     }
 
-    // --- GRID RENDER & FILTER ---
     function setTab(tab) {
         currentTab = tab;
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -461,7 +471,6 @@
 
         displayList.forEach(item => {
             const d = document.createElement('div');
-            
             if (item.type === 'local') {
                 d.className = 'file-card';
                 if (isMultiMode && selectedFiles.has(item.name)) d.classList.add('multi-selected');
@@ -538,7 +547,6 @@
             } else { btn.innerText = "SELECT TEST"; btn.disabled = true; }
         } else {
             activeFile = name;
-            // Truncate name for button
             let shortName = name.replace(/\.json$/i,'').substring(0,10) + (name.length>10?'...':'');
             document.getElementById('start-btn').innerText = 'START: ' + shortName;
             document.getElementById('start-btn').disabled = false;
@@ -580,7 +588,7 @@
         const h = parseInt(document.getElementById('hInput').value)||0;
         const m = parseInt(document.getElementById('mInput').value)||0;
         const s = parseInt(document.getElementById('sInput').value)||0;
-        seconds = (h*3600)+(m*60)+s || 3600; // Default 60 mins for SEBI
+        seconds = (h*3600)+(m*60)+s || 3600; 
         initExamUI();
     }
 
@@ -732,19 +740,39 @@
         
         reviewSet = [];
 
+        // NEW: Get Marking Scheme from Footer
+        const mode = document.getElementById('paperMode').value; // '1', '2', or 'auto'
+        let modeLabel = '';
+
         questions.forEach((q, i) => {
             const ans = responses[i]; const conf = confidence[i];
             if(!tStats[q.topic]) tStats[q.topic] = {t:0, c:0, w:0}; tStats[q.topic].t++;
             
             let isWrong = false; let isSkipped = false;
 
+            // --- SCORING LOGIC ---
+            let qMark = 1, qNeg = 0.25;
+
+            if (mode === '2') {
+                qMark = 2.0; qNeg = 0.5;
+                modeLabel = "Forced Paper 2 (+2 / -0.5)";
+            } else if (mode === '1') {
+                qMark = 1.0; qNeg = 0.25;
+                modeLabel = "Forced Paper 1 (+1 / -0.25)";
+            } else {
+                // Auto (From JSON)
+                qMark = q.marks ? parseFloat(q.marks) : 1.0;
+                qNeg = q.negative ? parseFloat(q.negative) : (qMark * 0.25);
+                modeLabel = "Auto-Detected from JSON";
+            }
+
             if(ans === undefined) { skip++; isSkipped=true; } 
             else {
                 if(ans === q.answer) {
-                    score += 1; cor++; tStats[q.topic].c++;
+                    score += qMark; cor++; tStats[q.topic].c++;
                     if(conf) cStats[conf].c++;
                 } else {
-                    score -= 0.25; wrg++; tStats[q.topic].w++;
+                    score -= qNeg; wrg++; tStats[q.topic].w++;
                     if(conf) cStats[conf].w++;
                     isWrong = true;
                 }
@@ -776,6 +804,7 @@
         }
 
         document.getElementById('res-fname').innerText = activeFile.replace(/\.json$/i, '');
+        document.getElementById('res-mode').innerText = modeLabel;
         document.getElementById('r-score').innerText = score.toFixed(2);
         document.getElementById('r-cor').innerText = cor;
         document.getElementById('r-wrg').innerText = wrg;
