@@ -225,11 +225,7 @@
         
         <div class="filter-bar">
             <input type="text" class="search-box" id="searchInput" placeholder="🔍 Search SEBI Mock Tests..." onkeyup="renderGrid()">
-            <div class="tabs">
-                <button class="tab-btn active" onclick="setTab('all')">All</button>
-                <button class="tab-btn" onclick="setTab('local')">Local</button>
-                <button class="tab-btn" onclick="setTab('cloud')">Cloud</button>
-            </div>
+            <div class="tabs" style="display:none;"></div>
         </div>
 
         <div class="library-box">
@@ -415,57 +411,55 @@
 
     let touchStartX=0, touchEndX=0;
     
-    window.onload = () => { 
-        try { 
-            loadLibraryFromStorage(); 
-            loadCloudManifest(); 
-            loadHistory(); 
-            checkResume(); 
-            
-            const ta = document.getElementById('touch-area');
-            ta.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX);
-            ta.addEventListener('touchend', e => { touchEndX = e.changedTouches[0].screenX; handleSwipe(); });
-        } catch(e){ console.error(e); } 
-    };
+    //NO cloud json [Replace existing window.onload]
+window.onload = () => { 
+    try { 
+        loadLibraryFromStorage();
+        loadRepoTests(); // <--- CHANGED: New function to auto-load tests
+        loadHistory(); 
+        checkResume(); 
+        
+        const ta = document.getElementById('touch-area');
+        ta.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX);
+        ta.addEventListener('touchend', e => { touchEndX = e.changedTouches[0].screenX; handleSwipe(); });
+    } catch(e){ console.error(e); } 
+};
 
     function handleSwipe() {
         if (touchStartX - touchEndX > 50) nextQ();
         else if (touchEndX - touchStartX > 50) prevQ();
     }
 
-    function loadCloudManifest() {
-        fetch('tests/test_manifest.json')
-            .then(res => res.json())
-            .then(data => { cloudList = data; renderGrid(); })
-            .catch(err => console.log('No cloud manifest found'));
-    }
-
-    async function downloadCloudFile(path) {
-        if(confirm("Download and open this test from Cloud?")) {
-            const btn = document.getElementById('start-btn');
-            const originalText = btn.innerText;
-            btn.innerText = "DL...";
+    // [Add this new function]
+async function loadRepoTests() {
+    try {
+        // 1. Fetch the manifest list
+        const res = await fetch('tests/test_manifest.json');
+        const manifest = await res.json();
+        
+        // 2. Fetch ALL test JSON contents in parallel
+        await Promise.all(manifest.map(async (item) => {
             try {
-                const res = await fetch(path);
-                const data = await res.json();
+                // Construct path (assumes flat structure inside tests/)
+                const path = `tests/${item.filename}`;
+                const fileRes = await fetch(path);
+                const fileData = await fileRes.json();
                 
-                const fileName = path.split('/').pop();
-                library[fileName] = data;
-                saveLibraryToStorage();
-                
-                activeFile = fileName;
-                renderGrid();
-                
-                let shortName = fileName.replace(/\.json$/i,'').substring(0,10) + (fileName.length>10?'...':'');
-                document.getElementById('start-btn').innerText = 'START: ' + shortName;
-                document.getElementById('start-btn').disabled = false;
-                
-            } catch(e) {
-                alert("Download failed: " + e.message);
-                btn.innerText = originalText;
+                // 3. Inject directly into the main library object
+                // We use the filename as the unique key
+                library[item.filename] = fileData;
+            } catch (err) {
+                console.warn(`Failed to auto-load ${item.filename}:`, err);
             }
-        }
+        }));
+
+        // 4. Refresh the grid to show new tests
+        renderGrid();
+
+    } catch (err) {
+        console.log('Repo manifest not found or network error.', err);
     }
+}
 
     // --- PASTE JSON LOGIC ---
     function openPasteModal() { document.getElementById('pasteModal').style.display = 'flex'; }
@@ -531,61 +525,42 @@
         renderGrid();
     }
 
-    function renderGrid() {
-        const grid = document.getElementById('file-grid'); grid.innerHTML = '';
-        const search = document.getElementById('searchInput').value.toLowerCase();
-        
-        let displayList = [];
-
-        if (currentTab === 'all' || currentTab === 'local') {
-            Object.keys(library).forEach(name => {
-                if(name.toLowerCase().includes(search)) {
-                    displayList.push({ type: 'local', name: name, qCount: library[name].length });
-                }
-            });
+    // [Replace existing renderGrid]
+function renderGrid() {
+    const grid = document.getElementById('file-grid');
+    grid.innerHTML = '';
+    const search = document.getElementById('searchInput').value.toLowerCase();
+    
+    // We filter the main library for everything now
+    let displayList = [];
+    Object.keys(library).forEach(name => {
+        if(name.toLowerCase().includes(search)) {
+            displayList.push({ name: name, qCount: library[name].length });
         }
+    });
 
-        if (currentTab === 'all' || currentTab === 'cloud') {
-            cloudList.forEach(item => {
-                let name = item.name || item.filename || item;
-                if (typeof item === 'string') name = item.split('/').pop();
-                const path = item.filename ? `tests/${item.filename}` : item;
-                
-                if(!library[name] && name.toLowerCase().includes(search)) { 
-                    displayList.push({ type: 'cloud', name: name, path: path });
-                }
-            });
-        }
-
-        displayList.forEach(item => {
-            const d = document.createElement('div');
-            if (item.type === 'local') {
-                d.className = 'file-card';
-                if (isMultiMode && selectedFiles.has(item.name)) d.classList.add('multi-selected');
-                else if (item.name === activeFile) d.classList.add('active');
-                
-                d.innerHTML = `
-                    <div class="local-badge">✓</div>
-                    <div class="del-file" onclick="deleteFile(event, '${item.name}')">×</div>
-                    <span class="file-name">${item.name}</span>
-                    <small class="file-meta">${item.qCount} Qs</small>
-                    <div class="multi-check">✔</div>
-                `;
-                d.onclick = () => handleCardClick(item.name);
-            } else {
-                d.className = 'file-card cloud';
-                d.innerHTML = `
-                    <div class="cloud-badge">☁️</div>
-                    <span class="file-name">${item.name}</span>
-                    <small class="file-meta" style="color:var(--accent)">Tap to Download</small>
-                `;
-                d.onclick = () => downloadCloudFile(item.path);
-            }
-            grid.appendChild(d);
-        });
+    displayList.forEach(item => {
+        const d = document.createElement('div');
+        d.className = 'file-card';
         
-        if(displayList.length === 0) grid.innerHTML = '<div style="color:#999; padding:20px;">No tests found.</div>';
-    }
+        // Check selection status
+        if (isMultiMode && selectedFiles.has(item.name)) d.classList.add('multi-selected');
+        else if (item.name === activeFile) d.classList.add('active');
+        
+        // Render card
+        d.innerHTML = `
+            <div class="local-badge" style="color:var(--accent)">★</div> 
+            <div class="del-file" onclick="deleteFile(event, '${item.name}')">×</div>
+            <span class="file-name">${item.name}</span>
+            <small class="file-meta">${item.qCount} Qs</small>
+            <div class="multi-check">✔</div>
+        `;
+        d.onclick = () => handleCardClick(item.name);
+        grid.appendChild(d);
+    });
+
+    if(displayList.length === 0) grid.innerHTML = '<div style="color:#999; padding:20px;">No tests found.</div>';
+}
 
     document.getElementById('jsonFile').onchange = (e) => loadFiles(e.target.files);
     
