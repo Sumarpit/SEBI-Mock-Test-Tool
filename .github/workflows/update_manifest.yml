@@ -1,9 +1,13 @@
 name: Update Test Manifest
 
 on:
+  # Trigger 1: Automatic (When you push a JSON file)
   push:
     paths:
       - 'tests/*.json'
+  
+  # Trigger 2: Manual (The "Fix It" Button)
+  workflow_dispatch: 
 
 jobs:
   build:
@@ -24,10 +28,10 @@ jobs:
               else
                 echo "," >> tests/test_manifest.json
               fi
-              # Basic extraction of name and filename using jq would be better but simple shell works for now
+              
               FILENAME=$(basename "$file")
               NAME="${FILENAME%.*}"
-              # Create JSON object string
+              # We use qCount: 0 as a placeholder since we aren't reading file content here
               echo "{\"name\": \"$NAME\", \"filename\": \"$FILENAME\", \"qCount\": 0}" >> tests/test_manifest.json
             fi
           done
@@ -38,5 +42,5 @@ jobs:
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
           git add tests/test_manifest.json
-          git commit -m "Auto-update test manifest" || echo "No changes to commit"
+          git commit -m "Manual update of test manifest" || echo "No changes to commit"
           git push
