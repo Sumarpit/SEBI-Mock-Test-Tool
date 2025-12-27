@@ -1,0 +1,182 @@
+[
+  {
+    "question": "<b>Topic: Basics</b><br>Which of the following costs is also known as 'Imputed Cost' or 'Notional Cost'?",
+    "options": ["Sunk Cost", "Opportunity Cost", "Implicit Cost", "Marginal Cost"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Costing",
+    "topic": "Basic Concepts",
+    "explanation": "Implicit costs (e.g., interest on own capital, rent of own building) do not involve cash outflow but are recorded for decision making."
+  },
+  {
+    "question": "<b>Topic: Material</b><br>In the context of Inventory Control, the 'Re-order Level' is calculated as:",
+    "options": ["Maximum Consumption × Maximum Lead Time", "Minimum Consumption × Minimum Lead Time", "Average Consumption × Average Lead Time", "(Max Consumption × Max Lead Time) - (Min Consumption × Min Lead Time)"],
+    "answer": 0,
+    "marks": 1,
+    "section": "Costing",
+    "topic": "Material Costing",
+    "explanation": "ROL = Maximum Usage × Maximum Lead Time. It ensures stock doesn't run out during the longest possible delay."
+  },
+  {
+    "question": "<b>Topic: Material</b><br>Calculate the Economic Order Quantity (EOQ) if Annual Demand = 1600 units, Ordering Cost = ₹50 per order, and Carrying Cost = ₹4 per unit per year.",
+    "options": ["100 units", "150 units", "200 units", "250 units"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Costing",
+    "topic": "EOQ (Numerical)",
+    "explanation": "EOQ = sqrt((2 * 1600 * 50) / 4) = sqrt(40,000) = 200 units."
+  },
+  {
+    "question": "<b>Topic: Labour</b><br>Under the Halsey Premium Plan, the bonus paid to a worker is equal to:",
+    "options": ["50% of Time Saved × Rate per Hour", "33.33% of Time Saved × Rate per Hour", "(Time Saved / Standard Time) × Time Taken × Rate", "100% of Time Saved × Rate per Hour"],
+    "answer": 0,
+    "marks": 1,
+    "section": "Costing",
+    "topic": "Labour Costing",
+    "explanation": "Halsey Plan Bonus = 50% of (Time Saved × Rate per Hour)."
+  },
+  {
+    "question": "<b>Topic: Overheads</b><br>The process of charging a specific overhead cost to a specific cost center is known as:",
+    "options": ["Allocation", "Apportionment", "Absorption", "Amortization"],
+    "answer": 0,
+    "marks": 1,
+    "section": "Costing",
+    "topic": "Overheads",
+    "explanation": "Allocation is the direct assignment of a cost to a cost center. Apportionment is the distribution of common costs."
+  },
+  {
+    "question": "<b>Topic: Marginal Costing</b><br>If Sales are ₹1,00,000, Variable Cost is ₹60,000, and Fixed Cost is ₹20,000, calculate the P/V Ratio.",
+    "options": ["20%", "40%", "50%", "60%"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Costing",
+    "topic": "Marginal Costing",
+    "explanation": "Contribution = Sales - VC = 1,00,000 - 60,000 = 40,000. P/V Ratio = (Contribution/Sales) * 100 = 40%."
+  },
+  {
+    "question": "<b>Topic: Marginal Costing</b><br>At the Break-Even Point (BEP), which of the following statements is true?",
+    "options": ["Total Contribution = Total Fixed Cost", "Total Contribution = Total Variable Cost", "Total Sales = Total Variable Cost", "Profit is positive"],
+    "answer": 0,
+    "marks": 1,
+    "section": "Costing",
+    "topic": "Break-Even Point",
+    "explanation": "At BEP, there is no profit or loss. Since Sales - VC = Contribution, and Contribution - FC = Profit (0), therefore Contribution must equal Fixed Cost."
+  },
+  {
+    "question": "<b>Topic: Standard Costing</b><br>Material Usage Variance is calculated as:",
+    "options": ["(Standard Price - Actual Price) × Actual Quantity", "(Standard Quantity - Actual Quantity) × Standard Price", "(Standard Quantity - Actual Quantity) × Actual Price", "(Standard Quantity × Standard Price) - (Actual Quantity × Actual Price)"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Costing",
+    "topic": "Standard Costing",
+    "explanation": "Usage Variance measures efficiency in quantity used. Formula: (Std Qty - Actual Qty) × Std Price."
+  },
+  {
+    "question": "<b>Topic: Budgeting</b><br>Which type of budget is designed to change in accordance with the level of activity attained?",
+    "options": ["Fixed Budget", "Master Budget", "Flexible Budget", "Zero-Based Budget"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Costing",
+    "topic": "Budgeting",
+    "explanation": "A Flexible Budget adjusts revenues and expenses based on the actual output level, allowing for 'apple-to-apple' comparison."
+  },
+  {
+    "question": "<b>Topic: Methods</b><br>Which method of costing is most suitable for the Transport or Hospital industry?",
+    "options": ["Job Costing", "Batch Costing", "Process Costing", "Operating Costing"],
+    "answer": 3,
+    "marks": 1,
+    "section": "Costing",
+    "topic": "Methods of Costing",
+    "explanation": "Operating Costing (Service Costing) is used for service industries. The unit is usually composite (e.g., passenger-km, bed-day)."
+  },
+  {
+    "question": "<b>Topic: Process Costing</b><br>In Process Costing, the cost of 'Abnormal Loss' is charged to:",
+    "options": ["The Next Process Account", "Costing Profit & Loss Account", "Factory Overhead Account", "Spread over good units"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Costing",
+    "topic": "Process Costing",
+    "explanation": "Normal loss is absorbed by good units. Abnormal loss (avoidable) is a period cost charged directly to the Costing P&L A/c."
+  },
+  {
+    "question": "<b>Topic: Lean Systems</b><br>Which of the following is NOT one of the '5S' principles?",
+    "options": ["Seiri (Sort)", "Seiton (Set in Order)", "Seiketsu (Standardize)", "Safety (Suraksha)"],
+    "answer": 3,
+    "marks": 1,
+    "section": "Costing",
+    "topic": "Lean Systems",
+    "explanation": "The 5S are: Seiri (Sort), Seiton (Set in Order), Seiso (Shine), Seiketsu (Standardize), Shitsuke (Sustain). Safety is not part of the original 5S."
+  },
+  {
+    "question": "<b>Topic: Marginal Costing</b><br>Margin of Safety can be calculated as:",
+    "options": ["Profit / PV Ratio", "Fixed Cost / PV Ratio", "Actual Sales + BEP Sales", "Contribution / Sales"],
+    "answer": 0,
+    "marks": 1,
+    "section": "Costing",
+    "topic": "Marginal Costing",
+    "explanation": "MOS = Actual Sales - BEP Sales. Alternatively, MOS = Profit / PV Ratio."
+  },
+  {
+    "question": "<b>Topic: Contract Costing</b><br>In a construction contract, the 'Escalation Clause' is provided to cover:",
+    "options": ["Loss due to accidents", "Change in prices of material and labour", "Delay in completion", "Penalties imposed by government"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Costing",
+    "topic": "Contract Costing",
+    "explanation": "Escalation Clause protects the contractor against fluctuations (rise) in the market prices of material and labour."
+  },
+  {
+    "question": "<b>Topic: Basics</b><br>Prime Cost + Factory Overheads is known as:",
+    "options": ["Cost of Production", "Works Cost", "Cost of Sales", "Total Cost"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Costing",
+    "topic": "Cost Sheet",
+    "explanation": "Prime Cost (Direct Costs) + Factory Overheads = Works Cost (or Factory Cost)."
+  },
+  {
+    "question": "<b>Topic: Lean Systems</b><br>'Just-In-Time' (JIT) system is based on the principle of:",
+    "options": ["Push System", "Pull System", "Batch Production", "Safety Stock maximization"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Costing",
+    "topic": "Lean Systems",
+    "explanation": "JIT is a 'Pull System' where production is triggered only when there is demand (an order) from the customer/next process."
+  },
+  {
+    "question": "<b>Topic: Budgeting</b><br>Who is considered the father of Zero-Based Budgeting (ZBB)?",
+    "options": ["Peter Drucker", "Peter Pyhrr", "F.W. Taylor", "Philip Kotler"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Costing",
+    "topic": "Budgeting",
+    "explanation": "Peter Pyhrr developed ZBB at Texas Instruments."
+  },
+  {
+    "question": "<b>Topic: Standard Costing</b><br>If Standard Hours = 100, Actual Hours = 120, and Standard Rate = ₹10/hr, calculate the Labour Efficiency Variance.",
+    "options": ["₹200 (Favorable)", "₹200 (Adverse)", "₹2000 (Adverse)", "₹1200 (Adverse)"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Costing",
+    "topic": "Standard Costing",
+    "explanation": "Efficiency Variance = (Std Hours - Actual Hours) * Std Rate = (100 - 120) * 10 = -200 (Adverse)."
+  },
+  {
+    "question": "<b>Topic: Marginal Costing</b><br>The 'Angle of Incidence' in a Break-Even Chart indicates:",
+    "options": ["Fixed Cost", "Margin of Safety", "Profit earning capacity", "Variable Cost per unit"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Costing",
+    "topic": "Break-Even Analysis",
+    "explanation": "The angle formed where the Sales line cuts the Total Cost line. A wider angle indicates a higher rate of profit earning."
+  },
+  {
+    "question": "<b>Topic: Basics</b><br>Which of the following is a 'Period Cost'?",
+    "options": ["Direct Material", "Factory Rent", "Salary of CEO", "Wages of machine operator"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Costing",
+    "topic": "Cost Classification",
+    "explanation": "Product costs (Material, Factory Rent) are attached to inventory. Period costs (Admin salaries, Selling exp) are expensed immediately in the period they occur."
+  }
+]
