@@ -1,0 +1,182 @@
+[
+  {
+    "question": "<b>Topic: Accounting Standards</b><br>According to AS 1, which of the following is NOT a 'Fundamental Accounting Assumption'?",
+    "options": ["Going Concern", "Consistency", "Accrual", "Conservatism"],
+    "answer": 3,
+    "marks": 1,
+    "section": "Accountancy",
+    "topic": "AS 1 Disclosure",
+    "explanation": "The three Fundamental Accounting Assumptions are Going Concern, Consistency, and Accrual. Conservatism is a concept/principle, but not defined as a 'Fundamental Assumption' in AS 1."
+  },
+  {
+    "question": "<b>Topic: Share Capital</b><br>X Ltd. issued shares on a pro-rata basis. Mr. A applied for 1,200 shares and was allotted 1,000 shares. If application money is ₹3 per share, how much 'Excess Application Money' will be adjusted towards allotment?",
+    "options": ["₹600", "₹3,000", "₹3,600", "₹200"],
+    "answer": 0,
+    "marks": 1,
+    "section": "Accountancy",
+    "topic": "Pro-rata Allotment",
+    "explanation": "Applied 1200, Allotted 1000. Excess shares = 200. Excess money = 200 * ₹3 = ₹600. This ₹600 is adjusted against Allotment dues."
+  },
+  {
+    "question": "<b>Topic: Financial Statements</b><br>Under Schedule III of the Companies Act, 'Current Maturities of Long-Term Debt' are shown under:",
+    "options": ["Long Term Borrowings", "Short Term Borrowings", "Other Current Liabilities", "Trade Payables"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Accountancy",
+    "topic": "Schedule III",
+    "explanation": "Previously shown under 'Other Current Liabilities'. As per recent amendments to Schedule III, Current Maturities of Long-Term Debt are disclosed under **Short Term Borrowings**."
+  },
+  {
+    "question": "<b>Topic: Ratios</b><br>Which ratio is best suited to evaluate the 'Operational Efficiency' of a company's management irrespective of its capital structure?",
+    "options": ["Return on Equity (ROE)", "Return on Capital Employed (ROCE)", "Earnings Per Share (EPS)", "Debt-Equity Ratio"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Accountancy",
+    "topic": "Ratio Analysis",
+    "explanation": "ROCE uses EBIT (Operating Profit) and Capital Employed (Debt + Equity). It removes the effect of tax and leverage, focusing purely on operational return on funds invested."
+  },
+  {
+    "question": "<b>Topic: Accounting Standards</b><br>AS 11 (The Effects of Changes in Foreign Exchange Rates) requires that monetary items denominated in foreign currency should be reported at the balance sheet date using:",
+    "options": ["Historical Rate", "Closing Rate", "Average Rate", "Opening Rate"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Accountancy",
+    "topic": "AS 11 Forex",
+    "explanation": "Monetary items (Cash, Debtors, Creditors) are translated at the **Closing Rate**. Non-monetary items (Fixed Assets) are at Historical Rate."
+  },
+  {
+    "question": "<b>Topic: Debentures</b><br>As per Companies Act/SEBI norms, a 'Debenture Redemption Reserve' (DRR) is NOT required to be created by:",
+    "options": ["Unlisted Companies", "Banking Companies", "Manufacturing Companies", "NBFCs (Publicly placed)"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Accountancy",
+    "topic": "Redemption of Debentures",
+    "explanation": "Banking Companies and All India Financial Institutions (AIFIs) are exempted from creating DRR."
+  },
+  {
+    "question": "<b>Topic: Cash Flow</b><br>When using the Indirect Method for Cash Flow from Operations, 'Profit on Sale of Machinery' is:",
+    "options": ["Added to Net Profit", "Deducted from Net Profit", "Ignored", "Shown as Financing Activity"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Accountancy",
+    "topic": "Cash Flow (AS 3)",
+    "explanation": "Profit on sale is a non-operating income included in Net Profit. To find *Operating* Cash Flow, it must be **deducted** (removed)."
+  },
+  {
+    "question": "<b>Topic: Share Capital</b><br>A 'Rights Issue' is an offer of shares to:",
+    "options": ["General Public", "Existing Shareholders", "Employees", "Promoters only"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Accountancy",
+    "topic": "Issue of Shares",
+    "explanation": "Rights Issue (Sec 62) is the right of existing shareholders to preserve their ownership percentage by subscribing to new shares first."
+  },
+  {
+    "question": "<b>Topic: Accounting Standards</b><br>AS 29 deals with Provisions, Contingent Liabilities, and Contingent Assets. A 'Provision' is defined as a liability which can be measured only by using a substantial degree of:",
+    "options": ["Accuracy", "Estimation", "Certainty", "Verification"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Accountancy",
+    "topic": "AS 29",
+    "explanation": "A Provision is a liability of uncertain timing or amount that can be measured by using a substantial degree of **estimation**."
+  },
+  {
+    "question": "<b>Topic: Ratios</b><br>In DuPont Analysis, Return on Equity (ROE) is decomposed into:",
+    "options": ["Net Profit Margin × Asset Turnover", "Net Profit Margin × Asset Turnover × Financial Leverage", "Gross Profit Margin × Inventory Turnover", "Operating Margin × Interest Coverage"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Accountancy",
+    "topic": "DuPont Analysis",
+    "explanation": "DuPont ROE = (Net Income/Sales) × (Sales/Assets) × (Assets/Equity). i.e., Margin × Turnover × Leverage."
+  },
+  {
+    "question": "<b>Topic: Inventory</b><br>In a period of **rising prices** (Inflation), which inventory valuation method results in Higher Net Income?",
+    "options": ["LIFO", "FIFO", "Weighted Average", "Specific Identification"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Accountancy",
+    "topic": "Inventory Valuation",
+    "explanation": "In FIFO, you sell the old (cheaper) stock first. COGS is lower. Profit is Higher. (LIFO sells expensive new stock, reducing profit)."
+  },
+  {
+    "question": "<b>Topic: ESOP</b><br>The period between the 'Grant Date' and the date on which the employee becomes entitled to exercise the option is called:",
+    "options": ["Exercise Period", "Vesting Period", "Lock-in Period", "Cooling Period"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Accountancy",
+    "topic": "ESOP Terms",
+    "explanation": "Vesting Period is the time the employee must serve the company to earn the right to the options."
+  },
+  {
+    "question": "<b>Topic: Accounting Standards</b><br>Which Accounting Standard deals with 'Borrowing Costs'?",
+    "options": ["AS 12", "AS 16", "AS 19", "AS 20"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Accountancy",
+    "topic": "AS Numbers",
+    "explanation": "AS 16 deals with Borrowing Costs and their capitalization. (AS 12: Govt Grants, AS 19: Leases, AS 20: EPS)."
+  },
+  {
+    "question": "<b>Topic: Share Capital</b><br>Interest on Calls-in-Arrears can be charged by a company maximum at ___ p.a. as per Table F of Companies Act, 2013.",
+    "options": ["5%", "6%", "10%", "12%"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Accountancy",
+    "topic": "Calls in Arrears",
+    "explanation": "Table F limits: Interest on Calls-in-Arrears = Max 10%. Interest on Calls-in-Advance = Max 12%."
+  },
+  {
+    "question": "<b>Topic: Concepts</b><br>Revenue is generally recognized when:",
+    "options": ["Order is received", "Cash is received", "Production is completed", "Sale is effected (Risk & Reward transferred)"],
+    "answer": 3,
+    "marks": 1,
+    "section": "Accountancy",
+    "topic": "Revenue Recognition",
+    "explanation": "As per AS 9, revenue from sale of goods is recognized when significant risks and rewards of ownership are transferred to the buyer."
+  },
+  {
+    "question": "<b>Topic: Ratios</b><br>A High 'Operating Cycle' indicates:",
+    "options": ["High Liquidity", "Funds are blocked in working capital for a long time", "Efficient inventory management", "Quick realization of debtors"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Accountancy",
+    "topic": "Working Capital",
+    "explanation": "Operating Cycle = Inventory Period + Receivables Period. A long cycle means money is stuck in stock/debtors, leading to liquidity strain."
+  },
+  {
+    "question": "<b>Topic: Buy-Back</b><br>Post buy-back, the debt-equity ratio of the company should not exceed:",
+    "options": ["1:1", "1.5:1", "2:1", "3:1"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Accountancy",
+    "topic": "Buy-Back Limits",
+    "explanation": "Sec 68 mandates that after buy-back, the ratio of Debt to Capital + Free Reserves should not be more than 2:1."
+  },
+  {
+    "question": "<b>Topic: Accounting Standards</b><br>AS 12 (Government Grants) states that grants related to specific fixed assets should be:",
+    "options": ["Credited to Capital Reserve", "Deducted from the Gross Value of the Asset", "Credited to P&L immediately", "Either A or B"],
+    "answer": 3,
+    "marks": 1,
+    "section": "Accountancy",
+    "topic": "AS 12",
+    "explanation": "AS 12 allows two methods: 1. Deduct from asset cost (reduced depreciation). 2. Treat as Deferred Income (amortize over useful life). Note: Old text might say Capital Reserve, but current practice/AS allows deduction or deferred income. 'Either A or B' is the safest theoretical answer for MCQ context if 'Deferred Income' isn't explicitly listed."
+  },
+  {
+    "question": "<b>Topic: Cash Flow</b><br>Which of the following is an example of 'Cash Equivalent' as per AS 3?",
+    "options": ["Investment in Shares", "Treasury Bills (maturing in 2 months)", "Fixed Deposit (maturing in 1 year)", "Gold Bullion"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Accountancy",
+    "topic": "Cash Equivalents",
+    "explanation": "Cash Equivalents are short-term, highly liquid investments readily convertible to cash with insignificant risk of change in value (Maturity < 3 months). T-Bills fit this."
+  },
+  {
+    "question": "<b>Topic: Share Capital</b><br>Underwriting Commission for shares cannot exceed ___ of the issue price.",
+    "options": ["2.5%", "5%", "10%", "1%"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Accountancy",
+    "topic": "Underwriting",
+    "explanation": "Max Underwriting Commission: Shares = 5%. Debentures = 2.5%."
+  }
+]
