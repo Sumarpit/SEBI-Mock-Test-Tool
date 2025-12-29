@@ -1,0 +1,182 @@
+[
+  {
+    "question": "<b>Topic: IS-LM Model</b><br>In the IS-LM framework, a 'Liquidity Trap' occurs when the LM curve is:",
+    "options": ["Vertical", "Horizontal", "Upward Sloping", "Downward Sloping"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "IS-LM",
+    "explanation": "In a Liquidity Trap, interest rates are so low that people prefer holding cash. The demand for money becomes infinitely elastic, making the LM curve **Horizontal** (flat). Monetary policy is ineffective here."
+  },
+  {
+    "question": "<b>Topic: National Income</b><br>If Nominal GDP is ₹600 and Real GDP is ₹500, what is the GDP Deflator?",
+    "options": ["83.33", "110", "120", "1.2"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "GDP Deflator",
+    "explanation": "GDP Deflator = (Nominal GDP / Real GDP) × 100. (600 / 500) × 100 = 1.2 × 100 = 120."
+  },
+  {
+    "question": "<b>Topic: Curves</b><br>The 'J-Curve Effect' suggests that following a currency devaluation, the Trade Balance will:",
+    "options": ["Improve immediately", "Worsen initially, then improve", "Improve initially, then worsen", "Remain unchanged"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "International Economics",
+    "explanation": "Initially, import volumes don't change (contracts are fixed), but prices rise, worsening the deficit. Later, volumes adjust to the new prices, improving the balance. Graph looks like the letter 'J'."
+  },
+  {
+    "question": "<b>Topic: IS-LM Model</b><br>The 'Crowding Out' effect, where government spending reduces private investment, is most effective when the LM curve is:",
+    "options": ["Horizontal", "Vertical", "Flat", "Downward Sloping"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Fiscal Policy",
+    "explanation": "If LM is **Vertical** (Classical range), any increase in Govt spending raises interest rates drastically without increasing income, causing 100% Crowding Out of private investment."
+  },
+  {
+    "question": "<b>Topic: Inflation</b><br>The 'Phillips Curve' in the **Long Run** is:",
+    "options": ["Downward sloping", "Horizontal", "Vertical at the Natural Rate of Unemployment", "Upward sloping"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Phillips Curve",
+    "explanation": "In the long run, there is no trade-off between inflation and unemployment. The curve is **Vertical** at the Natural Rate of Unemployment (NAIRU)."
+  },
+  {
+    "question": "<b>Topic: Consumer Behavior</b><br>For 'Complementary Goods' (e.g., Car and Petrol), the Cross Elasticity of Demand is:",
+    "options": ["Positive", "Negative", "Zero", "Infinite"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Elasticity",
+    "explanation": "If Price of Car goes UP, Demand for Petrol goes DOWN. The relationship is inverse, so Cross Elasticity is **Negative**."
+  },
+  {
+    "question": "<b>Topic: National Income</b><br>Which of the following is NOT part of 'Personal Disposable Income'?",
+    "options": ["Personal Income", "Direct Taxes paid by households", "Transfer Payments", "Dividends received"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "NI Accounting",
+    "explanation": "Disposable Income = Personal Income - **Personal Direct Taxes** - Misc. Fees/Fines. (It is the money actually available to spend)."
+  },
+  {
+    "question": "<b>Topic: Market Structures</b><br>A Monopolist maximizes profit at the point where:",
+    "options": ["Price = Marginal Cost", "Marginal Revenue = Marginal Cost", "Average Revenue = Average Cost", "Total Revenue is Maximized"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Monopoly",
+    "explanation": "The universal profit maximization condition (for Monopoly or Perfect Competition) is **MR = MC**. (Price > MC for Monopolist)."
+  },
+  {
+    "question": "<b>Topic: Money</b><br>'High Powered Money' (or Reserve Money/M0) consists of:",
+    "options": ["Currency with Public + Demand Deposits", "Currency with Public + Bankers' Deposits with RBI + Other Deposits with RBI", "M1 + Time Deposits", "M3 + Post Office Deposits"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Money Supply",
+    "explanation": "H (High Powered Money) is the monetary base created by RBI. Formula: Currency + Reserves (Bankers' Deposits)."
+  },
+  {
+    "question": "<b>Topic: Multiplier</b><br>If the Marginal Propensity to Consume (MPC) is 0.8, what is the 'Tax Multiplier'?",
+    "options": ["-4", "-5", "4", "5"],
+    "answer": 0,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Fiscal Multiplier",
+    "explanation": "Tax Multiplier = -MPC / (1 - MPC).  -0.8 / (1 - 0.8) = -0.8 / 0.2 = **-4**. (Note: Tax multiplier is negative and smaller than expenditure multiplier)."
+  },
+  {
+    "question": "<b>Topic: Curves</b><br>Which curve measures the degree of Income Inequality in an economy?",
+    "options": ["Laffer Curve", "Phillips Curve", "Lorenz Curve", "Kuznets Curve"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Inequality",
+    "explanation": "The **Lorenz Curve** plots cumulative % of income against cumulative % of population. The Gini Coefficient is derived from it."
+  },
+  {
+    "question": "<b>Topic: Forex</b><br>According to the 'Purchasing Power Parity' (PPP) theory, in the long run, exchange rates adjust to reflect differences in:",
+    "options": ["Interest Rates", "Inflation Rates (Price Levels)", "GDP Growth", "Unemployment"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Exchange Rate Theories",
+    "explanation": "PPP states that exchange rates equalize the purchasing power of currencies. If Country A has higher inflation than B, A's currency must depreciate."
+  },
+  {
+    "question": "<b>Topic: IS-LM Model</b><br>An increase in the Money Supply by the Central Bank shifts the:",
+    "options": ["IS Curve to the Right", "IS Curve to the Left", "LM Curve to the Right", "LM Curve to the Left"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Monetary Policy",
+    "explanation": "Money Supply affects the Money Market (LM). An increase in Money Supply lowers interest rates for a given income, shifting **LM to the Right**."
+  },
+  {
+    "question": "<b>Topic: Costs</b><br>The 'U' shape of the Short-Run Average Cost (SAC) curve is due to:",
+    "options": ["Returns to Scale", "Law of Variable Proportions", "Externalities", "Technological Progress"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Cost Theory",
+    "explanation": "In the Short Run, the Law of Variable Proportions (Diminishing Returns) operates. Initially costs fall (increasing returns), then rise (diminishing returns), creating a U-shape."
+  },
+  {
+    "question": "<b>Topic: Balance of Payments</b><br>Which of the following transactions is 'Autonomous' (Above the Line) in BoP?",
+    "options": ["Use of Forex Reserves by RBI", "Borrowing from IMF to cover deficit", "Export of Software Services", "Gold swap by Central Bank"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "BoP Components",
+    "explanation": "Autonomous transactions are done for economic motive (Profit). Exports are autonomous. The others are 'Accommodating' (Below the Line) to fix the BoP imbalance."
+  },
+  {
+    "question": "<b>Topic: Curves</b><br>The 'Laffer Curve' demonstrates the relationship between:",
+    "options": ["Tax Rates and Tax Revenue", "Inequality and Per Capita Income", "Unemployment and Inflation", "Growth and Environment"],
+    "answer": 0,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Fiscal Policy",
+    "explanation": "Laffer Curve shows that increasing Tax Rates increases revenue only up to a peak. Beyond that, higher rates discourage work/compliance, reducing revenue."
+  },
+  {
+    "question": "<b>Topic: Demand</b><br>If the Income Elasticity of Demand is greater than 1 (e.g., +2.5), the good is classified as a:",
+    "options": ["Necessity", "Inferior Good", "Luxury Good", "Giffen Good"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Elasticity",
+    "explanation": "Income Elasticity > 1 means demand rises faster than income (Luxury). Between 0 and 1 is Necessity. Negative is Inferior."
+  },
+  {
+    "question": "<b>Topic: Business Cycles</b><br>A 'Recessionary Gap' (Deflationary Gap) occurs when:",
+    "options": ["Aggregate Demand > Aggregate Supply at full employment", "Aggregate Demand < Aggregate Supply at full employment", "Investment > Savings", "Exports > Imports"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Keynesian Theory",
+    "explanation": "If AD is insufficient to buy the full-employment output (AD < AS), inventories pile up, leading to a Recessionary Gap."
+  },
+  {
+    "question": "<b>Topic: Market Structures</b><br>In Perfect Competition, the firm's Supply Curve in the short run is represented by:",
+    "options": ["The Marginal Cost curve above AVC", "The Average Cost curve", "The Marginal Revenue curve", "The Average Variable Cost curve"],
+    "answer": 0,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Supply Curve",
+    "explanation": "A competitive firm produces where P = MC. However, it will shut down if P < AVC. Thus, the supply curve is the MC curve *above* the Shutdown Point (AVC)."
+  },
+  {
+    "question": "<b>Topic: Curves</b><br>The 'Engel Curve' shows the relationship between:",
+    "options": ["Price and Quantity Demanded", "Income and Quantity Demanded", "Income and Inequality", "Tax Rate and Revenue"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Consumer Behavior",
+    "explanation": "Engel Curve traces how the quantity demanded of a good changes as the consumer's Income changes. (Upward for Normal goods, Downward for Inferior)."
+  }
+]
