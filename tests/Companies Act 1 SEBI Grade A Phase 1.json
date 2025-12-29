@@ -1,0 +1,182 @@
+[
+  {
+    "question": "<b>Topic: Meetings</b><br>What is the minimum notice period required for calling an Annual General Meeting (AGM) as per Section 101?",
+    "options": ["7 Clear Days", "14 Clear Days", "21 Clear Days", "30 Clear Days"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Companies Act",
+    "topic": "Meetings",
+    "explanation": "A general meeting may be called by giving not less than **21 clear days' notice** either in writing or through electronic mode."
+  },
+  {
+    "question": "<b>Topic: Directors</b><br>What is the maximum number of directorships a person can hold simultaneously in all companies (including private and public)?",
+    "options": ["10", "15", "20", "50"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Companies Act",
+    "topic": "Directors",
+    "explanation": "A person cannot be a director in more than **20 companies** at the same time. Out of these, the maximum number of public companies cannot exceed 10."
+  },
+  {
+    "question": "<b>Topic: Penalties</b><br>Under Section 447, the punishment for 'Fraud' involves imprisonment for a term which shall not be less than:",
+    "options": ["3 months", "6 months", "1 year", "2 years"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Companies Act",
+    "topic": "Penalties (Sec 447)",
+    "explanation": "Fraud involving an amount of at least ₹10 Lakh or 1% of turnover is punishable with imprisonment of min **6 months** (extendable to 10 years)."
+  },
+  {
+    "question": "<b>Topic: Definitions</b><br>As per the definition of a 'Small Company' (Sec 2(85)), the Paid-up Share Capital shall not exceed ___ and Turnover shall not exceed ___.",
+    "options": ["₹2 Cr, ₹20 Cr", "₹4 Cr, ₹40 Cr", "₹10 Cr, ₹100 Cr", "₹50 Lakh, ₹2 Cr"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Companies Act",
+    "topic": "Definitions",
+    "explanation": "Revised limits for Small Company: Paid-up Capital <= **₹4 Crore** AND Turnover <= **₹40 Crore**."
+  },
+  {
+    "question": "<b>Topic: CSR</b><br>Every company meeting the CSR criteria must spend at least ___ of the average net profits of the company made during the three immediately preceding financial years.",
+    "options": ["1%", "2%", "5%", "10%"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Companies Act",
+    "topic": "CSR Limits",
+    "explanation": "Sec 135 requires spending at least **2%** of the average net profits of the 3 immediately preceding FYs."
+  },
+  {
+    "question": "<b>Topic: Meetings</b><br>The maximum gap allowed between two consecutive Board Meetings is:",
+    "options": ["90 Days", "100 Days", "120 Days", "180 Days"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Companies Act",
+    "topic": "Board Meetings",
+    "explanation": "Sec 173: Minimum 4 meetings per year, with a gap of not more than **120 days** between two consecutive meetings."
+  },
+  {
+    "question": "<b>Topic: Auditors</b><br>In a listed company, an individual auditor cannot serve for more than:",
+    "options": ["One term of 5 consecutive years", "Two terms of 5 consecutive years", "One term of 10 consecutive years", "Life time"],
+    "answer": 0,
+    "marks": 1,
+    "section": "Companies Act",
+    "topic": "Audit Rotation",
+    "explanation": "Sec 139: Individual Auditor = 1 term of 5 years. Audit Firm = 2 terms of 5 years (Total 10). Cooling period is 5 years."
+  },
+  {
+    "question": "<b>Topic: Directors</b><br>Every listed company and every other public company with a paid-up share capital of ₹100 Crore or more or turnover of ₹300 Crore or more must appoint at least one:",
+    "options": ["Small Shareholder Director", "Woman Director", "Resident Director", "Nominee Director"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Companies Act",
+    "topic": "Woman Director",
+    "explanation": "Rule 3: Woman Director is mandatory for Listed companies OR Public companies with Capital >= ₹100 Cr or Turnover >= ₹300 Cr."
+  },
+  {
+    "question": "<b>Topic: Meetings</b><br>What is the 'Quorum' for a General Meeting of a Public Company if the number of members is between 1000 and 5000?",
+    "options": ["5 members", "15 members", "30 members", "50 members"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Companies Act",
+    "topic": "Quorum (Sec 103)",
+    "explanation": "<1000 members = 5. **1000-5000 members = 15**. >5000 members = 30 personally present."
+  },
+  {
+    "question": "<b>Topic: Incorporation</b><br>For a 'One Person Company' (OPC), the nominee must be:",
+    "options": ["A Resident Indian only", "A Citizen of India (Resident or Non-Resident)", "Any person (Foreign or Indian)", "A Body Corporate"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Companies Act",
+    "topic": "OPC Rules",
+    "explanation": "Amendment 2021: A natural person who is an Indian Citizen, whether resident in India **or otherwise** (NRI allowed), can incorporate an OPC."
+  },
+  {
+    "question": "<b>Topic: Dividends</b><br>Dividend once declared must be paid within ___ days from the date of declaration.",
+    "options": ["15 days", "21 days", "30 days", "45 days"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Companies Act",
+    "topic": "Dividend Payment",
+    "explanation": "Sec 127: Dividend must be paid/warrants posted within **30 days** of declaration. Penalty for director: Imprisonment up to 2 yrs + Fine."
+  },
+  {
+    "question": "<b>Topic: Directors</b><br>An Independent Director can hold office for a term up to ___ consecutive years on the Board of a company.",
+    "options": ["3 years", "5 years", "7 years", "10 years"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Companies Act",
+    "topic": "Independent Directors",
+    "explanation": "Sec 149(10): An Independent Director shall hold office for a term up to **5 consecutive years**. (Max 2 terms permitted)."
+  },
+  {
+    "question": "<b>Topic: Accounts</b><br>The books of account of every company shall be kept open for inspection by directors and preserved for a period of not less than ___ financial years immediately preceding a financial year.",
+    "options": ["5 years", "7 years", "8 years", "10 years"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Companies Act",
+    "topic": "Books of Accounts",
+    "explanation": "Sec 128: Books of account must be preserved in good order for at least **8 financial years**."
+  },
+  {
+    "question": "<b>Topic: Charges</b><br>A company must register the particulars of every charge created by it with the Registrar within ___ days of its creation.",
+    "options": ["15 days", "30 days", "60 days", "90 days"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Companies Act",
+    "topic": "Registration of Charges",
+    "explanation": "Sec 77: Charge must be registered within **30 days**. (Registrar may allow extension up to 60 days on payment of additional fees)."
+  },
+  {
+    "question": "<b>Topic: Deposits</b><br>A company accepting deposits from the public must maintain a 'Deposit Repayment Reserve Account' and deposit at least ___ of the amount of deposits maturing during the following financial year.",
+    "options": ["10%", "15%", "20%", "25%"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Companies Act",
+    "topic": "Deposits (Sec 73)",
+    "explanation": "Company must deposit **20%** of the amount of deposits maturing in the following FY into a scheduled bank by April 30th each year."
+  },
+  {
+    "question": "<b>Topic: Penalties</b><br>If a company fails to file its Annual Return (Sec 92) within the prescribed time, the penalty is:",
+    "options": ["₹50,000 one time", "₹10,000 + ₹100 per day", "₹1 Lakh one time", "₹10,000 continuing per day"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Companies Act",
+    "topic": "Penalties",
+    "explanation": "Penalty for Sec 92/137 default: ₹10,000 (Initial) + **₹100 per day** of continuing failure (Subject to Max cap ₹2L for Co, ₹50k for Officer)."
+  },
+  {
+    "question": "<b>Topic: Directors</b><br>The Director Identification Number (DIN) is allotted by the Central Government under which section?",
+    "options": ["Sec 152", "Sec 153/154", "Sec 164", "Sec 149"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Companies Act",
+    "topic": "Sections",
+    "explanation": "Sec 153 deals with Application for DIN. Sec 154 deals with Allotment of DIN."
+  },
+  {
+    "question": "<b>Topic: Prospectus</b><br>A 'Shelf Prospectus' filed with the Registrar shall remain valid for a period not exceeding:",
+    "options": ["6 months", "1 year", "2 years", "5 years"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Companies Act",
+    "topic": "Prospectus",
+    "explanation": "Sec 31: A Shelf Prospectus is valid for **1 year**. It allows multiple issues of securities without filing a fresh prospectus every time."
+  },
+  {
+    "question": "<b>Topic: Auditors</b><br>The First Auditor of a non-government company shall be appointed by the Board of Directors within ___ days of registration of the company.",
+    "options": ["15 days", "30 days", "60 days", "90 days"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Companies Act",
+    "topic": "Appointment of Auditor",
+    "explanation": "Sec 139(6): Board appoints First Auditor within **30 days**. If Board fails, EGM appoints within 90 days."
+  },
+  {
+    "question": "<b>Topic: Meetings</b><br>In case of an adjourned AGM due to want of Quorum, if the Quorum is still not present within half an hour of the rescheduled time, then:",
+    "options": ["The meeting stands cancelled", "The members present shall be the Quorum", "The meeting is adjourned sine die", "Penalty is imposed on Directors"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Companies Act",
+    "topic": "Adjournment",
+    "explanation": "Sec 103: If at the adjourned meeting also quorum is not present, **the members present shall be the quorum** (provided not less than 2)."
+  }
+]
