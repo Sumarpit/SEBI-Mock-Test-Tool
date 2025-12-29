@@ -1,0 +1,182 @@
+[
+  {
+    "question": "<b>Topic: Market Structures</b><br>The 'Kinked Demand Curve' hypothesis in an Oligopoly market is used to explain:",
+    "options": ["Price Rigidity", "Price Discrimination", "Cartel Formation", "Product Differentiation"],
+    "answer": 0,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Oligopoly",
+    "explanation": "In an Oligopoly, if a firm raises price, rivals won't follow (elastic demand). If it lowers price, rivals will follow (inelastic demand). This creates a kink, leading to 'Price Rigidity' or sticky prices."
+  },
+  {
+    "question": "<b>Topic: National Income</b><br>If Nominal GDP is ₹11,000 and Real GDP is ₹10,000, what is the GDP Deflator?",
+    "options": ["100", "110", "90", "120"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "GDP Concepts",
+    "explanation": "GDP Deflator = (Nominal GDP / Real GDP) * 100 = (11,000 / 10,000) * 100 = 110."
+  },
+  {
+    "question": "<b>Topic: Macro Theory</b><br>In the IS-LM model, an increase in Government Spending (Fiscal Expansion) will shift the:",
+    "options": ["LM Curve to the right", "IS Curve to the right", "LM Curve to the left", "IS Curve to the left"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "IS-LM Model",
+    "explanation": "The IS curve represents the Goods Market (Investment-Saving). Fiscal policy (Govt Spending) shifts the IS curve. Expansionary policy shifts it to the Right."
+  },
+  {
+    "question": "<b>Topic: Inflation</b><br>The 'Phillips Curve' depicts the inverse relationship between:",
+    "options": ["Inflation and GDP Growth", "Inflation and Unemployment", "Interest Rate and Investment", "Tax Rate and Tax Revenue"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Phillips Curve",
+    "explanation": "The Phillips Curve suggests a trade-off: Lower Unemployment leads to Higher Inflation (in the short run)."
+  },
+  {
+    "question": "<b>Topic: Money & Banking</b><br>Which of the following monetary aggregates is known as 'Broad Money' in India?",
+    "options": ["M1", "M2", "M3", "M4"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Money Supply",
+    "explanation": "M3 is Broad Money. M1 is Narrow Money. M3 = M1 + Time Deposits with Banks."
+  },
+  {
+    "question": "<b>Topic: International Eco</b><br>Which of the following is recorded in the 'Capital Account' of the Balance of Payments (BoP)?",
+    "options": ["Export of Goods", "Remittances from abroad", "NRI Deposits", "Interest payments on loans"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Balance of Payments",
+    "explanation": "NRI Deposits create a liability/asset change, so they are Capital Account. Exports, Remittances, and Interest Payments are Current Account items."
+  },
+  {
+    "question": "<b>Topic: Consumer Behavior</b><br>For a 'Giffen Good', the Income Effect is:",
+    "options": ["Positive and stronger than Substitution Effect", "Negative and stronger than Substitution Effect", "Negative and weaker than Substitution Effect", "Zero"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Demand Theory",
+    "explanation": "For a Giffen Good, as Price falls, Real Income rises, but the consumer buys LESS. The Negative Income Effect is so strong it outweighs the Substitution Effect."
+  },
+  {
+    "question": "<b>Topic: Fiscal Policy</b><br>'Primary Deficit' is calculated as:",
+    "options": ["Fiscal Deficit - Interest Payments", "Revenue Deficit - Interest Payments", "Fiscal Deficit + Interest Payments", "Total Expenditure - Total Receipts"],
+    "answer": 0,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Budget Deficits",
+    "explanation": "Primary Deficit shows the current fiscal stance excluding legacy debt cost. Formula: Fiscal Deficit - Interest Payments."
+  },
+  {
+    "question": "<b>Topic: Macro Theory</b><br>According to the Keynesian Consumption Function, the 'Marginal Propensity to Consume' (MPC) is:",
+    "options": ["Always greater than 1", "Always equal to 1", "Between 0 and 1", "Negative"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Keynesian Theory",
+    "explanation": "MPC is the fraction of additional income spent. It lies between 0 (save everything) and 1 (spend everything)."
+  },
+  {
+    "question": "<b>Topic: Market Structures</b><br>In which market structure is the demand curve for a firm perfectly elastic (horizontal)?",
+    "options": ["Monopoly", "Oligopoly", "Perfect Competition", "Monopolistic Competition"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Market Forms",
+    "explanation": "In Perfect Competition, the firm is a price taker. It can sell any amount at the market price. Hence, demand curve is horizontal (Ed = Infinity)."
+  },
+  {
+    "question": "<b>Topic: Growth Models</b><br>Which growth model emphasizes the role of 'Human Capital' and technological progress as endogenous factors?",
+    "options": ["Harrod-Domar Model", "Solow Model", "Romer (Endogenous) Growth Model", "Lewis Model"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Growth & Development",
+    "explanation": "Harrod-Domar and Solow treat tech as exogenous (external). Romer's Endogenous Growth Theory integrates R&D and human capital internally."
+  },
+  {
+    "question": "<b>Topic: RBI & Monetary</b><br>The 'Liquidity Trap' is a situation where:",
+    "options": ["Interest rates are high and demand for money is low", "Interest rates are very low and people prefer to hold cash", "Inflation is extremely high", "Banks stop lending due to NPA"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Keynesian Economics",
+    "explanation": "At very low interest rates, investors expect rates to rise (bond prices to fall), so they hold 100% cash. Monetary policy becomes ineffective."
+  },
+  {
+    "question": "<b>Topic: Forex</b><br>The 'J-Curve Effect' describes the phenomenon where:",
+    "options": ["Tax revenue rises then falls with tax rate", "Trade Balance worsens initially after devaluation before improving", "Inequality rises then falls with growth", "Inflation rises with unemployment"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "International Trade",
+    "explanation": "After currency devaluation, imports become expensive immediately (Volume stays same, Value rises), worsening trade deficit. Later, volumes adjust, and balance improves."
+  },
+  {
+    "question": "<b>Topic: Production</b><br>The 'Law of Variable Proportions' applies to:",
+    "options": ["Long Run only", "Short Run only", "Both Short and Long Run", "Very Long Run"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Production Function",
+    "explanation": "It assumes at least one factor is fixed (usually Capital). Hence, it applies only to the Short Run. (Long Run = Returns to Scale)."
+  },
+  {
+    "question": "<b>Topic: National Income</b><br>Which of the following is NOT included in the calculation of National Income?",
+    "options": ["Wages of factory workers", "Imputed rent of owner-occupied houses", "Transfer Payments (e.g., Pension, Scholarship)", "Profit of PSU"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "NI Accounting",
+    "explanation": "Transfer Payments are unilateral (no goods/services produced in return). Hence, excluded from National Income."
+  },
+  {
+    "question": "<b>Topic: Multiplier</b><br>If the Marginal Propensity to Save (MPS) is 0.2, what is the value of the Investment Multiplier?",
+    "options": ["2", "4", "5", "10"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Multiplier Effect",
+    "explanation": "Multiplier (K) = 1 / MPS. K = 1 / 0.2 = 5."
+  },
+  {
+    "question": "<b>Topic: Business Cycles</b><br>A 'Recession' is technically defined as:",
+    "options": ["High inflation for 1 year", "Rising unemployment for 2 years", "Negative GDP growth for 2 consecutive quarters", "Stock market crash"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Business Cycles",
+    "explanation": "Technical definition: Contraction (Negative GDP growth) for two consecutive quarters."
+  },
+  {
+    "question": "<b>Topic: Market Failure</b><br>Public Goods are characterized by being:",
+    "options": ["Rival and Excludable", "Non-Rival and Excludable", "Non-Rival and Non-Excludable", "Rival and Non-Excludable"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Public Finance",
+    "explanation": "Public Goods (e.g., National Defense, Streetlight) are Non-Rival (my use doesn't reduce yours) and Non-Excludable (cannot stop free riders)."
+  },
+  {
+    "question": "<b>Topic: Forex</b><br>The difference between the Nominal Exchange Rate and the Real Exchange Rate (REER) is that REER adjusts for:",
+    "options": ["Interest Rate Differentials", "Inflation Differentials", "GDP Growth Differentials", "Fiscal Deficit"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Exchange Rates",
+    "explanation": "REER = Nominal Rate adjusted for relative price levels (Inflation) between trading partners."
+  },
+  {
+    "question": "<b>Topic: General</b><br>Which curve shows the relationship between Tax Rates and Tax Revenue?",
+    "options": ["Lorenz Curve", "Laffer Curve", "Kuznets Curve", "Indifference Curve"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Economics",
+    "topic": "Famous Curves",
+    "explanation": "Laffer Curve (inverted U-shape) suggests that tax revenue increases with tax rate up to a point, after which it falls."
+  }
+]
