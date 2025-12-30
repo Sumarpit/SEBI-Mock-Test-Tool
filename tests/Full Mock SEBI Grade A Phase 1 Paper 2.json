@@ -9,7 +9,7 @@
       "14%",
       "10%"
     ],
-    "answer": "13.33%",
+    "answer": 2,
     "explanation": "Return on Equity (ROE) is calculated as Net Income / Shareholders' Equity * 100.<br>ROE = (4,00,000 / 30,00,000) * 100 = 13.33%."
   },
   {
@@ -22,7 +22,7 @@
       "When MU is Zero, TU is maximum.",
       "When MU is negative, TU starts inclining"
     ],
-    "answer": "When MU is Zero, TU is maximum.",
+    "answer": 3,
     "explanation": "The relationship between Total Utility and Marginal Utility:<br>1. When MU decreases (but positive), TU increases at a decreasing rate.<br>2. When MU is Zero, TU is maximum (Saturation point).<br>3. When MU is negative, TU starts declining."
   },
   {
@@ -35,7 +35,7 @@
       "Twenty-one days",
       "Forty-five days"
     ],
-    "answer": "Twenty-one days",
+    "answer": 3,
     "explanation": "According to the provision (Sec 48 of Companies Act), if a variation of share rights affects the holders of not less than 10% of the issued shares of a class and they did not consent, they have the right to apply to the Tribunal (NCLT) to cancel the variation. This application must be made within **21 days** after the consent was given or resolution passed."
   },
   {
@@ -48,7 +48,7 @@
       "Greeks Model",
       "Value at Risk (VaR) Model"
     ],
-    "answer": "Binomial Option Pricing Model",
+    "answer": 1,
     "explanation": "The Binomial Option Pricing Model (BOPM) assumes stock prices follow a discrete binomial distribution, with possible movements 'up' or 'down' at each time step, creating a binomial tree. Black-Scholes assumes continuous time."
   },
   {
@@ -58,10 +58,10 @@
       "NBFC cannot accept demand deposits",
       "NBFCs do not form part of the payment and settlement system and cannot issue cheques drawn on itself",
       "Deposit insurance facility of Deposit Insurance and Credit Guarantee Corporation is not available to depositors of NBFCs, unlike in case of banks.",
-      "Deposit insurance facility... is available to depositors of NBFCs...",
+      "Deposit insurance facility of Deposit Insurance and Credit Guarantee Corporation is available to depositors of NBFCs, unlike in case of banks.",
       "All A, B and C"
     ],
-    "answer": "All A, B and C",
+    "answer": 4,
     "explanation": "Key differences: 1) NBFCs cannot accept demand deposits (only term deposits). 2) NBFCs are not part of the payment system (cannot issue cheques). 3) DICGC insurance covers Bank deposits but NOT NBFC deposits."
   },
   {
@@ -74,7 +74,7 @@
       "5%",
       "10%"
     ],
-    "answer": "5%",
+    "answer": 3,
     "explanation": "According to the rules (Sec 67 proviso), the total value of shares to be purchased or subscribed by the company, including the money provided for this purpose, must not exceed **5%** of the aggregate of the company's paid-up capital and free reserves."
   },
   {
@@ -87,7 +87,7 @@
       "I and II Only",
       "All of the above"
     ],
-    "answer": "III only",
+    "answer": 2,
     "explanation": "Working Capital = CA - CL.<br>Statement III is correct because selling goods on credit increases Debtors (CA) and decreases Inventory (CA) by a similar amount (assuming cost), so Net CA is unchanged. Similarly for purchase on credit (Inventory Up, Creditors Up), both CA and CL rise, keeping net WC stable (or logic assumes operating cycle neutrality)."
   },
   {
@@ -100,7 +100,7 @@
       "37 days",
       "7 days"
     ],
-    "answer": "37 days",
+    "answer": 3,
     "explanation": "A company must transfer any declared dividend not paid/claimed within 30 days to a special 'Unpaid Dividend Account'. The maximum period available is 30 days (payment period) + 7 days (transfer period) = **37 days** from the date of declaration."
   },
   {
@@ -113,7 +113,7 @@
       "System 4: Participative system",
       "System 5: Transformational leadership"
     ],
-    "answer": "System 1: Exploitative authoritative",
+    "answer": 0,
     "explanation": "Likert's System 1 (Exploitative Authoritative) relies on threats, fear, and punishment. Communication is entirely downward, and management has no trust in subordinates."
   },
   {
@@ -126,7 +126,7 @@
       "Only Statement II is correct",
       "None of the above"
     ],
-    "answer": "All statements are correct",
+    "answer": 0,
     "explanation": "Gini coefficient ranges from 0 to 1.<br>0 = Perfect Equality (everyone has same income).<br>1 = Perfect Inequality (one person has all income).<br>Both statements are correct."
   },
   {
@@ -139,7 +139,7 @@
       "Prime Cost",
       "Material cost"
     ],
-    "answer": "Variable Cost",
+    "answer": 1,
     "explanation": "In a make-or-buy decision, fixed costs are generally irrelevant (sunk). The firm should compare the supplier's price with its own **Variable (Incremental) Cost** of production."
   },
   {
@@ -152,20 +152,20 @@
       "₹1,97,000",
       "₹1,99,000"
     ],
-    "answer": "₹1,99,000",
+    "answer": 4,
     "explanation": "Cash Expenses = Accrual Expense + Decrease in Outstanding - Decrease in Prepaid (logic check).<br>Actual Logic:<br>Decrease in Prepaid (10k->8k) = +2000 (Cash inflow/savings utilized)<br>Decrease in Outstanding (15k->12k) = -3000 (Cash paid for old dues)<br>Net Adjustment = +2000 - 3000 = -1000.<br>Cash Expense = 2,00,000 - 1,000 = ₹1,99,000."
   },
   {
     "id": 13,
     "question": "What is the primary purpose of the \"margin\" in futures contracts, and which of the following accurately describes the \"maintenance margin\"?",
     "options": [
-      "Margin is used to pay for the entire cost...",
-      "Margin is a penalty for contract defaults...",
-      "Margin is a commission fee...",
+      "Margin is used to pay for the entire cost of the futures contract upfront; maintenance margin is the initial amount required to open a futures position.",
+      "Margin is a penalty for contract defaults; maintenance margin is the extra charge added during volatile market conditions.",
+      "Margin is a commission fee paid to brokers; maintenance margin is the fee for each trade executed.",
       "Margin ensures the performance of the contract terms; maintenance margin is the amount set aside to prevent the balance in the margin account from becoming negative.",
-      "Margin is a bonus..."
+      "Margin is a bonus given to investors; maintenance margin is the bonus distributed during profitable trades."
     ],
-    "answer": "Margin ensures the performance of the contract terms; maintenance margin is the amount set aside to prevent the balance in the margin account from becoming negative.",
+    "answer": 3,
     "explanation": "Margin is a good-faith deposit (collateral) to mitigate counterparty risk. Maintenance margin is the minimum balance that must be maintained in the account at all times to keep the position open."
   },
   {
@@ -178,7 +178,7 @@
       "If it has issued any partly paid-up shares",
       "If it is not recommended by the Board"
     ],
-    "answer": "If it has not defaulted in payment of interest or principal on fixed deposits or debt securities",
+    "answer": 2,
     "explanation": "Conditions for Bonus Issue (Sec 63): Must be authorized by AOA, recommended by Board, approved by members. Must **NOT** have defaulted in payment of interest/principal on fixed deposits or debt securities, or statutory dues (PF/Gratuity). Shares must be fully paid up."
   },
   {
@@ -191,7 +191,7 @@
       "Only B and C",
       "All of the above"
     ],
-    "answer": "Only B and C",
+    "answer": 3,
     "explanation": "Aristotle's model is a **Linear** model (Speaker -> Speech -> Audience), not circular. It is considered the **first model** (classic). It focuses on persuasion and does **not** include concepts like feedback or noise."
   },
   {
@@ -204,7 +204,7 @@
       "20%",
       "25%"
     ],
-    "answer": "10%",
+    "answer": 0,
     "explanation": "Inflation Rate = ((Current CPI - Past CPI) / Past CPI) * 100.<br>= ((132 - 120) / 120) * 100<br>= (12 / 120) * 100 = 10%."
   },
   {
@@ -217,12 +217,12 @@
       "Only a and b",
       "None of the above"
     ],
-    "answer": "Only a and b",
+    "answer": 3,
     "explanation": "Demand-pull inflation is 'Too much money chasing too few goods'. It happens when Aggregate Demand > Aggregate Supply. Statements A and B describe this perfectly. It is associated with Keynesian economics, not Classical."
   },
   {
     "id": 18,
-    "question": "GHI Ltd. is a company planning to issue sweat equity shares to reward its employees... The company's existing paid-up equity share capital is ₹10 crores... What is the maximum value of sweat equity shares GHI Ltd. can issue in a year if it follows the standard limit?",
+    "question": "GHI Ltd. is a company planning to issue sweat equity shares to reward its employees for their hard work and contributions. The company's existing paid-up equity share capital is ₹10 crores. GHI Ltd. wants to ensure compliance with the regulatory limits for issuing sweat equity shares. What is the maximum value of sweat equity shares GHI Ltd. can issue in a year if it follows the standard limit?",
     "options": [
       "₹1.5 crores",
       "₹2 crores",
@@ -230,7 +230,7 @@
       "₹7.5 crores",
       "₹10 crores"
     ],
-    "answer": "₹5 crores",
+    "answer": 2,
     "explanation": "Limit for Sweat Equity: Max **15%** of paid-up equity capital OR **₹5 Crores**, whichever is **HIGHER**. <br>15% of 10 Cr = 1.5 Cr.<br>Comparing 1.5 Cr vs 5 Cr -> Higher is 5 Cr."
   },
   {
@@ -243,7 +243,7 @@
       "Three-fourths",
       "One-fourth"
     ],
-    "answer": "Two-thirds",
+    "answer": 2,
     "explanation": "Sec 152(6): Unless articles provide for retirement of all, not less than **two-thirds** of the total number of directors of a public company shall be persons whose period of office is liable to determination by retirement of directors by rotation."
   },
   {
@@ -252,12 +252,12 @@
     "options": [
       "If the inflation in the economy is high then, to control the inflation RBI reduces the money supply by selling government securities.",
       "Open Market Operations refers to buying and selling of bonds issued by the Government in the secondary market.",
-      "Outright Open Market Operations and LAF Open Market Operations are the two types...",
+      "Outright Open Market Operations and LAF Open Market Operations are the two types of Open Market Operations",
       "Under OMO there is continuous buying and selling of securities",
       "All of the above are correct"
     ],
-    "answer": "All of the above are correct",
-    "explanation": "Technically, the question asks for the 'incorrect' answer, but the system marks 'All of the above are correct' as red (wrong) but selects B as green? <br>*Wait, looking at the image:* Option B is marked Green. Option E is Red. <br>The prompt asks to choose the **incorrect** answer. <br>Let's re-read Option B: '...in the secondary market'. This is actually Correct. <br>Actually, looking closely at the image solution, it says 'Hence Option B is correct'. This implies the question might have been 'Which is Correct?' or there is a glitch in the screenshot interpretation. <br>However, based on standard knowledge: OMO is buying/selling in the open market (Secondary). Statement A is correct. Statement C is correct. <br>Wait, the solution text says 'Hence Option B is correct' and defines OMO. It seems the question asked for the **Correct** statement or there's a typo. I will stick to Option B being the intended answer."
+    "answer": 1,
+    "explanation": "Open Market Operations refers to buying and selling of bonds issued by the Government in the open(secondary) market. This purchase and sale is entrusted to the Central bank on behalf of the Government."
   },
   {
     "id": 21,
@@ -269,12 +269,12 @@
       "120 days",
       "150 days"
     ],
-    "answer": "46 days",
+    "answer": 0,
     "explanation": "Average Collection Period = (Average Debtors / Credit Sales) * 365.<br>= (80,000 / 6,40,000) * 365<br>= (1/8) * 365 = 45.625 days -> approx 46 days."
   },
   {
     "id": 22,
-    "question": "Which of the following statements about capital reserve and reserve capital are correct?<br>I. A capital reserve is created from the capital profits... while Reserve capital is created out of authorized capital.<br>II. It is necessary to create both capital reserve and reserve capital.<br>III. Reserve capital is utilized at the time of liquidation of the company.",
+    "question": "Which of the following statements about capital reserve and reserve capital are correct?<br>I. A capital reserve is created from the capital profits of the company while Reserve capital is created out of authorized capital.<br>II. It is necessary to create both capital reserve and reserve capital.<br>III. Reserve capital is utilized at the time of liquidation of the company.",
     "options": [
       "Only I",
       "Only II",
@@ -282,20 +282,20 @@
       "Both I and II",
       "Both I and III"
     ],
-    "answer": "Both I and III",
+    "answer": 4,
     "explanation": "I is Correct: Capital Reserve comes from capital profits (e.g., revaluation). Reserve Capital is uncalled capital reserved for winding up.<br>II is Incorrect: Creating Reserve Capital is optional (Special Resolution required).<br>III is Correct: Reserve Capital can only be called up during liquidation."
   },
   {
     "id": 23,
     "question": "Which of the following correctly describes the policy responses needed for an Inflationary Gap versus a Deflationary Gap?",
     "options": [
-      "Inflationary Gap: Need for more government spending...",
-      "Inflationary Gap: Need for expansionary fiscal...",
+      "Inflationary Gap: Need for more government spending, less taxes, lower interest rates; Deflationary Gap: Need for restrictive fiscal and monetary policies",
+      "Inflationary Gap: Need for expansionary fiscal and monetary policies; Deflationary Gap: Need for restrictive fiscal and monetary policies",
       "Inflationary Gap: Need for restrictive fiscal and monetary policies; Deflationary Gap: Need for more government spending, less taxes, lower interest rates",
-      "Inflationary Gap: Need for underemployment...",
-      "Inflationary Gap: Excess of aggregate Supply..."
+      "Inflationary Gap: Need for underemployment; Deflationary Gap: Need for overemployment",
+      "Inflationary Gap: Excess of aggregate Supply; Deflationary Gap: Excess of aggregate demand"
     ],
-    "answer": "Inflationary Gap: Need for restrictive fiscal and monetary policies; Deflationary Gap: Need for more government spending, less taxes, lower interest rates",
+    "answer": 2,
     "explanation": "Inflationary Gap (AD > AS) requires Contractionary/Restrictive policies (Cut spending, Hike taxes/rates).<br>Deflationary Gap (AD < AS) requires Expansionary policies (Boost spending, Cut taxes/rates)."
   },
   {
@@ -303,12 +303,12 @@
     "question": "The Government of India, in consultation with the RBI, decided to issue a new short-term instrument, known as Cash Management Bills (CMB), in August 2009. Which among the following is not a feature of CMB?",
     "options": [
       "The tenure of the proposed Bills will be less than 91 days",
-      "The proposed Bills will be issued at discount to the face value...",
-      "The proposed Bills will be tradable...",
+      "The proposed Bills will be issued at discount to the face value through auctions",
+      "The proposed Bills will be tradable and qualify for ready forward facility",
       "The settlement of the auction will be on T+4 basis.",
-      "The Non-Competitive Bidding Scheme... will not be extended..."
+      "The Non-Competitive Bidding Scheme for Treasury Bills will not be extended to the Cash Management Bills."
     ],
-    "answer": "The settlement of the auction will be on T+4 basis.",
+    "answer": 3,
     "explanation": "CMBs are issued to meet temporary cash flow mismatches. Tenure < 91 days. Issued at discount. Tradable. **Settlement is T+1**, not T+4."
   },
   {
@@ -321,7 +321,7 @@
       "Finalising Comparison Measurements",
       "Taking Corrective Actions"
     ],
-    "answer": "Finalising Comparison Measurements",
+    "answer": 3,
     "explanation": "The standard Control Process has 4 steps: 1. Set Standards, 2. Measure Performance, 3. Compare Actual vs Standard, 4. Take Corrective Action. 'Finalising Comparison Measurements' is not a standard step name."
   },
   {
@@ -334,7 +334,7 @@
       "5% of the issue size, carried out by an external legal advisor.",
       "25% of the issue size, carried out by a regulatory body."
     ],
-    "answer": "15% of the issue size, carried out by a stabilizing agent",
+    "answer": 2,
     "explanation": "According to guidelines (Green Shoe Option), the promoter lends up to **15%** of the issue size to the Stabilizing Agent (usually a merchant banker) to stabilize the post-IPO price."
   },
   {
@@ -347,7 +347,7 @@
       "20%",
       "35%"
     ],
-    "answer": "20%",
+    "answer": 3,
     "explanation": "P/V Ratio = (Contribution / Sales) * 100.<br>In the absence of variable cost info, we assume Profit = Contribution (if Fixed Cost is zero or ignored, though theoretically unsafe, let's look at the solution logic).<br>Wait, the solution says: 'P/V Ratio = 2,00,000 / 10,00,000 = 0.20'.<br>Re-reading Question Image 27: Sales is 1,00,00,000 (1 Cr) or 10,00,000 (10 Lakh)? <br>Let's look at the comma placement in image: `₹1,00,00,000` (1 Crore). Solution says `2,00,000 / 10,00,000`. <br>There is a mismatch in zeroes in the Oliveboard solution or my reading. <br>Actually, look at the zeroes again in the image Q27: `1,00,00,000` (7 zeroes = 1 Cr). Profit `200,000` (2 Lakh). <br>If 2L/1Cr = 2%. Option is not there.<br>If Sales was `10,00,000` (10 Lakh), then 2L/10L = 20%. <br>Given Option D is 20%, the question likely meant 10 Lakh Sales or the solution has a typo. <br>*Based on the solution screenshot provided:* It calculates 20%."
   },
   {
@@ -360,7 +360,7 @@
       "The net value of invisible exports exceeds the net value of invisible imports.",
       "The nation's receipts on the current account are equal to its payments on the current account."
     ],
-    "answer": "The value of imports of goods is greater than the value of exports of goods.",
+    "answer": 2,
     "explanation": "Balance of Trade (BOT) deals only with **Goods** (Merchandise). A deficit means Imports > Exports."
   },
   {
@@ -373,7 +373,7 @@
       "Unity of Direction",
       "Authority"
     ],
-    "answer": "Esprit de Corps",
+    "answer": 2,
     "explanation": "Esprit de Corps is one of Fayol's 14 principles, emphasizing team spirit, harmony, and unity among personnel."
   },
   {
@@ -386,7 +386,7 @@
       "Only I and II",
       "Only II and III"
     ],
-    "answer": "Only II and III",
+    "answer": 4,
     "explanation": "TPM involves everyone (employees) and machines to improve integrity. Statement I says 'only', implying exclusion of employees or other aspects, which makes it weak. The solution selects II and III as the primary definitions."
   },
   {
@@ -399,7 +399,7 @@
       "Hindsight bias",
       "Availability bias"
     ],
-    "answer": "Anchoring bias",
+    "answer": 0,
     "explanation": "Anchoring bias occurs when an individual relies too heavily on an initial piece of information ('the anchor') when making decisions."
   },
   {
@@ -412,7 +412,7 @@
       "Statements II and V are correct",
       "Statements I and IV are correct"
     ],
-    "answer": "Statements II and IV are correct",
+    "answer": 1,
     "explanation": "Rules for Private Placement (Sec 42):<br>- Max persons: **200** (previously 50, updated to 200 by rules). So II is Correct, I is Incorrect.<br>- Allotment: Within **60 days** (Not 45). So III is Incorrect.<br>- Money: Separate Bank Account. IV is Correct.<br>- Penalty: Amount involved or 2 Cr, whichever is lower (Not 1k/day). V is Incorrect."
   },
   {
@@ -425,7 +425,7 @@
       "Multiple units; multiple items",
       "Multiple units; composite items"
     ],
-    "answer": "Multiple units, a single item",
+    "answer": 0,
     "explanation": "Job Costing = Costs collected for a **single** specific job/unit.<br>Batch Costing = Costs collected for a **batch** (group) of identical units (Multiple units) as a single cost unit."
   },
   {
@@ -438,7 +438,7 @@
       "To protect the interests of investors in agriculture...",
       "To protect the interests of investors in MSME..."
     ],
-    "answer": "To protect the interests of investors in securities and to promote the development of, and to regulate the securities market and for matters connected therewith or incidental thereto.",
+    "answer": 2,
     "explanation": "This is the verbatim Preamble of the SEBI Act, 1992. Memorize the trio: Protect, Promote, Regulate."
   },
   {
@@ -451,7 +451,7 @@
       "Decrease expenses by ₹4,000 , Decrease assets by ₹3,000",
       "None of the above"
     ],
-    "answer": "Increase liabilities by ₹4,000, Increase assets by ₹3,000",
+    "answer": 1,
     "explanation": "1. Accrued Wages (Outstanding): Wage Expense Dr, **Outstanding Wages (Liability) Cr**. -> Liability Increases.<br>2. Prepaid Rent: **Prepaid Rent (Asset) Dr**, Rent Expense Cr. -> Asset Increases."
   },
   {
@@ -464,7 +464,7 @@
       "Nominal Group Technique",
       "None of the above"
     ],
-    "answer": "Nominal Group Technique",
+    "answer": 3,
     "explanation": "NGT is structured. It involves silent generation of ideas followed by **voting/ranking** to reach a quick agreement on relative importance. Brainstorming lacks the voting/ranking structure."
   },
   {
@@ -477,7 +477,7 @@
       "₹5",
       "₹0"
     ],
-    "answer": "₹5",
+    "answer": 3,
     "explanation": "Option Premium = Intrinsic Value + Time Value.<br>Intrinsic Value (Call) = Spot - Strike = 100 - 90 = ₹10.<br>Premium = ₹15.<br>Time Value = 15 - 10 = **₹5**."
   },
   {
@@ -490,7 +490,7 @@
       "It reduces the need for the issuer to engage in buybacks...",
       "It minimizes the underwriters' fees..."
     ],
-    "answer": "It allows underwriters to control the final offer size based on market demand, minimizing reputational risk if shares trade below the offer price.",
+    "answer": 1,
     "explanation": "Green Shoe (Over-allotment) allows underwriters to oversell shares and then buy them back from the market if the price falls (stabilization), supporting the price and saving face."
   },
   {
@@ -503,7 +503,7 @@
       "WPI measures the average change in prices received by the producer...",
       "Both WPI and PPI include indirect taxes..."
     ],
-    "answer": "PPI removes the multiple counting bias inherent in WPI, and WPI does not cover services while PPI includes services.",
+    "answer": 2,
     "explanation": "WPI tracks price at wholesale level (Goods only, includes multiple counting of inputs). PPI tracks price received by producer (Goods + Services, excludes taxes, removes multiple counting)."
   },
   {
@@ -516,7 +516,7 @@
       "Retention Money = Value of work certified + value of work not certified",
       "None of the above"
     ],
-    "answer": "Retention Money = Value of work certified - Payment actually made/cash paid",
+    "answer": 2,
     "explanation": "When a contractor certifies work, the client pays only a % (e.g., 90%) and retains the rest (10%) as security. <br>Retention = Certified Value - Cash Paid."
   },
   {
@@ -529,7 +529,7 @@
       "Subtract foreign exchange gain as it reflects a non-cash adjustment.",
       "Subtract dividend received as it is considered a non-operating income."
     ],
-    "answer": "Add interest received as it is related to operating activities.",
+    "answer": 2,
     "explanation": "Interest Received is an **Investing Activity** (return on investment), not Operating. Therefore, we **Subtract** it from Net Profit to clean the operating cash flow, not add it. Adding it is incorrect."
   },
   {
@@ -542,7 +542,7 @@
       "88,500",
       "98,500"
     ],
-    "answer": "88,500",
+    "answer": 3,
     "explanation": "RM Consumed = Opening Stock + Purchases + Expenses on RM (Carriage In) - Closing Stock.<br>= 13,500 + 70,000 + 22,500 - 17,500.<br>= 1,06,000 - 17,500 = **88,500**."
   },
   {
@@ -555,7 +555,7 @@
       "90 days",
       "120 days"
     ],
-    "answer": "60 days",
+    "answer": 2,
     "explanation": "Sec 139(7): For a Govt Company, First Auditor is appointed by CAG within **60 days** of registration."
   },
   {
@@ -568,7 +568,7 @@
       "Chronemics",
       "Artifacts"
     ],
-    "answer": "Paralinguistics",
+    "answer": 0,
     "explanation": "Paralinguistics refers to 'how' something is said, not 'what'. It involves tone, pitch, volume, speed, pauses (Vocal cues)."
   },
   {
@@ -581,7 +581,7 @@
       "Rs 850",
       "Rs 800"
     ],
-    "answer": "Rs 850",
+    "answer": 3,
     "explanation": "C = 50 + 0.8(1000) = 50 + 800 = 850."
   },
   {
@@ -594,7 +594,7 @@
       "Physical damage of the assets",
       "The carrying amount of the assets... is more than its market capitalization"
     ],
-    "answer": "Physical damage of the assets",
+    "answer": 3,
     "explanation": "Internal indicators are those arising from within the company. 'Physical damage' or 'Obsolescence' are internal. Market rates, Technology changes, and Legal changes are External indicators."
   },
   {
@@ -607,7 +607,7 @@
       "88,500",
       "1,44,400"
     ],
-    "answer": "1,44,400",
+    "answer": 4,
     "explanation": "Prime Cost = RM Consumed + Direct Labor + Direct Expenses.<br>RM Consumed = 88,500 (calculated in Q42).<br>Direct Labor = 32,500.<br>Direct Expenses = 23,400.<br>Total = 88,500 + 32,500 + 23,400 = **1,44,400**."
   },
   {
@@ -620,7 +620,7 @@
       "None of the above",
       "All the above"
     ],
-    "answer": "All the above",
+    "answer": 4,
     "explanation": "Standard IS-LM assumptions: Investment falls as interest rate rises (Negative slope). Savings rise as interest rate/income rises (Positive slope)."
   },
   {
@@ -633,7 +633,7 @@
       "Marginal Cost",
       "Capitalised Cost"
     ],
-    "answer": "Estimated Cost",
+    "answer": 1,
     "explanation": "This is a definition-based question. Kohler defines 'Estimated Cost' as the expected cost computed in advance."
   },
   {
@@ -646,7 +646,7 @@
       "90-degree line",
       "15-degree line"
     ],
-    "answer": "45-degree line",
+    "answer": 2,
     "explanation": "The 45-degree line represents points where Y (Income) = C (Consumption) + S (Savings). If the consumption curve hits this line, Y = C, so S = 0. This is the Break-even point."
   }
 ]
