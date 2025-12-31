@@ -1,0 +1,182 @@
+[
+  {
+    "question": "<b>Topic: National News - Infrastructure</b><br>Which of the following became the first airport in India to be connected by a water taxi service in October 2025?",
+    "options": ["Indira Gandhi International Airport", "Cochin International Airport", "Navi Mumbai International Airport", "Jewar Airport"],
+    "answer": 2,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "National News",
+    "explanation": "Navi Mumbai International Airport (NMIA) is the first airport in India to be connected by a water taxi service."
+  },
+  {
+    "question": "<b>Topic: International Appointments</b><br>Sanae Takaichi has recently been elected as the first female Prime Minister of which country?",
+    "options": ["South Korea", "Japan", "Thailand", "Singapore"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Appointments",
+    "explanation": "Sanae Takaichi was elected as the 104th Prime Minister of Japan, becoming the first female to hold the post."
+  },
+  {
+    "question": "<b>Topic: Banking & Regulatory Appointments</b><br>Who has been appointed as the new Deputy Governor of the Reserve Bank of India (RBI) in October 2025?",
+    "options": ["Sanjay Kumar Hansda", "Shirish Chandra Murmu", "Sonali Sen Gupta", "Prathiba M. Singh"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Appointments",
+    "explanation": "Shirish Chandra Murmu has been appointed as the Deputy Governor of the Reserve Bank of India."
+  },
+  {
+    "question": "<b>Topic: Global Rankings</b><br>According to the Henley Passport Index 2025, what is the rank of the Indian passport?",
+    "options": ["80th", "82nd", "85th", "90th"],
+    "answer": 2,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Rankings",
+    "explanation": "India is ranked 85th in the Henley Passport Index 2025, while Singapore holds the top spot."
+  },
+  {
+    "question": "<b>Topic: Science & Technology</b><br>Nafithromycin (Miqnaf), which was recently in the news, is India’s first indigenously developed:",
+    "options": ["Anti-viral drug", "Macrolide antibiotic", "mRNA Vaccine", "Monoclonal antibody"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "National News",
+    "explanation": "Nafithromycin (Miqnaf) is India’s first indigenously developed macrolide antibiotic, developed by DBT and Wockhardt."
+  },
+  {
+    "question": "<b>Topic: Nobel Prizes 2025</b><br>The Nobel Memorial Prize in Economic Sciences 2025 was awarded to Joel Mokyr, Philippe Aghion, and Peter Howitt for their research on:",
+    "options": ["Global poverty alleviation", "Creative destruction and technological progress", "Behavioral economics in finance", "Auction theory"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Awards",
+    "explanation": "The 2025 Economics Nobel was awarded for research on historical prerequisites for technological progress and the theory of 'creative destruction'."
+  },
+  {
+    "question": "<b>Topic: Sports - Para Athletics</b><br>Which country topped the medal tally at the 12th World Para Athletics Championships 2025 held in New Delhi?",
+    "options": ["India", "China", "Brazil", "USA"],
+    "answer": 2,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Sports",
+    "explanation": "Brazil topped the medal tally at the World Para Athletics Championships 2025 held in New Delhi."
+  },
+  {
+    "question": "<b>Topic: National Awards</b><br>Who was honored with the Dadasaheb Phalke Award at the 71st National Film Awards?",
+    "options": ["Amitabh Bachchan", "Mohanlal", "Shyam Benegal", "Shah Rukh Khan"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Awards",
+    "explanation": "Mohanlal was presented with the Dadasaheb Phalke Award at the 71st National Film Awards."
+  },
+  {
+    "question": "<b>Topic: Financial Centres Ranking</b><br>According to the Global Financial Centres Index 38, which Indian city is the top-ranked financial hub in the country?",
+    "options": ["Mumbai (Rank 50)", "GIFT City (Rank 43)", "New Delhi (Rank 62)", "Bengaluru (Rank 70)"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Rankings",
+    "explanation": "GIFT City is India's top-ranked financial centre, placed 43rd globally in the GFCI 38."
+  },
+  {
+    "question": "<b>Topic: International Summits</b><br>What was the theme of the 22nd ASEAN-India Summit hosted in Kuala Lumpur, Malaysia?",
+    "options": ["Connectivity and Resilience", "Inclusivity and Sustainability", "A Global Partner", "Digital Transformation"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Summits",
+    "explanation": "The theme of the 22nd ASEAN-India Summit in Malaysia was 'Inclusivity and Sustainability'."
+  },
+  {
+    "question": "<b>Topic: Defence - Military Exercises</b><br>'Exercise Konkan-2025' is a bilateral naval exercise conducted between India and which other country?",
+    "options": ["France", "United Kingdom", "Japan", "Australia"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Defence",
+    "explanation": "Exercise Konkan-2025 is conducted between India and the United Kingdom."
+  },
+  {
+    "question": "<b>Topic: Constitutional Appointments</b><br>Who has been appointed as the 53rd Chief Justice of India (CJI)?",
+    "options": ["Justice Surya Kant", "Justice D.Y. Chandrachud", "Justice Prathiba M. Singh", "Justice Sanjiv Khanna"],
+    "answer": 0,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Appointments",
+    "explanation": "Justice Surya Kant has been appointed as the 53rd Chief Justice of India."
+  },
+  {
+    "question": "<b>Topic: Cyber Security</b><br>Which international framework is recognized as the first global, legally binding framework to combat cyber threats?",
+    "options": ["Budapest Convention", "Hanoi Convention", "Paris Call", "Tallinn Manual"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "International News",
+    "explanation": "The Hanoi Convention is the first global, legally binding framework to combat cyber threats."
+  },
+  {
+    "question": "<b>Topic: Sports - Shooting</b><br>Which country topped the medal table at the ISSF Junior World Cup 2025, hosted in New Delhi for the first time?",
+    "options": ["China", "India", "Germany", "USA"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Sports",
+    "explanation": "India topped the medal table at the ISSF Junior World Cup 2025 with a total of 26 medals."
+  },
+  {
+    "question": "<b>Topic: National Initiatives</b><br>The 'Sanchar Saathi Portal,' which recently helped recover 6 lakh lost mobile phones, is an initiative of which Ministry?",
+    "options": ["Ministry of Home Affairs", "Ministry of Electronics and IT", "Ministry of Communications", "Ministry of Finance"],
+    "answer": 2,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Initiatives",
+    "explanation": "The Sanchar Saathi Portal is an initiative of the Ministry of Communications (Department of Telecommunications)."
+  },
+  {
+    "question": "<b>Topic: Global Wealth</b><br>In October 2025, who became the first person in the world to reach a net worth of half a trillion dollars ($500 Billion)?",
+    "options": ["Jeff Bezos", "Elon Musk", "Bernard Arnault", "Mark Zuckerberg"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "International News",
+    "explanation": "Elon Musk became the first 'half-trillionaire' in the world with a net worth of $500 billion."
+  },
+  {
+    "question": "<b>Topic: Defence Inductions</b><br>Which of the following is an indigenous 4.5-generation multi-role fighter jet recently inducted/ordered by the Indian Air Force?",
+    "options": ["Rafale", "Tejas LCA Mk1A", "MIG-21 Bison", "Su-30 MKI"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Defence",
+    "explanation": "The Tejas LCA Mk1A is an indigenous 4.5-generation multi-role fighter jet."
+  },
+  {
+    "question": "<b>Topic: State News</b><br>Which Indian city has been recommended as the proposed host for the 2030 Centenary Commonwealth Games?",
+    "options": ["New Delhi", "Ahmedabad", "Mumbai", "Bengaluru"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "National News",
+    "explanation": "Ahmedabad has been recommended as the proposed host city for the 2030 Centenary Commonwealth Games."
+  },
+  {
+    "question": "<b>Topic: Global Rankings - Pension</b><br>What is India's rank in the Global Pension Index 2025?",
+    "options": ["45th", "52nd", "85th", "23rd"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Rankings",
+    "explanation": "India is ranked 52nd in the Global Pension Index 2025, with the Netherlands taking the top spot."
+  },
+  {
+    "question": "<b>Topic: Nobel Peace Prize 2025</b><br>Who was awarded the Nobel Peace Prize 2025 for advocating for free and fair elections in Venezuela?",
+    "options": ["Alexei Navalny", "Maria Corina Machado", "Narges Mohammadi", "Malala Yousafzai"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Awards",
+    "explanation": "Maria Corina Machado (Venezuela) won the 2025 Nobel Peace Prize for her role in advocating for free and fair elections."
+  }
+]
