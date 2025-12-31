@@ -1,0 +1,182 @@
+[
+  {
+    "question": "<b>Topic: SEBI Mutual Fund Reforms</b><br>As per the SEBI Mitra platform guidelines, what is the minimum period of no investor-initiated transactions (financial or non-financial) required to define a mutual fund folio as 'inactive'?",
+    "options": ["3 years", "5 years", "7 years", "10 years"],
+    "answer": 3,
+    "marks": 1,
+    "section": "Finance",
+    "topic": "Mutual Funds",
+    "explanation": "SEBI has redefined an 'inactive folio' as one where no investor-initiated transactions have occurred for a period of 10 years. The Mitra platform was specifically launched to help trace such unclaimed investments,,."
+  },
+  {
+    "question": "<b>Topic: RBI Integrated Ombudsman Scheme (RB-IOS)</b><br>Effective November 1, 2025, the RB-IOS has been expanded to include State and Central Co-operative Banks with a minimum deposit size of:",
+    "options": ["₹25 crore", "₹50 crore", "₹100 crore", "₹200 crore"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Banking",
+    "topic": "RBI Regulation",
+    "explanation": "The expansion of RB-IOS now covers State and Central Co-operative Banks with a deposit size of ₹50 crore and above. Previously, it covered SCBs, RRBs, and NBFCs with assets over ₹100 crore,,."
+  },
+  {
+    "question": "<b>Topic: SEBI Algo Trading Framework</b><br>What is the extended deadline for the full implementation of the Retail Algorithmic (Algo) Trading Framework for stock brokers?",
+    "options": ["October 31, 2025", "January 5, 2026", "April 1, 2026", "October 1, 2026"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Finance",
+    "topic": "Primary Market",
+    "explanation": "SEBI has extended the full implementation deadline for the Retail Algo Trading Framework to April 1, 2026. However, non-compliant brokers will be barred from onboarding new retail clients for API-based trading from January 5, 2026,."
+  },
+  {
+    "question": "<b>Topic: Payment Aggregators (PA)</b><br>Under the RBI directions for Payment Aggregators, what is the minimum net worth required for non-bank PAs at the time of application?",
+    "options": ["₹5 crore", "₹15 crore", "₹25 crore", "₹50 crore"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Banking",
+    "topic": "Fintech",
+    "explanation": "Non-bank PAs must have a minimum net worth of ₹15 crore at the time of application and reach ₹25 crore by the end of the third financial year post-authorization,,."
+  },
+  {
+    "question": "<b>Topic: Deceased Claim Settlements</b><br>According to the RBI Directions 2025, what is the threshold for the 'simplified settlement procedure' (without requiring a Will or legal dispute) for Commercial Banks (other than Co-operative Banks)?",
+    "options": ["₹5 lakh", "₹10 lakh", "₹15 lakh", "₹25 lakh"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Banking",
+    "topic": "RBI Guidelines",
+    "explanation": "The simplified settlement threshold is ₹15 lakh for Commercial Banks and ₹5 lakh for Co-operative Banks. Claims must be settled within 15 calendar days,."
+  },
+  {
+    "question": "<b>Topic: Banking Penalties</b><br>What is the daily penalty imposed on banks for delays in processing locker or safe custody claims beyond the prescribed 15-day period for deceased customers?",
+    "options": ["₹500 per day", "₹1,000 per day", "₹2,500 per day", "₹5,000 per day"],
+    "answer": 3,
+    "marks": 1,
+    "section": "Banking",
+    "topic": "RBI Guidelines",
+    "explanation": "Under the new RBI framework, banks face a specific penalty of ₹5,000 per day for delays in settling locker or safe custody claims,."
+  },
+  {
+    "question": "<b>Topic: Government Schemes (PM-SETU)</b><br>What is the total budgetary outlay for the 'Pradhan Mantri Skilling and Employability Transformation through Upgraded ITIs' (PM-SETU) scheme?",
+    "options": ["₹22,919 crore", "₹30,000 crore", "₹60,000 crore", "₹76,000 crore"],
+    "answer": 2,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Government Schemes",
+    "explanation": "PM-SETU, aimed at upgrading 1,000 Government ITIs, has a total outlay of ₹60,000 crore,,."
+  },
+  {
+    "question": "<b>Topic: Clearing Corporations (CCs)</b><br>A SEBI working group has proposed increasing the share of fees allocated to Clearing Corporations from the current 5–6% to approximately:",
+    "options": ["10% or more", "15% or more", "25% or more", "50% or more"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Finance",
+    "topic": "Capital Markets",
+    "explanation": "The proposal aims to increase the fee allocation to approximately 25% or more from total transaction volumes to strengthen Clearing Corporations,,."
+  },
+  {
+    "question": "<b>Topic: Banking Capital (Basel III)</b><br>Revised Basel III regulations allow banks to include Perpetual Debt Instruments (PDI) in Additional Tier 1 (AT1) capital up to what percentage of Risk Weighted Assets (RWAs)?",
+    "options": ["1.0%", "1.5%", "2.0%", "2.5%"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Finance",
+    "topic": "Banking Regulation",
+    "explanation": "The eligible limit for PDI in AT1 capital is 1.5% of RWAs. Banks can now source the entire 1.5% from overseas,."
+  },
+  {
+    "question": "<b>Topic: UPI Innovations</b><br>What is the transaction cap for instant withdrawals from liquid mutual funds via the 'Pay with Mutual Fund' feature on UPI?",
+    "options": ["₹10,000", "₹25,000", "₹50,000", "₹1,00,000"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Banking",
+    "topic": "Fintech",
+    "explanation": "The feature allows instant redemption and UPI payment from liquid funds with a cap of ₹50,000,."
+  },
+  {
+    "question": "<b>Topic: Digital Payment Authentication</b><br>RBI has mandated the implementation of Two-Factor Authentication (2FA) for all domestic digital payments by which deadline?",
+    "options": ["October 31, 2025", "January 1, 2026", "April 1, 2026", "October 1, 2026"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Banking",
+    "topic": "Digital Payments",
+    "explanation": "Mandatory 2FA, with at least one factor being dynamic, must be fully implemented by April 1, 2026."
+  },
+  {
+    "question": "<b>Topic: Economic Indicators</b><br>What was the headline CPI Inflation recorded for September 2025, reaching its lowest point since June 2017?",
+    "options": ["0.13%", "1.54%", "2.60%", "4.00%"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Macroeconomics",
+    "explanation": "Headline CPI inflation for September 2025 was recorded at 1.54%,."
+  },
+  {
+    "question": "<b>Topic: Institutional Data (NeSL)</b><br>The authorized capital of India’s first Information Utility, NeSL (National E-Governance Services Ltd), was recently increased to:",
+    "options": ["₹25 crore", "₹50 crore", "₹75 crore", "₹100 crore"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Finance",
+    "topic": "Financial Institutions",
+    "explanation": "The authorized capital of NeSL was increased to ₹75 crore, with 65% shareholding held by major government financial institutions."
+  },
+  {
+    "question": "<b>Topic: Appointments</b><br>Who was appointed as the Deputy Governor of RBI in October 2025, replacing M. Rajeshwar Rao?",
+    "options": ["Sanjay Kumar Hansda", "Sonali Sen Gupta", "Shirish Chandra Murmu", "R.S. Gandhi"],
+    "answer": 2,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Appointments",
+    "explanation": "Shirish Chandra Murmu was appointed as the Deputy Governor of RBI."
+  },
+  {
+    "question": "<b>Topic: Industrial Schemes</b><br>What is the total outlay for the newly launched 'Electronics Component Manufacturing Scheme (2025)' under MeitY?",
+    "options": ["₹11,440 crore", "₹22,919 crore", "₹60,000 crore", "₹750 crore"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Government Schemes",
+    "explanation": "The Electronics Component Manufacturing Scheme has a total outlay of ₹22,919 crore,."
+  },
+  {
+    "question": "<b>Topic: Banking Laws (Amendment) Act, 2025</b><br>Under the 2025 amendments, what is the maximum number of nominees allowed for a single deposit account or locker?",
+    "options": ["2 Persons", "3 Persons", "4 Persons", "5 Persons"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Banking",
+    "topic": "Banking Regulation",
+    "explanation": "The amendment allows up to 4 persons as nominees for deposit accounts and lockers."
+  },
+  {
+    "question": "<b>Topic: Unclaimed Deposits (DEA Fund)</b><br>As of August 2025, what is the total value of unclaimed deposits transferred to the RBI's Depositor Education and Awareness (DEA) Fund?",
+    "options": ["₹9,000 crore", "₹13,800 crore", "₹50,000 crore", "₹75,000 crore"],
+    "answer": 3,
+    "marks": 1,
+    "section": "Banking",
+    "topic": "RBI Data",
+    "explanation": "Unclaimed deposits in the DEA Fund stood at ₹75,000 crore as of August 2025."
+  },
+  {
+    "question": "<b>Topic: Fintech Mergers & Acquisitions</b><br>Which Dubai-based bank acquired a 60% stake in RBL Bank for $3 billion, marking a major cross-border deal?",
+    "options": ["First Abu Dhabi Bank", "Emirates NBD", "Mashreq Bank", "Qatar National Bank"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Banking Sector",
+    "explanation": "Emirates NBD acquired a majority 60% stake in RBL Bank for $3 billion,."
+  },
+  {
+    "question": "<b>Topic: Hello! UPI (Voice)</b><br>What is the maximum limit per transaction for the voice-enabled feature 'Hello! UPI' in the offline 'on-call' mode?",
+    "options": ["₹100", "₹500", "₹1,000", "₹2,000"],
+    "answer": 2,
+    "marks": 1,
+    "section": "Banking",
+    "topic": "Fintech",
+    "explanation": "The 'on-call' offline mode for Hello! UPI has a per-transaction limit of ₹1,000, with a daily limit of 5 transactions."
+  },
+  {
+    "question": "<b>Topic: Companies Act & Dividends</b><br>According to Section 124(5) of the Companies Act 2013, unclaimed dividends must be transferred to the IEPF after how many years?",
+    "options": ["5 years", "7 years", "10 years", "25 years"],
+    "answer": 1,
+    "marks": 1,
+    "section": "Finance",
+    "topic": "Corporate Law",
+    "explanation": "Unclaimed dividends must be transferred to the Investor Education and Protection Fund (IEPF) after 7 years,."
+  }
+]
