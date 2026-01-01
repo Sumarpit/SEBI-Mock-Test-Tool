@@ -1,0 +1,322 @@
+[
+  {
+    "type": "GS_Statement_Based",
+    "question": "<b>With reference to the Export Promotion Mission (EPM) approved in 2025, consider the following statements:</b><br>1. It is a Central Sector Scheme with a financial outlay of over ₹25,000 crores.<br>2. The mission includes a sub-scheme 'Niryat Disha' focused specifically on providing affordable trade finance.<br>3. It integrates existing schemes like the Interest Equalisation Scheme and Market Access Initiative.<br><br><b>Which of the statements given above are correct?</b>",
+    "options": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
+    "answer": 2,
+    "subject": "Economy",
+    "topic": "Trade and Commerce",
+    "marks": 2.0,
+    "negative": 0.66,
+    "explanation": "<b>Statement 1 is correct:</b> The EPM has a financial outlay of Rs. 25,060 crores for six years.<br><b>Statement 2 is incorrect:</b> 'Niryat Disha' focuses on non-financial support like market readiness and quality compliance, while 'Niryat Protsahan' is designed for financial support/trade finance.<br><b>Statement 3 is correct:</b> The mission integrates and modernizes existing schemes like Interest Equalisation and Market Access Initiative."
+  },
+  {
+    "type": "GS_Fact_Based",
+    "question": "<b>Which organization is the implementing agency for the 'Credit Guarantee Scheme for Exporters (CGSE)'?</b>",
+    "options": [
+      "Export-Import Bank of India (EXIM)",
+      "National Credit Guarantee Trustee Company Limited (NCGTC)",
+      "Directorate General of Foreign Trade (DGFT)",
+      "Securities and Exchange Board of India (SEBI)"
+    ],
+    "answer": 1,
+    "subject": "Economy",
+    "topic": "Export Promotion",
+    "marks": 2.0,
+    "negative": 0.66,
+    "explanation": "The CGSE is implemented by the Department of Financial Services (DFS) through the <b>National Credit Guarantee Trustee Company Limited (NCGTC)</b>. It provides up to ₹20,000 crore collateral-free credit with 100% guarantee coverage."
+  },
+  {
+    "type": "GS_Statement_Based",
+    "question": "<b>In the context of the Indian manufacturing sector as of 2024-25, consider the following statements:</b><br>1. Manufacturing contributes approximately 17% to India's GDP.<br>2. India’s share in global manufacturing currently stands at approximately 10%.<br>3. Out of the total FDI received in 2024-25, manufacturing accounted for nearly 23.5%.<br><br><b>Which of the statements given above is/are correct?</b>",
+    "options": [
+      "1 only",
+      "1 and 3 only",
+      "2 and 3 only",
+      "1, 2 and 3"
+    ],
+    "answer": 1,
+    "subject": "Economy",
+    "topic": "Manufacturing Sector",
+    "marks": 2.0,
+    "negative": 0.66,
+    "explanation": "<b>Statement 1 is correct:</b> Manufacturing contributes 17% to India's GDP.<br><b>Statement 2 is incorrect:</b> India’s share in global manufacturing is around 3%, not 10%.<br><b>Statement 3 is correct:</b> Manufacturing accounted for 23.5% (USD 19.04 billion) of the total FDI of USD 81.04 billion in 2024-25."
+  },
+  {
+    "type": "GS_Match_Following",
+    "question": "<b>Consider the following pairs of 'Frontier Technology Enablers' and their roles identified by NITI Aayog:</b><br><br><table border='1' style='width:100%; border-collapse:collapse;'><tr><th>Technology</th><th>Role/Application</th></tr><tr><td>1. Digital Twins</td><td>Virtual replicas of physical systems</td></tr><tr><td>2. Advanced Materials</td><td>Predictive maintenance</td></tr><tr><td>3. AI & ML</td><td>Process optimization</td></tr></table><br><b>How many of the pairs given above are correctly matched?</b>",
+    "options": [
+      "Only one",
+      "Only two",
+      "All three",
+      "None"
+    ],
+    "answer": 1,
+    "subject": "Economy",
+    "topic": "Industrial Policy",
+    "marks": 2.0,
+    "negative": 0.66,
+    "explanation": "<b>Pair 1 is correct:</b> Digital Twins are virtual, data-driven replicas of physical systems.<br><b>Pair 2 is incorrect:</b> AI & ML are used for predictive maintenance; Advanced Materials are used to enhance product performance.<br><b>Pair 3 is correct:</b> AI & ML are used for process optimization and quality control."
+  },
+  {
+    "type": "GS_Fact_Based",
+    "question": "<b>According to the World Inequality Report 2026, what is the approximate share of national wealth held by the top 1% of India's population?</b>",
+    "options": [
+      "15%",
+      "25%",
+      "40%",
+      "65%"
+    ],
+    "answer": 2,
+    "subject": "Economy",
+    "topic": "Growth and Development",
+    "marks": 2.0,
+    "negative": 0.66,
+    "explanation": "The report states that the top 1% in India holds approximately <b>40%</b> of the total national wealth, while the richest 10% hold ~65%."
+  },
+  {
+    "type": "GS_Statement_Based",
+    "question": "<b>With reference to the measurement of inequality, consider the following statements:</b><br>1. The Gini Index ranges from 0 to 1, where 1 represents perfect equality.<br>2. The Palma Ratio is the share of income of the top 10% divided by the income share of the bottom 40%.<br>3. The Gini Index is commonly defined through the Lorenz curve.<br><br><b>Which of the statements given above are correct?</b>",
+    "options": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
+    "answer": 1,
+    "subject": "Economy",
+    "topic": "Growth and Development",
+    "marks": 2.0,
+    "negative": 0.66,
+    "explanation": "<b>Statement 1 is incorrect:</b> Gini index ranges from 0 to 100 (or 0 to 1), but 0 represents perfect equality and 100 (or 1) represents perfect inequality.<br><b>Statement 2 is correct:</b> This is the standard definition of the Palma Ratio.<br><b>Statement 3 is correct:</b> The Gini index is graphically represented via the Lorenz curve."
+  },
+  {
+    "type": "GS_Fact_Based",
+    "question": "<b>The 2025 implementation of the four Labour Codes in India consolidated how many existing central labour laws?</b>",
+    "options": [
+      "15",
+      "29",
+      "37",
+      "44"
+    ],
+    "answer": 1,
+    "subject": "Economy",
+    "topic": "Labour Reforms",
+    "marks": 2.0,
+    "negative": 0.66,
+    "explanation": "The four Labour Codes consolidate <b>29</b> existing central labour laws to simplify compliance and improve ease of doing business."
+  },
+  {
+    "type": "GS_Assertion_Reason",
+    "question": "<b>Statement-I:</b> Under the Industrial Relations Code 2020, the threshold for government approval for lay-offs in industrial establishments has been raised.<br><b>Statement-II:</b> The Code aims to offer greater flexibility to employers while explicitly institutionalising Fixed-Term Employment (FTE).<br><br><b>Which one of the following is correct in respect of the above statements?</b>",
+    "options": [
+      "Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I",
+      "Both Statement-I and Statement-II are correct and Statement-II is not the correct explanation for Statement-I",
+      "Statement-I is correct but Statement-II is incorrect",
+      "Statement-I is incorrect but Statement-II is correct"
+    ],
+    "answer": 1,
+    "subject": "Economy",
+    "topic": "Labour Reforms",
+    "marks": 2.0,
+    "negative": 0.66,
+    "explanation": "<b>Both statements are correct.</b> The threshold was raised from 100 to 300 workers. Statement II reflects the broader aim of the code to simplify laws and institutionalise FTE to reduce contractualisation."
+  },
+  {
+    "type": "GS_Statement_Based",
+    "question": "<b>With reference to the Code on Social Security 2020, consider the following statements:</b><br>1. For the first time, gig and platform workers are legally defined in India.<br>2. Aggregators are required to contribute 1-2% of their annual turnover to a social security fund.<br>3. Fixed-term employees become eligible for gratuity only after five years of continuous service.<br><br><b>Which of the statements given above is/are correct?</b>",
+    "options": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
+    "answer": 0,
+    "subject": "Economy",
+    "topic": "Labour Reforms",
+    "marks": 2.0,
+    "negative": 0.66,
+    "explanation": "<b>Statement 1 is correct:</b> Gig and platform workers are legally defined for the first time.<br><b>Statement 2 is correct:</b> Aggregators must contribute 1-2% of annual turnover (max 5% of payments to workers).<br><b>Statement 3 is incorrect:</b> Fixed-term employees are now eligible for gratuity after <b>one year</b> of service, reduced from the previous five years."
+  },
+  {
+    "type": "GS_Fact_Based",
+    "question": "<b>Under the Occupational Safety, Health and Working Conditions Code (2020), women are permitted to work night shifts (before 6 AM and beyond 7 PM) provided:</b>",
+    "options": [
+      "They are paid double wages.",
+      "The establishment has more than 500 workers.",
+      "They give consent and mandatory safety protocols are followed.",
+      "They are only employed in the IT or Healthcare sectors."
+    ],
+    "answer": 2,
+    "subject": "Economy",
+    "topic": "Labour Reforms",
+    "marks": 2.0,
+    "negative": 0.66,
+    "explanation": "Women can work in all types of establishments and during night hours subject to their <b>consent and safety measures</b>."
+  },
+  {
+    "type": "GS_Statement_Based",
+    "question": "<b>In the context of India's maritime sector, consider the following statements:</b><br>1. Nearly 95% of India’s trade by volume moves through maritime routes.<br>2. The 'Green Tug Programme' aims to deploy 100 eco-friendly tugs by 2040.<br>3. 'Digi Bandar' is a framework launched to privatize all major ports in India.<br><br><b>Which of the statements given above are correct?</b>",
+    "options": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
+    "answer": 0,
+    "subject": "Economy",
+    "topic": "Infrastructure",
+    "marks": 2.0,
+    "negative": 0.66,
+    "explanation": "<b>Statement 1 is correct:</b> 95% by volume and 70% by value move through maritime routes.<br><b>Statement 2 is correct:</b> The programme involves an investment of ₹12,000 crore for 100 tugs.<br><b>Statement 3 is incorrect:</b> Digi Bandar is a framework to make ports <b>data-driven, AI-enabled, and interconnected</b>, not specifically to privatize them."
+  },
+  {
+    "type": "GS_Fact_Based",
+    "question": "<b>What is the target for reducing logistics costs in India as per the National Logistics Policy (2022)?</b>",
+    "options": [
+      "12% of GDP by 2030",
+      "10% of GDP by 2025",
+      "8% of GDP by 2030",
+      "5% of GDP by 2047"
+    ],
+    "answer": 2,
+    "subject": "Economy",
+    "topic": "Logistics",
+    "marks": 2.0,
+    "negative": 0.66,
+    "explanation": "The policy aims to reduce logistics costs to an average of <b>8% of GDP by 2030</b>. As of 2025, it has dropped to 7.97%."
+  },
+  {
+    "type": "GS_Fact_Based",
+    "question": "<b>The 'Financial Sector Assessment Program (FSAP)' is a joint program conducted by which two international organizations?</b>",
+    "options": [
+      "World Bank and WTO",
+      "IMF and World Bank",
+      "WEF and IMF",
+      "ADB and World Bank"
+    ],
+    "answer": 1,
+    "subject": "Economy",
+    "topic": "Financial Institutions",
+    "marks": 2.0,
+    "negative": 0.66,
+    "explanation": "FSAP is a joint <b>World Bank-IMF</b> program started in 1999 to assess the resilience of a country's financial system."
+  },
+  {
+    "type": "GS_Assertion_Reason",
+    "question": "<b>Statement-I:</b> The National Industrial Classification (NIC) – 2025 moved from a 5-digit to a 6-digit coding structure.<br><b>Statement-II:</b> The update aims to provide greater granularity and better represent emerging sectors like fintech and e-commerce.<br><br><b>Which one of the following is correct in respect of the above statements?</b>",
+    "options": [
+      "Both Statement-I and Statement-II are correct and Statement-II is the correct explanation for Statement-I",
+      "Both Statement-I and Statement-II are correct and Statement-II is not the correct explanation for Statement-I",
+      "Statement-I is correct but Statement-II is incorrect",
+      "Statement-I is incorrect but Statement-II is correct"
+    ],
+    "answer": 0,
+    "subject": "Economy",
+    "topic": "National Income Accounting",
+    "marks": 2.0,
+    "negative": 0.66,
+    "explanation": "<b>Both statements are correct and II explains I.</b> The shift to a 6-digit structure was specifically done to allow for greater granularity and represent new activities like cloud infrastructure and fintech."
+  },
+  {
+    "type": "GS_Fact_Based",
+    "question": "<b>With reference to the Public Distribution System (PDS), which AI-based platform allows beneficiaries to share feedback on ration distribution in their preferred language?</b>",
+    "options": [
+      "Bhandaran 360",
+      "ANNA DARPAN",
+      "ASHA",
+      "SATHI"
+    ],
+    "answer": 2,
+    "subject": "Economy",
+    "topic": "Food Security",
+    "marks": 2.0,
+    "negative": 0.66,
+    "explanation": "The Department of Food and Public Distribution launched <b>ASHA (Anna Sahayata Holistic AI Solution)</b> to allow feedback through AI-enabled calls."
+  },
+  {
+    "type": "GS_Statement_Based",
+    "question": "<b>Consider the following statements regarding the 'Panchamrita' targets for 2030:</b><br>1. Meet 50% of energy requirements from renewable energy.<br>2. Reach non-fossil energy capacity of 500 GW.<br>3. Reduce carbon intensity of the economy by 45% over 2005 levels.<br><br><b>Which of the statements given above are correct?</b>",
+    "options": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
+    "answer": 3,
+    "subject": "Economy",
+    "topic": "Infrastructure-Energy",
+    "marks": 2.0,
+    "negative": 0.66,
+    "explanation": "All three are components of the <b>Panchamrita</b> targets announced at COP26 and updated in India's NDC. Note that Statement 3 is also an NDC target."
+  },
+  {
+    "type": "GS_Fact_Based",
+    "question": "<b>Which state in India has the highest installed Renewable Energy capacity as of 2025?</b>",
+    "options": [
+      "Gujarat",
+      "Tamil Nadu",
+      "Rajasthan",
+      "Karnataka"
+    ],
+    "answer": 2,
+    "subject": "Economy",
+    "topic": "Energy",
+    "marks": 2.0,
+    "negative": 0.66,
+    "explanation": "According to the sources, the top 5 RE states are <b>Rajasthan</b>, followed by Gujarat, Tamil Nadu, Karnataka, and Maharashtra."
+  },
+  {
+    "type": "GS_Statement_Based",
+    "question": "<b>With reference to the Draft Seeds Bill 2025, consider the following statements:</b><br>1. It mandates the registration of every seed variety sold commercially, except for farmers' varieties.<br>2. It seeks to replace the Seeds Act of 1966.<br>3. Farmers are prohibited from selling their seeds under a brand name.<br><br><b>Which of the statements given above are correct?</b>",
+    "options": [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
+    "answer": 3,
+    "subject": "Economy",
+    "topic": "Agriculture",
+    "marks": 2.0,
+    "negative": 0.66,
+    "explanation": "<b>Statement 1 is correct:</b> Registration is mandatory for all except farmers' varieties and export-only seeds.<br><b>Statement 2 is correct:</b> It replaces the 1966 Act and 1983 Order.<br><b>Statement 3 is correct:</b> Farmers can save and exchange seeds but cannot sell them under a brand name."
+  },
+  {
+    "type": "GS_Fact_Based",
+    "question": "<b>The 'BPaLM' regimen mentioned in the WHO Global TB Report 2025 is primarily used for the treatment of:</b>",
+    "options": [
+      "Drug-sensitive Tuberculosis",
+      "Drug-resistant Tuberculosis",
+      "Spinal Tuberculosis (Pott's disease)",
+      "Sickle Cell Disease"
+    ],
+    "answer": 1,
+    "subject": "Economy",
+    "topic": "Health Sector",
+    "marks": 2.0,
+    "negative": 0.66,
+    "explanation": "The <b>BPaLM</b> (Bedaquiline + Pretomanid + Linezolid + Moxifloxacin) regimen has transformed TB care, especially for <b>drug-resistant TB</b>."
+  },
+  {
+    "type": "GS_Statement_Based",
+    "question": "<b>With reference to the Pradhan Mantri Fasal Bima Yojana (PMFBY), consider the following statements:</b><br>1. For North-Eastern states, the premium subsidy is shared in a 90:10 ratio between Centre and State.<br>2. As per the 2026 revision, crop loss due to wild animal attacks is now included as a mandatory cover for all states.<br>3. Post-harvest losses are covered for up to 14 days after harvesting.<br><br><b>Which of the statements given above is/are correct?</b>",
+    "options": [
+      "1 only",
+      "1 and 3 only",
+      "2 and 3 only",
+      "1, 2 and 3"
+    ],
+    "answer": 1,
+    "subject": "Economy",
+    "topic": "Agriculture-Insurance",
+    "marks": 2.0,
+    "negative": 0.66,
+    "explanation": "<b>Statement 1 is correct:</b> Since Kharif 2020, NE states follow a 90:10 ratio.<br><b>Statement 2 is incorrect:</b> Crop loss due to wild animal attacks is the <b>5th add-on cover</b>, not a mandatory core cover.<br><b>Statement 3 is correct:</b> It covers up to 14 days for crops in 'cut and spread' condition."
+  }
+]
