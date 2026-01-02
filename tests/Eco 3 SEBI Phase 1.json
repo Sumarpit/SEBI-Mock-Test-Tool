@@ -1,0 +1,262 @@
+[
+  {
+    "id": 1,
+    "question": "In the context of the IS-LM model, what is the effect of an increase in Government Spending (G) on the IS curve and the equilibrium interest rate, assuming the LM curve is upward sloping?",
+    "options": [
+      "IS curve shifts to the left; Interest rate decreases",
+      "IS curve shifts to the right; Interest rate increases",
+      "IS curve shifts to the right; Interest rate decreases",
+      "LM curve shifts to the right; Interest rate increases",
+      "No change in IS curve; Interest rate remains constant"
+    ],
+    "answer": 1,
+    "explanation": "An increase in Government Spending (fiscal expansion) shifts the IS curve to the **right**. As aggregate demand rises, demand for money increases, pushing the interest rate **up** (assuming money supply is constant)."
+  },
+  {
+    "id": 2,
+    "question": "If the Nominal GDP of an economy is ₹600 Crores and the Real GDP is ₹500 Crores, what is the GDP Deflator?",
+    "options": [
+      "110",
+      "120",
+      "83.33",
+      "100",
+      "150"
+    ],
+    "answer": 1,
+    "explanation": "GDP Deflator = (Nominal GDP / Real GDP) * 100.<br>Deflator = (600 / 500) * 100 = 1.2 * 100 = **120**."
+  },
+  {
+    "id": 3,
+    "question": "Which of the following market structures is characterized by the 'Kinked Demand Curve' hypothesis, devised by Paul Sweezy?",
+    "options": [
+      "Perfect Competition",
+      "Monopoly",
+      "Monopolistic Competition",
+      "Oligopoly",
+      "Duopoly"
+    ],
+    "answer": 3,
+    "explanation": "The Kinked Demand Curve is a feature of **Oligopoly**. It explains price rigidity, where firms match price cuts by rivals but ignore price increases."
+  },
+  {
+    "id": 4,
+    "question": "According to the Short-Run Philips Curve, there is an inverse relationship between:",
+    "options": [
+      "Inflation and Interest Rates",
+      "Unemployment and Inflation",
+      "GDP Growth and Inflation",
+      "Money Supply and Interest Rates",
+      "Taxation and Revenue"
+    ],
+    "answer": 1,
+    "explanation": "The Philips Curve suggests a trade-off (inverse relationship) between **Unemployment** and **Inflation** in the short run. Lower unemployment leads to higher wages and higher inflation."
+  },
+  {
+    "id": 5,
+    "question": "If the Marginal Propensity to Consume (MPC) is 0.75, what is the value of the Investment Multiplier?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5",
+      "2.5"
+    ],
+    "answer": 2,
+    "explanation": "Investment Multiplier (K) = 1 / (1 - MPC).<br>K = 1 / (1 - 0.75) = 1 / 0.25 = **4**."
+  },
+  {
+    "id": 6,
+    "question": "Which of the following correctly defines 'Primary Deficit'?",
+    "options": [
+      "Fiscal Deficit - Interest Payments",
+      "Revenue Deficit - Capital Expenditure",
+      "Total Expenditure - Total Receipts",
+      "Fiscal Deficit + Interest Payments",
+      "Budget Deficit - Borrowings"
+    ],
+    "answer": 0,
+    "explanation": "Primary Deficit indicates the government's borrowing requirement excluding past interest obligations.<br>Formula: **Fiscal Deficit - Interest Payments**."
+  },
+  {
+    "id": 7,
+    "question": "In the Balance of Payments (BoP), 'Accommodating Transactions' are undertaken to:",
+    "options": [
+      "Maximize profit from trade",
+      "Establish equilibrium in the BoP",
+      "Increase foreign exchange reserves",
+      "Reduce the fiscal deficit",
+      "Promote exports"
+    ],
+    "answer": 1,
+    "explanation": "Accommodating transactions (below the line) are undertaken by the central bank to cover the deficit or surplus arising from autonomous transactions (above the line) to **balance the BoP**."
+  },
+  {
+    "id": 8,
+    "question": "Under the Law of Variable Proportions, at which stage does a rational producer operate?",
+    "options": [
+      "Stage I: Increasing Returns",
+      "Stage II: Diminishing Returns",
+      "Stage III: Negative Returns",
+      "Stage I and II",
+      "Any of the above"
+    ],
+    "answer": 1,
+    "explanation": "A rational producer operates in **Stage II**, where Total Product is increasing at a decreasing rate and Marginal Product is positive but declining. Stage I is irrational (underutilization) and Stage III is irrational (negative MP)."
+  },
+  {
+    "id": 9,
+    "question": "Which form of money is referred to as 'Narrow Money' in India?",
+    "options": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M0"
+    ],
+    "answer": 0,
+    "explanation": "**M1** is Narrow Money (Currency + Demand Deposits). M3 is Broad Money. M0 is Reserve Money."
+  },
+  {
+    "id": 10,
+    "question": "What does the 'Crowding Out' effect refer to in macroeconomics?",
+    "options": [
+      "Government spending replacing private investment due to higher interest rates",
+      "Foreign investors pushing out domestic investors",
+      "Increase in imports reducing domestic production",
+      "Rise in tax rates reducing disposable income",
+      "Central Bank printing money causing inflation"
+    ],
+    "answer": 0,
+    "explanation": "Crowding Out occurs when increased government borrowing raises interest rates, thereby making borrowing expensive for the private sector and reducing **Private Investment**."
+  },
+  {
+    "id": 11,
+    "question": "If the price of Good X rises and the demand for Good Y increases, then Good X and Good Y are:",
+    "options": [
+      "Complements",
+      "Substitutes",
+      "Inferior Goods",
+      "Giffen Goods",
+      "Unrelated Goods"
+    ],
+    "answer": 1,
+    "explanation": "This is a positive cross-elasticity of demand. If Price of X rises, consumers switch to Y. Therefore, they are **Substitutes** (e.g., Tea and Coffee)."
+  },
+  {
+    "id": 12,
+    "question": "Which of the following is NOT a characteristic of Monopolistic Competition?",
+    "options": [
+      "Large number of buyers and sellers",
+      "Product Differentiation",
+      "Free entry and exit",
+      "Homogeneous Product",
+      "Selling Costs"
+    ],
+    "answer": 3,
+    "explanation": "Monopolistic Competition features **Differentiated Products** (e.g., soaps, toothpaste). **Homogeneous Products** are a feature of Perfect Competition."
+  },
+  {
+    "id": 13,
+    "question": "The 'Liquidity Trap' is a situation where:",
+    "options": [
+      "Interest rates are very high and people hold no cash",
+      "Interest rates are very low and people hold all wealth as cash",
+      "Inflation is zero",
+      "Money supply cannot be increased",
+      "Banks stop lending"
+    ],
+    "answer": 1,
+    "explanation": "In a Liquidity Trap (Keynesian concept), interest rates are so low that people expect them to rise (and bond prices to fall), so they prefer to hold **Cash (Liquidity)** rather than bonds."
+  },
+  {
+    "id": 14,
+    "question": "What is the relationship between Average Cost (AC) and Marginal Cost (MC) when AC is minimum?",
+    "options": [
+      "MC > AC",
+      "MC < AC",
+      "MC = AC",
+      "MC is zero",
+      "No relationship"
+    ],
+    "answer": 2,
+    "explanation": "The MC curve cuts the AC curve from below at its minimum point. Therefore, when AC is minimum, **MC = AC**."
+  },
+  {
+    "id": 15,
+    "question": "Which curve represents the inequality of income distribution in an economy?",
+    "options": [
+      "Laffer Curve",
+      "Lorenz Curve",
+      "Kuznets Curve",
+      "Philips Curve",
+      "Indifference Curve"
+    ],
+    "answer": 1,
+    "explanation": "**Lorenz Curve** depicts income distribution. The Gini Coefficient is derived from it. (Laffer is tax rate vs revenue; Kuznets is growth vs inequality)."
+  },
+  {
+    "id": 16,
+    "question": "Devaluation of a currency is expected to lead to an improvement in the Balance of Payments only if the sum of price elasticities of exports and imports is greater than 1. This is known as:",
+    "options": [
+      "Marshall-Lerner Condition",
+      "J-Curve Effect",
+      "Fisher Effect",
+      "Mundell-Fleming Model",
+      "Heckscher-Ohlin Theory"
+    ],
+    "answer": 0,
+    "explanation": "The **Marshall-Lerner Condition** states that devaluation improves the trade balance only if Elasticity(Exports) + Elasticity(Imports) > 1."
+  },
+  {
+    "id": 17,
+    "question": "Which of the following creates 'High Powered Money' (H) in the economy?",
+    "options": [
+      "Commercial Banks",
+      "Reserve Bank of India (RBI)",
+      "Ministry of Finance",
+      "NBFCs",
+      "Development Finance Institutions"
+    ],
+    "answer": 1,
+    "explanation": "High Powered Money (Reserve Money or M0) includes Currency in Circulation + Bankers' Deposits with RBI. It is created by the **Central Bank (RBI)**."
+  },
+  {
+    "id": 18,
+    "question": "In National Income accounting, 'Personal Disposable Income' is calculated as:",
+    "options": [
+      "Personal Income - Direct Taxes - Miscellaneous Receipts of Govt",
+      "Personal Income - Indirect Taxes",
+      "National Income - Undistributed Profits",
+      "Private Income - Corporate Tax",
+      "Personal Income + Transfer Payments"
+    ],
+    "answer": 0,
+    "explanation": "Disposable Income is what individuals actually have available to spend. <br>PDI = Personal Income - Personal Direct Taxes (Income Tax) - Misc. Fees/Fines."
+  },
+  {
+    "id": 19,
+    "question": "Classical economists assumed that 'Supply creates its own Demand'. This law is known as:",
+    "options": [
+      "Gresham's Law",
+      "Say's Law of Markets",
+      "Keynes' Law",
+      "Engel's Law",
+      "Okun's Law"
+    ],
+    "answer": 1,
+    "explanation": "**Say's Law** is the foundation of Classical Economics, implying there can be no general overproduction or unemployment in the long run."
+  },
+  {
+    "id": 20,
+    "question": "If the Quantity Theory of Money equation is MV = PT, and 'V' (Velocity) and 'T' (Transactions) are constant, a doubling of Money Supply (M) will lead to:",
+    "options": [
+      "Doubling of Price Level (P)",
+      "Halving of Price Level (P)",
+      "No change in Price Level",
+      "Increase in Output",
+      "Decrease in Interest Rates"
+    ],
+    "answer": 0,
+    "explanation": "According to Fisher's Quantity Theory, if V and T are constant, M is directly proportional to P. Doubling M will **Double P** (Inflation)."
+  }
+]
