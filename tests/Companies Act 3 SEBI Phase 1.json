@@ -1,0 +1,322 @@
+[
+  {
+    "question": "According to Section 2(62), 'One Person Company' means a company which has only one person as a member. Who is eligible to incorporate an OPC?",
+    "options": [
+      "Any person resident in India",
+      "A natural person who is an Indian citizen, whether resident in India or not",
+      "Any body corporate",
+      "A natural person who is an Indian citizen and resident in India only",
+      "A foreign national residing in India for 182 days"
+    ],
+    "answer": 1,
+    "explanation": "As per the Companies (Incorporation) Second Amendment Rules, 2021, a natural person who is an Indian citizen, whether resident in India or otherwise, is eligible to incorporate an OPC. The residency requirement of 182 days was reduced to 120 days.",
+    "section": "General Stream",
+    "topic": "Companies Act",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "A 'Small Company' is defined under Section 2(85). What are the current threshold limits for paid-up share capital and turnover?",
+    "options": [
+      "Paid-up capital ≤ ₹50 Lakh; Turnover ≤ ₹2 Cr",
+      "Paid-up capital ≤ ₹2 Cr; Turnover ≤ ₹20 Cr",
+      "Paid-up capital ≤ ₹4 Cr; Turnover ≤ ₹40 Cr",
+      "Paid-up capital ≤ ₹10 Cr; Turnover ≤ ₹100 Cr",
+      "Paid-up capital ≤ ₹50 Cr; Turnover ≤ ₹250 Cr"
+    ],
+    "answer": 2,
+    "explanation": "The definition was amended (effective from Sep 2022). A small company means a company (other than a public company) where paid-up share capital does not exceed ₹4 Crore AND turnover does not exceed ₹40 Crore.",
+    "section": "General Stream",
+    "topic": "Companies Act",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Under Section 26, a prospectus must be issued within how many days from the date of its delivery to the Registrar for registration?",
+    "options": [
+      "30 Days",
+      "60 Days",
+      "90 Days",
+      "120 Days",
+      "15 Days"
+    ],
+    "answer": 2,
+    "explanation": "Section 26(8): No prospectus shall be valid if it is issued more than 90 days after the date on which a copy thereof is delivered to the Registrar.",
+    "section": "General Stream",
+    "topic": "Companies Act",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "What is the validity period of a 'Shelf Prospectus' filed with the Registrar under Section 31?",
+    "options": [
+      "6 months",
+      "1 year",
+      "2 years",
+      "5 years",
+      "Until the next AGM"
+    ],
+    "answer": 1,
+    "explanation": "Section 31(1): A Shelf Prospectus shall be valid for a period not exceeding one year from the date of opening of the first offer of securities under that prospectus.",
+    "section": "General Stream",
+    "topic": "Companies Act",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Under Section 39, the minimum amount of application money to be paid on share application shall not be less than what percentage of the nominal amount?",
+    "options": [
+      "5%",
+      "10%",
+      "15%",
+      "25%",
+      "50%"
+    ],
+    "answer": 0,
+    "explanation": "Section 39(2) states that the amount payable on application on every security shall not be less than 5% of the nominal amount of the security or such other percentage or amount as may be specified by SEBI (SEBI generally mandates 25% for issue price, but the Act floor is 5%).",
+    "section": "General Stream",
+    "topic": "Companies Act",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "A 'Sweat Equity Share' under Section 54 can be issued to employees for providing know-how. What is the lock-in period for such shares?",
+    "options": [
+      "1 year",
+      "2 years",
+      "3 years",
+      "5 years",
+      "No lock-in"
+    ],
+    "answer": 2,
+    "explanation": "As per Rule 8 of Companies (Share Capital and Debentures) Rules, 2014, sweat equity shares issued to directors or employees shall be locked in/non-transferable for a period of 3 years from the date of allotment.",
+    "section": "General Stream",
+    "topic": "Companies Act",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Section 62 deals with the issue of shares on a rights basis (Right Issue). The notice for the offer must be dispatched at least how many days before the opening of the issue?",
+    "options": [
+      "3 days",
+      "7 days",
+      "15 days",
+      "21 days",
+      "30 days"
+    ],
+    "answer": 0,
+    "explanation": "Section 62(1)(a)(i): The offer shall be made by notice specifying the number of shares offered and limiting a time not being less than 15 days and not exceeding 30 days. However, the notice itself must be dispatched at least 3 days before the opening of the issue (Rule 12A).",
+    "section": "General Stream",
+    "topic": "Companies Act",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Under Section 68, a company can purchase its own shares (Buy-back). The maximum limit for buy-back in any financial year is what percentage of total paid-up equity capital?",
+    "options": [
+      "10%",
+      "15%",
+      "25%",
+      "50%",
+      "75%"
+    ],
+    "answer": 2,
+    "explanation": "Section 68(2)(c): The buy-back of equity shares in any financial year shall not exceed 25% of the total paid-up equity capital of the company in that financial year.",
+    "section": "General Stream",
+    "topic": "Companies Act",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Under Section 135 (CSR), a company is required to constitute a CSR Committee if its Net Worth, Turnover, or Net Profit exceeds certain limits. Which of the following is NOT a correct threshold?",
+    "options": [
+      "Net Worth of Rs. 500 Crore or more",
+      "Turnover of Rs. 1000 Crore or more",
+      "Net Profit of Rs. 5 Crore or more",
+      "Paid-up Capital of Rs. 10 Crore or more",
+      "All of the above are correct thresholds"
+    ],
+    "answer": 3,
+    "explanation": "Section 135 applies if Net Worth >= 500 Cr OR Turnover >= 1000 Cr OR Net Profit >= 5 Cr. Paid-up capital is NOT a criterion for CSR applicability.",
+    "section": "General Stream",
+    "topic": "Companies Act",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Who appoints the First Auditor of a non-government company under Section 139(6)?",
+    "options": [
+      "Shareholders in AGM",
+      "Board of Directors within 30 days of registration",
+      "CAG within 60 days",
+      "Central Government",
+      "Registrar of Companies"
+    ],
+    "answer": 1,
+    "explanation": "Section 139(6): The first auditor of a company, other than a Government company, shall be appointed by the Board of Directors within 30 days from the date of registration of the company.",
+    "section": "General Stream",
+    "topic": "Companies Act",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "An auditor is disqualified from appointment under Section 141(3)(d) if a relative holds security in the company exceeding what face value?",
+    "options": [
+      "Rs. 1,000",
+      "Rs. 10,000",
+      "Rs. 50,000",
+      "Rs. 1,00,000",
+      "Rs. 5,00,000"
+    ],
+    "answer": 3,
+    "explanation": "A person is disqualified if a relative holds security or interest in the company of face value exceeding Rs. 1,00,000 (One Lakh).",
+    "section": "General Stream",
+    "topic": "Companies Act",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Under Section 149(1), what is the maximum number of directors a company can have without passing a special resolution?",
+    "options": [
+      "10",
+      "12",
+      "15",
+      "20",
+      "7"
+    ],
+    "answer": 2,
+    "explanation": "Section 149(1): A company shall have a maximum of 15 directors. A company may appoint more than 15 directors after passing a special resolution.",
+    "section": "General Stream",
+    "topic": "Companies Act",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Section 149(4) mandates that every listed public company shall have at least what proportion of total directors as Independent Directors?",
+    "options": [
+      "One-half",
+      "One-third",
+      "Two-thirds",
+      "One-fourth",
+      "One director"
+    ],
+    "answer": 1,
+    "explanation": "Section 149(4): Every listed public company shall have at least one-third of the total number of directors as independent directors.",
+    "section": "General Stream",
+    "topic": "Companies Act",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "According to Section 165, a person cannot be a director in more than how many companies at the same time?",
+    "options": [
+      "10 companies",
+      "15 companies",
+      "20 companies",
+      "25 companies",
+      "50 companies"
+    ],
+    "answer": 2,
+    "explanation": "Section 165(1): No person shall hold office as a director in more than 20 companies at the same time. Provided that the maximum number of public companies in which a person can be appointed as a director shall not exceed 10.",
+    "section": "General Stream",
+    "topic": "Companies Act",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "What is the minimum number of meetings of the Board of Directors required in a year under Section 173?",
+    "options": [
+      "2 meetings",
+      "3 meetings",
+      "4 meetings",
+      "5 meetings",
+      "1 meeting every quarter"
+    ],
+    "answer": 2,
+    "explanation": "Section 173(1): Every company shall hold the first meeting of the Board of Directors within 30 days of incorporation and thereafter hold a minimum of 4 meetings every year.",
+    "section": "General Stream",
+    "topic": "Companies Act",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Under Section 177, the Audit Committee must consist of a minimum of how many directors?",
+    "options": [
+      "2 directors",
+      "3 directors",
+      "4 directors",
+      "5 directors",
+      "7 directors"
+    ],
+    "answer": 1,
+    "explanation": "Section 177(2): The Audit Committee shall consist of a minimum of 3 directors with independent directors forming a majority.",
+    "section": "General Stream",
+    "topic": "Companies Act",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Loans to Directors are generally prohibited under Section 185. Which of the following is an EXCEPTION where loan can be given?",
+    "options": [
+      "Loan to a private company where director is a director",
+      "Loan to a Managing Director as part of conditions of service extended to all employees",
+      "Loan to a director's relative",
+      "Loan to a firm in which director is a partner",
+      "Loan to a holding company"
+    ],
+    "answer": 1,
+    "explanation": "Section 185(1) Proviso: The section does not apply to the giving of any loan to a Managing Director or Whole-Time Director as a part of the conditions of service extended by the company to all its employees.",
+    "section": "General Stream",
+    "topic": "Companies Act",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Section 134(3)(n) requires the Board's Report to include a statement indicating development and implementation of a policy for:",
+    "options": [
+      "Corporate Social Responsibility",
+      "Risk Management",
+      "Internal Financial Controls",
+      "Related Party Transactions",
+      "Whistle Blower Mechanism"
+    ],
+    "answer": 1,
+    "explanation": "Section 134(3)(n) specifically mandates a statement indicating development and implementation of a Risk Management Policy for the company.",
+    "section": "General Stream",
+    "topic": "Companies Act",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "What is the penalty for 'Fraud' under Section 447 if the amount involved is at least ₹10 Lakh or 1% of turnover?",
+    "options": [
+      "Imprisonment 6 months to 10 years AND Fine up to 3 times the amount",
+      "Imprisonment up to 3 years only",
+      "Fine up to ₹50 Lakh only",
+      "Imprisonment 3 years to 5 years",
+      "Fine equal to the amount of fraud"
+    ],
+    "answer": 0,
+    "explanation": "Section 447: Punishment for fraud is imprisonment for a term not less than 6 months but which may extend to 10 years AND fine which shall not be less than the amount involved in the fraud, but which may extend to 3 times the amount involved.",
+    "section": "General Stream",
+    "topic": "Companies Act",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Under Section 123, dividend can be declared only out of:",
+    "options": [
+      "Current year profits after depreciation",
+      "Accumulated profits of previous years after depreciation",
+      "Money provided by Central/State Government for dividend",
+      "Free Reserves",
+      "All of the above"
+    ],
+    "answer": 4,
+    "explanation": "Section 123(1): Dividend shall be declared or paid out of profits of the current year (after depreciation), profits of previous financial years (after depreciation), or money provided by the Central/State Government for the payment of dividend.",
+    "section": "General Stream",
+    "topic": "Companies Act",
+    "marks": 2,
+    "negative": 0.5
+  }
+]
