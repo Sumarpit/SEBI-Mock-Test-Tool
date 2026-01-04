@@ -1,0 +1,322 @@
+[
+  {
+    "question": "Which management thinker conducted the famous 'Hawthorne Studies' at Western Electric Company, which shifted the focus of management from technical efficiency to human behavior and social relations?",
+    "options": [
+      "Frederick Taylor",
+      "Henri Fayol",
+      "Elton Mayo",
+      "Max Weber",
+      "Peter Drucker"
+    ],
+    "answer": 2,
+    "explanation": "Elton Mayo and his associates conducted the Hawthorne Studies (1924-1932). These experiments revealed that social factors, informal groups, and employee attention (Hawthorne Effect) significantly influence productivity, leading to the Human Relations Movement.",
+    "section": "General Stream",
+    "topic": "Management",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "According to Abraham Maslow's Hierarchy of Needs, which of the following needs must be satisfied immediately after 'Physiological Needs' are met?",
+    "options": [
+      "Social Needs",
+      "Esteem Needs",
+      "Safety/Security Needs",
+      "Self-Actualization Needs",
+      "Autonomy Needs"
+    ],
+    "answer": 2,
+    "explanation": "The hierarchy order is: 1. Physiological -> 2. Safety/Security -> 3. Social/Belongingness -> 4. Esteem -> 5. Self-Actualization. Once basic survival needs are met, individuals seek safety and security.",
+    "section": "General Stream",
+    "topic": "Management",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "In the context of the Managerial Grid (Blake and Mouton), a manager who has high concern for people but low concern for production (1,9) is said to be practicing which style of management?",
+    "options": [
+      "Impoverished Management",
+      "Country Club Management",
+      "Task Management",
+      "Team Management",
+      "Middle-of-the-Road Management"
+    ],
+    "answer": 1,
+    "explanation": "The (1,9) style is 'Country Club Management', where the manager focuses on creating a comfortable and friendly work environment, often at the expense of production tasks.",
+    "section": "General Stream",
+    "topic": "Management",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Which theory of motivation distinguishes between 'Hygiene Factors' (dissatisfiers) and 'Motivational Factors' (satisfiers)?",
+    "options": [
+      "Vroom's Expectancy Theory",
+      "Herzberg's Two-Factor Theory",
+      "McClelland's Theory of Needs",
+      "Alderfer's ERG Theory",
+      "Adam's Equity Theory"
+    ],
+    "answer": 1,
+    "explanation": "Frederick Herzberg's Two-Factor Theory posits that Hygiene factors (e.g., salary, working conditions) prevent dissatisfaction but do not motivate, while Motivators (e.g., recognition, responsibility) actually drive performance.",
+    "section": "General Stream",
+    "topic": "Management",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "What does the concept of 'Unity of Command' in Fayol's Principles of Management imply?",
+    "options": [
+      "One head and one plan for a group of activities",
+      "An employee should receive orders from one superior only",
+      "Team spirit and harmony in the organization",
+      "Fair remuneration for all employees",
+      "Centralization of authority at the top"
+    ],
+    "answer": 1,
+    "explanation": "Unity of Command states that an individual employee should receive orders from and be accountable to only one superior to avoid confusion and conflict. (Note: 'One head one plan' refers to Unity of Direction).",
+    "section": "General Stream",
+    "topic": "Management",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "In the communication process, the conversion of a message into symbols (words, gestures, pictures) by the sender is known as:",
+    "options": [
+      "Decoding",
+      "Feedback",
+      "Encoding",
+      "Channeling",
+      "Brainstorming"
+    ],
+    "answer": 2,
+    "explanation": "Encoding is the process where the sender translates thoughts or ideas into a message using symbols or language that can be transmitted to the receiver.",
+    "section": "General Stream",
+    "topic": "Management",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Which leadership theory suggests that there is no single best way to lead, and the effectiveness of a leader depends on the match between the leader's style and the situational favorableness?",
+    "options": [
+      "Great Man Theory",
+      "Trait Theory",
+      "Fiedler's Contingency Theory",
+      "Behavioral Theory",
+      "Transformational Theory"
+    ],
+    "answer": 2,
+    "explanation": "Fred Fiedler's Contingency Model argues that leadership effectiveness depends on the interaction of the leader's style (Task vs. Relationship oriented) and the situation (Leader-Member relations, Task Structure, Position Power).",
+    "section": "General Stream",
+    "topic": "Management",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "The 'Grapevine' is a term used to describe which type of communication network?",
+    "options": [
+      "Formal downward communication",
+      "Formal upward communication",
+      "Informal communication",
+      "Horizontal formal communication",
+      "External communication"
+    ],
+    "answer": 2,
+    "explanation": "The Grapevine refers to the informal communication network within an organization, which does not follow official lines of authority and is often faster but less accurate than formal channels.",
+    "section": "General Stream",
+    "topic": "Management",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Who is credited with propounding the 'Theory X and Theory Y' of human motivation?",
+    "options": [
+      "Douglas McGregor",
+      "Abraham Maslow",
+      "William Ouchi",
+      "Victor Vroom",
+      "Clayton Alderfer"
+    ],
+    "answer": 0,
+    "explanation": "Douglas McGregor proposed Theory X (assumes employees dislike work and need coercion) and Theory Y (assumes employees are self-motivated and seek responsibility).",
+    "section": "General Stream",
+    "topic": "Management",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "In the context of Recruitment and Selection, 'Selection' is often described as a:",
+    "options": [
+      "Positive process",
+      "Negative process",
+      "Neutral process",
+      "Creative process",
+      "Planning process"
+    ],
+    "answer": 1,
+    "explanation": "Selection is called a 'Negative Process' because it involves rejecting unsuitable candidates to find the best fit, whereas Recruitment is a 'Positive Process' aiming to attract a large pool of candidates.",
+    "section": "General Stream",
+    "topic": "Management",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Which performance appraisal method involves collecting feedback from a wide range of people including supervisors, peers, subordinates, and customers?",
+    "options": [
+      "Management by Objectives (MBO)",
+      "Critical Incident Method",
+      "360-Degree Appraisal",
+      "Paired Comparison",
+      "Assessment Centre"
+    ],
+    "answer": 2,
+    "explanation": "360-Degree Appraisal gathers performance data from all circles of an employee's interaction (boss, peers, subordinates, customers) to provide a holistic view of performance.",
+    "section": "General Stream",
+    "topic": "Management",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Vroom’s Expectancy Theory of motivation is represented by the formula: Motivation = ?",
+    "options": [
+      "Valence × Expectancy",
+      "Valence × Instrumentality × Expectancy",
+      "Needs × Goals",
+      "Satisfaction × Performance",
+      "Effort × Reward"
+    ],
+    "answer": 1,
+    "explanation": "Expectancy Theory states that Motivation (Force) = Valence (desire for reward) × Instrumentality (belief that performance leads to reward) × Expectancy (belief that effort leads to performance).",
+    "section": "General Stream",
+    "topic": "Management",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "What does the 'Halo Effect' refer to in the context of perception and performance appraisal?",
+    "options": [
+      "Judging someone on the basis of the group they belong to",
+      "Drawing a general impression about an individual based on a single characteristic",
+      "Attributing one's own traits to others",
+      "Underestimating the influence of external factors",
+      "Remembering only the most recent behavior"
+    ],
+    "answer": 1,
+    "explanation": "The Halo Effect occurs when a general impression (positive or negative) of a person is formed based on a single prominent characteristic (e.g., intelligence or appearance), biasing the judgment of other traits.",
+    "section": "General Stream",
+    "topic": "Management",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Which of the following is NOT one of the three ego states in Transactional Analysis (TA)?",
+    "options": [
+      "Parent",
+      "Adult",
+      "Child",
+      "Manager",
+      "None of the above"
+    ],
+    "answer": 3,
+    "explanation": "Eric Berne's Transactional Analysis model identifies three ego states: Parent (learned behaviors), Adult (rational/processing), and Child (emotional/impulsive). 'Manager' is not an ego state in this theory.",
+    "section": "General Stream",
+    "topic": "Management",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Kurt Lewin’s model of Change Management consists of three stages. Which is the correct order?",
+    "options": [
+      "Change - Unfreeze - Refreeze",
+      "Unfreeze - Change - Refreeze",
+      "Refreeze - Change - Unfreeze",
+      "Plan - Do - Check",
+      "Diagnosis - Analysis - Action"
+    ],
+    "answer": 1,
+    "explanation": "Lewin's model involves: 1. Unfreezing (preparing for change), 2. Changing (implementing the change), and 3. Refreezing (solidifying the new state).",
+    "section": "General Stream",
+    "topic": "Management",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "According to the Johari Window, the 'Blind Spot' quadrant represents information that is:",
+    "options": [
+      "Known to self and known to others",
+      "Unknown to self but known to others",
+      "Known to self but unknown to others",
+      "Unknown to self and unknown to others",
+      "Known only to the manager"
+    ],
+    "answer": 1,
+    "explanation": "The Blind Spot (Blind Area) contains information about an individual (behaviors, traits) that others can see, but the individual is unaware of.",
+    "section": "General Stream",
+    "topic": "Management",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Which management concept refers to the number of subordinates that a manager can effectively supervise?",
+    "options": [
+      "Unity of Direction",
+      "Scalar Chain",
+      "Span of Control",
+      "Delegation of Authority",
+      "Departmentation"
+    ],
+    "answer": 2,
+    "explanation": "Span of Control (or Span of Management) refers to the number of immediate subordinates a manager can efficiently and effectively direct.",
+    "section": "General Stream",
+    "topic": "Management",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "In Clayton Alderfer’s ERG Theory, what do the letters E, R, and G stand for?",
+    "options": [
+      "Esteem, Respect, Growth",
+      "Existence, Relatedness, Growth",
+      "Energy, Responsibility, Goal",
+      "Existence, Respect, Goal",
+      "Efficiency, Reliability, Growth"
+    ],
+    "answer": 1,
+    "explanation": "ERG stands for Existence needs (basic material requirements), Relatedness needs (social relationships), and Growth needs (personal development). It is a modification of Maslow’s hierarchy.",
+    "section": "General Stream",
+    "topic": "Management",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Which conflict management style, according to the Thomas-Kilmann model, is assertive and uncooperative, pursuing one's own concerns at the other person's expense?",
+    "options": [
+      "Accommodating",
+      "Avoiding",
+      "Collaborating",
+      "Competing",
+      "Compromising"
+    ],
+    "answer": 3,
+    "explanation": "Competing is the 'Win-Lose' style where an individual pursues their own interests at the expense of others. It is high on assertiveness and low on cooperativeness.",
+    "section": "General Stream",
+    "topic": "Management",
+    "marks": 2,
+    "negative": 0.5
+  },
+  {
+    "question": "Job Enrichment is a technique that involves:",
+    "options": [
+      "Adding more tasks of the same nature to a job",
+      "Moving employees from one job to another",
+      "Increasing the depth of the job by adding responsibility and autonomy",
+      "Simplifying the job to reduce fatigue",
+      "Reducing the number of working hours"
+    ],
+    "answer": 2,
+    "explanation": "Job Enrichment (vertical loading) increases the depth of a job by giving employees more control, responsibility, and autonomy. Job Enlargement (horizontal loading) adds more tasks of a similar nature.",
+    "section": "General Stream",
+    "topic": "Management",
+    "marks": 2,
+    "negative": 0.5
+  }
+]
