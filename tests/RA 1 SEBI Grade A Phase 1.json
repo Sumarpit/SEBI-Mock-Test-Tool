@@ -1,0 +1,332 @@
+[
+  {
+    "question": "<b>Directions (1-5):</b> Study the following information carefully and answer the questions given below.<br><br>A certain number of persons are sitting in a linear row facing North. Three persons sit between A and B. C sits second to the right of B. Only three persons sit between C and D. D is not an immediate neighbor of B. E sits immediately to the left of D. F sits second to the right of E. The number of persons sitting to the left of A is the same as the number of persons sitting to the right of F. F sits at one of the extreme ends.<br><br><b>Q1.</b> How many persons are sitting in the row?",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "13",
+      "14"
+    ],
+    "answer": 2,
+    "explanation": "<b>Arrangement:</b> A _ _ _ B _ C _ _ E D _ F<br>Positions: A(1), B(5), C(7), E(10), D(11), F(12).<br>F sits at the extreme end (12th). Total persons = 12.",
+    "section": "Paper 1",
+    "topic": "Reasoning",
+    "marks": 1.25,
+    "negative": 0.3125,
+    "passage": "<p><b>Directions (1-5):</b> Study the following information carefully and answer the questions given below.<br><br>A certain number of persons are sitting in a linear row facing North. Three persons sit between A and B. C sits second to the right of B. Only three persons sit between C and D. D is not an immediate neighbor of B. E sits immediately to the left of D. F sits second to the right of E. The number of persons sitting to the left of A is the same as the number of persons sitting to the right of F. F sits at one of the extreme ends.</p>"
+  },
+  {
+    "question": "<b>Q2.</b> Who sits third to the right of C?",
+    "options": [
+      "D",
+      "E",
+      "F",
+      "Unknown person",
+      "None of these"
+    ],
+    "answer": 1,
+    "explanation": "C is at position 7. Third to the right is position 10, which is occupied by E.",
+    "section": "Paper 1",
+    "topic": "Reasoning",
+    "marks": 1.25,
+    "negative": 0.3125,
+    "passage": "<p><b>Directions (1-5):</b> Study the following information carefully and answer the questions given below.<br><br>A certain number of persons are sitting in a linear row facing North. Three persons sit between A and B. C sits second to the right of B. Only three persons sit between C and D. D is not an immediate neighbor of B. E sits immediately to the left of D. F sits second to the right of E. The number of persons sitting to the left of A is the same as the number of persons sitting to the right of F. F sits at one of the extreme ends.</p>"
+  },
+  {
+    "question": "<b>Q3.</b> How many persons sit between A and E?",
+    "options": [
+      "Six",
+      "Seven",
+      "Eight",
+      "Five",
+      "Nine"
+    ],
+    "answer": 2,
+    "explanation": "A is at position 1. E is at position 10. Number of persons between them = 10 - 1 - 1 = 8.",
+    "section": "Paper 1",
+    "topic": "Reasoning",
+    "marks": 1.25,
+    "negative": 0.3125,
+    "passage": "<p><b>Directions (1-5):</b> Study the following information carefully and answer the questions given below.<br><br>A certain number of persons are sitting in a linear row facing North. Three persons sit between A and B. C sits second to the right of B. Only three persons sit between C and D. D is not an immediate neighbor of B. E sits immediately to the left of D. F sits second to the right of E. The number of persons sitting to the left of A is the same as the number of persons sitting to the right of F. F sits at one of the extreme ends.</p>"
+  },
+  {
+    "question": "<b>Q4.</b> What is the position of B with respect to F?",
+    "options": [
+      "5th to the left",
+      "6th to the left",
+      "7th to the left",
+      "8th to the left",
+      "4th to the left"
+    ],
+    "answer": 2,
+    "explanation": "B is at 5. F is at 12. Position of B from F is 12 - 5 = 7th to the left.",
+    "section": "Paper 1",
+    "topic": "Reasoning",
+    "marks": 1.25,
+    "negative": 0.3125,
+    "passage": "<p><b>Directions (1-5):</b> Study the following information carefully and answer the questions given below.<br><br>A certain number of persons are sitting in a linear row facing North. Three persons sit between A and B. C sits second to the right of B. Only three persons sit between C and D. D is not an immediate neighbor of B. E sits immediately to the left of D. F sits second to the right of E. The number of persons sitting to the left of A is the same as the number of persons sitting to the right of F. F sits at one of the extreme ends.</p>"
+  },
+  {
+    "question": "<b>Q5.</b> If Z sits exactly between A and B, what is the position of Z from the left end?",
+    "options": [
+      "1st",
+      "2nd",
+      "3rd",
+      "4th",
+      "5th"
+    ],
+    "answer": 2,
+    "explanation": "A is at 1, B is at 5. The exact middle position is 3. So Z sits at position 3, which is 3rd from the left end.",
+    "section": "Paper 1",
+    "topic": "Reasoning",
+    "marks": 1.25,
+    "negative": 0.3125,
+    "passage": "<p><b>Directions (1-5):</b> Study the following information carefully and answer the questions given below.<br><br>A certain number of persons are sitting in a linear row facing North. Three persons sit between A and B. C sits second to the right of B. Only three persons sit between C and D. D is not an immediate neighbor of B. E sits immediately to the left of D. F sits second to the right of E. The number of persons sitting to the left of A is the same as the number of persons sitting to the right of F. F sits at one of the extreme ends.</p>"
+  },
+  {
+    "question": "<b>Directions (6-10):</b> Study the information carefully and answer the questions.<br><br>Eight persons P, Q, R, S, T, U, V and W were born in four different months – March, June, September and December of the same year on two different dates – 5th and 12th.<br>P was born on an odd date of a month having 31 days. Only three persons were born between P and W. Q was born immediately before W. The number of persons born before Q is the same as the number of persons born after R. T was born before U in the same month. V was born before S.<br><br><b>Q6.</b> Who was born on 12th September?",
+    "options": [
+      "R",
+      "S",
+      "U",
+      "W",
+      "Q"
+    ],
+    "answer": 0,
+    "explanation": "<b>Arrangement:</b><br>Mar 5: P<br>Mar 12: V<br>Jun 5: S<br>Jun 12: Q<br>Sep 5: W<br>Sep 12: R<br>Dec 5: T<br>Dec 12: U<br><br>R was born on Sep 12.",
+    "section": "Paper 1",
+    "topic": "Reasoning",
+    "marks": 1.25,
+    "negative": 0.3125,
+    "passage": "<p><b>Directions (6-10):</b> Study the information carefully and answer the questions.<br><br>Eight persons P, Q, R, S, T, U, V and W were born in four different months – March, June, September and December of the same year on two different dates – 5th and 12th.<br>P was born on an odd date of a month having 31 days. Only three persons were born between P and W. Q was born immediately before W. The number of persons born before Q is the same as the number of persons born after R. T was born before U in the same month. V was born before S.</p>"
+  },
+  {
+    "question": "<b>Q7.</b> How many persons were born between V and T?",
+    "options": [
+      "One",
+      "Two",
+      "Three",
+      "Four",
+      "Five"
+    ],
+    "answer": 3,
+    "explanation": "V is Mar 12. T is Dec 5. Persons between them: S, Q, W, R. Total 4.",
+    "section": "Paper 1",
+    "topic": "Reasoning",
+    "marks": 1.25,
+    "negative": 0.3125,
+    "passage": "<p><b>Directions (6-10):</b> Study the information carefully and answer the questions.<br><br>Eight persons P, Q, R, S, T, U, V and W were born in four different months – March, June, September and December of the same year on two different dates – 5th and 12th.<br>P was born on an odd date of a month having 31 days. Only three persons were born between P and W. Q was born immediately before W. The number of persons born before Q is the same as the number of persons born after R. T was born before U in the same month. V was born before S.</p>"
+  },
+  {
+    "question": "<b>Q8.</b> Which of the following pair was born in June?",
+    "options": [
+      "P, V",
+      "S, Q",
+      "W, R",
+      "T, U",
+      "Q, W"
+    ],
+    "answer": 1,
+    "explanation": "S (Jun 5) and Q (Jun 12) were born in June.",
+    "section": "Paper 1",
+    "topic": "Reasoning",
+    "marks": 1.25,
+    "negative": 0.3125,
+    "passage": "<p><b>Directions (6-10):</b> Study the information carefully and answer the questions.<br><br>Eight persons P, Q, R, S, T, U, V and W were born in four different months – March, June, September and December of the same year on two different dates – 5th and 12th.<br>P was born on an odd date of a month having 31 days. Only three persons were born between P and W. Q was born immediately before W. The number of persons born before Q is the same as the number of persons born after R. T was born before U in the same month. V was born before S.</p>"
+  },
+  {
+    "question": "<b>Q9.</b> Who was born immediately after P?",
+    "options": [
+      "V",
+      "S",
+      "Q",
+      "W",
+      "R"
+    ],
+    "answer": 0,
+    "explanation": "P is Mar 5. V is Mar 12. V was born immediately after P.",
+    "section": "Paper 1",
+    "topic": "Reasoning",
+    "marks": 1.25,
+    "negative": 0.3125,
+    "passage": "<p><b>Directions (6-10):</b> Study the information carefully and answer the questions.<br><br>Eight persons P, Q, R, S, T, U, V and W were born in four different months – March, June, September and December of the same year on two different dates – 5th and 12th.<br>P was born on an odd date of a month having 31 days. Only three persons were born between P and W. Q was born immediately before W. The number of persons born before Q is the same as the number of persons born after R. T was born before U in the same month. V was born before S.</p>"
+  },
+  {
+    "question": "<b>Q10.</b> Four of the following five are alike in a certain way and hence form a group. Which of the following does not belong to that group?",
+    "options": [
+      "P",
+      "S",
+      "W",
+      "Q",
+      "T"
+    ],
+    "answer": 3,
+    "explanation": "P, S, W, and T are all born on the 5th (Odd date). Q is born on the 12th (Even date).",
+    "section": "Paper 1",
+    "topic": "Reasoning",
+    "marks": 1.25,
+    "negative": 0.3125,
+    "passage": "<p><b>Directions (6-10):</b> Study the information carefully and answer the questions.<br><br>Eight persons P, Q, R, S, T, U, V and W were born in four different months – March, June, September and December of the same year on two different dates – 5th and 12th.<br>P was born on an odd date of a month having 31 days. Only three persons were born between P and W. Q was born immediately before W. The number of persons born before Q is the same as the number of persons born after R. T was born before U in the same month. V was born before S.</p>"
+  },
+  {
+    "question": "<b>Q11.</b> <b>Statements:</b><br>Only a few Chart are Turbine.<br>Only a few Turbine are Pores.<br>Only a few Pores are Fan.<br><br><b>Conclusions:</b><br>I. Some Fan are Turbine is a possibility.<br>II. All Turbine can be Pores.",
+    "options": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Neither I nor II follows",
+      "Either I or II follows"
+    ],
+    "answer": 0,
+    "explanation": "I. No direct restriction between Fan and Turbine, so possibility exists. True.<br>II. 'Only a few Turbine are Pores' means some Turbine are Pores AND some Turbine are NOT Pores. Therefore, All Turbine cannot be Pores. False.",
+    "section": "Paper 1",
+    "topic": "Reasoning",
+    "marks": 1.25,
+    "negative": 0.3125
+  },
+  {
+    "question": "<b>Q12.</b> <b>Statements:</b><br>All Beaches are Delta.<br>All Deltas are Cushion.<br>No Cushion is Wave.<br><br><b>Conclusions:</b><br>I. Some Beaches can be Wave.<br>II. No Delta is Wave.",
+    "options": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Neither I nor II follows",
+      "Either I or II follows"
+    ],
+    "answer": 1,
+    "explanation": "I. Since All Beaches are inside Cushion and No Cushion is Wave, no Beach can be Wave. False.<br>II. All Deltas are inside Cushion. No Cushion is Wave. So No Delta is Wave. True.",
+    "section": "Paper 1",
+    "topic": "Reasoning",
+    "marks": 1.25,
+    "negative": 0.3125
+  },
+  {
+    "question": "<b>Q13.</b> <b>Statements:</b><br>Only a few Aces are Club.<br>No Club is Jack.<br>Only a few Jacks are Diamond.<br><br><b>Conclusions:</b><br>I. Some Diamond are Aces.<br>II. Some Aces are not Club.",
+    "options": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Neither I nor II follows",
+      "Either I or II follows"
+    ],
+    "answer": 1,
+    "explanation": "I. No direct relation between Diamond and Aces. Not definite. False.<br>II. 'Only a few Aces are Club' implies Some Aces are Club and Some Aces are NOT Club. True.",
+    "section": "Paper 1",
+    "topic": "Reasoning",
+    "marks": 1.25,
+    "negative": 0.3125
+  },
+  {
+    "question": "<b>Q14.</b> <b>Statements:</b><br>P ≥ Q > R = S ≤ T < U<br><br><b>Conclusions:</b><br>I. P > S<br>II. R < U",
+    "options": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Neither I nor II follows",
+      "Either I or II follows"
+    ],
+    "answer": 2,
+    "explanation": "I. P ≥ Q > R = S. So P > S. True.<br>II. R = S ≤ T < U. So R < U. True.",
+    "section": "Paper 1",
+    "topic": "Reasoning",
+    "marks": 1.25,
+    "negative": 0.3125
+  },
+  {
+    "question": "<b>Q15.</b> <b>Statements:</b><br>A = B < C > D; E > C < F<br><br><b>Conclusions:</b><br>I. E > B<br>II. F > D",
+    "options": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Neither I nor II follows",
+      "Either I or II follows"
+    ],
+    "answer": 2,
+    "explanation": "Combine: E > C > B (=A); F > C > D.<br>I. E > C > B -> E > B. True.<br>II. F > C > D -> F > D. True.",
+    "section": "Paper 1",
+    "topic": "Reasoning",
+    "marks": 1.25,
+    "negative": 0.3125
+  },
+  {
+    "question": "<b>Q16.</b> P is the father of Q. R is the sister of Q. S is the mother of R. T is the brother-in-law of P. U is the father of T. How is S related to U?",
+    "options": [
+      "Daughter",
+      "Daughter-in-law",
+      "Sister",
+      "Mother",
+      "Wife"
+    ],
+    "answer": 0,
+    "explanation": "P is father of Q & R. S is mother of R. So P and S are married. T is brother-in-law of P. Since P is male (father), T is likely S's brother. U is father of T. If U is father of T, and T is S's brother, then U is also father of S. Thus, S is the daughter of U.",
+    "section": "Paper 1",
+    "topic": "Reasoning",
+    "marks": 1.25,
+    "negative": 0.3125
+  },
+  {
+    "question": "<b>Q17.</b> Point A is 5m north of Point B. Point C is 5m east of Point B. Point D is 5m north of Point C. Point E is 10m west of Point D. What is the shortest distance between Point A and Point E?",
+    "options": [
+      "10m",
+      "5m",
+      "15m",
+      "5√2m",
+      "10√2m"
+    ],
+    "answer": 1,
+    "explanation": "A is at (0, 5) relative to B(0,0). C is at (5, 0). D is at (5, 5). E is at (5-10, 5) = (-5, 5).<br>Coordinates: A(0, 5), E(-5, 5).<br>Distance is horizontal: 0 - (-5) = 5m.",
+    "section": "Paper 1",
+    "topic": "Reasoning",
+    "marks": 1.25,
+    "negative": 0.3125
+  },
+  {
+    "question": "<b>Q18.</b> How many such pairs of letters are there in the word \"DIPLOMACY\" each of which has as many letters between them in the word as in the English alphabet (both forward and backward)?",
+    "options": [
+      "One",
+      "Two",
+      "Three",
+      "Four",
+      "None"
+    ],
+    "answer": 2,
+    "explanation": "Pairs:<br>1. I - L (I, J, K, L) - No.<br>1. I - M (I, J, K, L, M) -> 'I' to 'M' in word is I, P, L, O, M (3 letters). Alphabet gap is 3. Pair 1 (I, M).<br>2. A - C (A, B, C) -> 'A' to 'C' in word is A, C (0 letters). Alphabet gap is 1. No.<br>3. M - O (M, N, O). Word: M, A, C, Y (Forward) / O, L, P, I (Back). O..M is O, L, M (1 letter). Alphabet gap 1. Pair 2 (O, M).<br>4. P - M (P, O, N, M). Word P, L, O, M. 2 letters. Alphabet gap 2. Pair 3 (M, P).<br>Total 3 pairs.",
+    "section": "Paper 1",
+    "topic": "Reasoning",
+    "marks": 1.25,
+    "negative": 0.3125
+  },
+  {
+    "question": "<b>Q19.</b> <b>Statement:</b> The city authority has decided to close down the factory located in the city outskirts as it emits a lot of toxic fumes causing pollution.<br><b>Assumptions:</b><br>I. The pollution level in the city will reduce after the closure of the factory.<br>II. The workers of the factory will be left unemployed.",
+    "options": [
+      "Only I is implicit",
+      "Only II is implicit",
+      "Both I and II are implicit",
+      "Neither I nor II is implicit",
+      "Either I or II is implicit"
+    ],
+    "answer": 0,
+    "explanation": "I is implicit because the action is taken specifically to address the pollution caused by the factory. II is not an assumption but a consequence, and the statement doesn't imply the authority *assumed* unemployment as a premise for the decision.",
+    "section": "Paper 1",
+    "topic": "Reasoning",
+    "marks": 1.25,
+    "negative": 0.3125
+  },
+  {
+    "question": "<b>Q20.</b> <b>Statement:</b> Heavy rains have caused flooding in the low-lying areas of the city.<br><b>Courses of Action:</b><br>I. The government should immediately arrange for food and shelter for the affected people.<br>II. The fire brigade and relief teams should be put on high alert to rescue trapped people.",
+    "options": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Neither I nor II follows",
+      "Either I or II follows"
+    ],
+    "answer": 2,
+    "explanation": "Both actions are logical and immediate responses to a flooding situation. Providing relief and ensuring rescue readiness are standard administrative courses of action.",
+    "section": "Paper 1",
+    "topic": "Reasoning",
+    "marks": 1.25,
+    "negative": 0.3125
+  }
+]
