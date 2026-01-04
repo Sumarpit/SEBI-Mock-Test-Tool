@@ -479,7 +479,9 @@ input[type="file"] { display: none; }
     // --- USER CONFIG ---
     const REPO_OWNER = "Sumarpit";
     const REPO_NAME = "SEBI-Mock-Test-Tool";
-    
+    // [Add to global variables]
+    let qTimers = {}; // Stores seconds spent on each question index
+    let lastQTime = 0; // Timestamp when current question appeared
     // --- VARIABLES ---
     const KEY = 'sebi_v1_data';
     const HIST = 'sebi_v1_hist';
@@ -709,43 +711,93 @@ function renderGrid() {
         renderGrid();
     }
 
-    function prepareQuestions(sourceList) {
-        let newList = JSON.parse(JSON.stringify(sourceList));
-        for (let i = newList.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [newList[i], newList[j]] = [newList[j], newList[i]];
-        }
-        return newList.map(q => {
-            let correctText = q.options[q.answer];
-            for (let i = q.options.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [q.options[i], q.options[j]] = [q.options[j], q.options[i]];
+   function prepareQuestions(sourceList) {
+    // 1. GROUPING ALGORITHM (Preserves Passage Sequence)
+    let groups = [];
+    let currentGroup = [];
+    
+    sourceList.forEach((q, index) => {
+        // If it's the first question, start a group
+        if (index === 0) {
+            currentGroup.push(q);
+        } else {
+            const prevQ = sourceList[index - 1];
+            // Check if passage exists and matches previous question
+            // We strip whitespace to avoid mismatches due to formatting
+            const samePassage = q.passage && prevQ.passage && (q.passage.trim() === prevQ.passage.trim());
+            const sameGroup = q.group_id && prevQ.group_id && (q.group_id === prevQ.group_id);
+
+            if (samePassage || sameGroup) {
+                currentGroup.push(q);
+            } else {
+                // Seal previous group and start new one
+                groups.push(currentGroup);
+                currentGroup = [q];
             }
-            q.answer = q.options.indexOf(correctText);
-            return q;
-        });
+        }
+    });
+    if (currentGroup.length > 0) groups.push(currentGroup);
+
+    // 2. SHUFFLE GROUPS (instead of individual questions)
+    for (let i = groups.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [groups[i], groups[j]] = [groups[j], groups[i]];
     }
 
-    function startExam() {
-        if(localStorage.getItem(KEY)) if(!confirm("Discard current progress?")) return;
-        isReviewMode = false;
-        let rawQuestions = [];
-        if (isMultiMode) {
-            if (selectedFiles.size === 0) return;
-            selectedFiles.forEach(f => { if(library[f]) rawQuestions.push(...library[f]); });
-            activeFile = "Combined Test";
-        } else {
-            if(!activeFile || !library[activeFile]) return;
-            rawQuestions = library[activeFile];
+    // 3. FLATTEN & SHUFFLE OPTIONS (Conditionally)
+    let flatList = groups.flat();
+    
+    return flatList.map(q => {
+        // Clone to avoid reference issues
+        let newQ = JSON.parse(JSON.stringify(q));
+        
+        // CHECK: Should we shuffle options?
+        // Skip if user set "noShuffle": true OR if options contain tricky keywords
+        const trickyKeywords = ["Both", "All of", "None of", "Only A", "Only B"];
+        const hasTrickyOption = newQ.options.some(opt => trickyKeywords.some(kw => opt.includes(kw)));
+        
+        if (newQ.noShuffle !== true && !hasTrickyOption) {
+            let correctText = newQ.options[newQ.answer];
+            for (let i = newQ.options.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [newQ.options[i], newQ.options[j]] = [newQ.options[j], newQ.options[i]];
+            }
+            newQ.answer = newQ.options.indexOf(correctText);
         }
-        questions = prepareQuestions(rawQuestions);
-        responses = {}; confidence = {}; visited = {}; currIdx = 0;
-        const h = parseInt(document.getElementById('hInput').value)||0;
-        const m = parseInt(document.getElementById('mInput').value)||0;
-        const s = parseInt(document.getElementById('sInput').value)||0;
-        seconds = (h*3600)+(m*60)+s || 3600; 
-        initExamUI();
+        
+        return newQ;
+    });
+}
+
+
+// [Update startExam]
+function startExam() {
+    if(localStorage.getItem(KEY)) if(!confirm("Discard current progress?")) return;
+    isReviewMode = false;
+    let rawQuestions = [];
+    
+    // ... [Keep your existing selection logic] ...
+    if (isMultiMode) {
+        if (selectedFiles.size === 0) return;
+        selectedFiles.forEach(f => { if(library[f]) rawQuestions.push(...library[f]); });
+        activeFile = "Combined Test";
+    } else {
+        if(!activeFile || !library[activeFile]) return;
+        rawQuestions = library[activeFile];
     }
+
+    questions = prepareQuestions(rawQuestions);
+    responses = {}; confidence = {}; visited = {}; 
+    qTimers = {}; // <--- RESET TIMERS
+    currIdx = 0;
+    
+    const h = parseInt(document.getElementById('hInput').value)||0;
+    const m = parseInt(document.getElementById('mInput').value)||0;
+    const s = parseInt(document.getElementById('sInput').value)||0;
+    seconds = (h*3600)+(m*60)+s || 3600; 
+    
+    initExamUI();
+}
 
     function startSmartReview() {
         if(!reviewSet || reviewSet.length === 0) return;
@@ -799,8 +851,17 @@ function renderGrid() {
     }
 
     function loadQ(i) {
-        currIdx = i; visited[i] = true;
-        const q = questions[i];
+        // 1. SAVE TIME FOR PREVIOUS QUESTION
+        const now = Date.now();
+        if (lastQTime !== 0) {
+        const diff = (now - lastQTime) / 1000; // convert ms to seconds
+        // Add to existing time or initialize
+        qTimers[currIdx] = (qTimers[currIdx] || 0) + diff; 
+        }
+         lastQTime = now; // Reset start time for the NEW question (i)
+
+        
+        
         
         const passDiv = document.getElementById('pane-passage');
         if(q.passage) { passDiv.classList.add('active'); document.getElementById('passage-content').innerHTML = q.passage; }
@@ -838,6 +899,8 @@ function renderGrid() {
         if(i === questions.length-1) { btn.innerText = "Submit Test"; btn.style.background = "#e67e22"; }
         else { btn.innerText = "Save & Next"; btn.style.background = "#2962ff"; }
         renderPalette();
+        // [Ensure saveState saves the timers too]
+        saveState();
     }
 
     function setConf(val) { confidence[currIdx] = val; loadQ(currIdx); saveState(); }
@@ -873,23 +936,40 @@ function renderGrid() {
     }
 
     function saveState() {
-        localStorage.setItem(KEY, JSON.stringify({ library, activeFile, questions, responses, confidence, visited, currIdx, seconds, isReviewMode }));
-    }
+    // Added qTimers and lastQTime to storage
+    localStorage.setItem(KEY, JSON.stringify({ 
+        library, activeFile, questions, responses, confidence, 
+        visited, currIdx, seconds, isReviewMode, qTimers, lastQTime 
+    }));
+}
 
     function checkResume() { if(localStorage.getItem(KEY)) document.getElementById('resume-btn').style.display = 'inline-block'; }
 
     function resumeExam() {
-        const d = JSON.parse(localStorage.getItem(KEY));
-        loadLibraryFromStorage();
-        activeFile = d.activeFile; questions = d.questions;
-        responses = d.responses; confidence = d.confidence; visited = d.visited;
-        currIdx = d.currIdx; seconds = d.seconds; isReviewMode = d.isReviewMode;
-        initExamUI();
-    }
+    const d = JSON.parse(localStorage.getItem(KEY));
+    loadLibraryFromStorage();
+    activeFile = d.activeFile; questions = d.questions;
+    responses = d.responses; confidence = d.confidence; visited = d.visited;
+    currIdx = d.currIdx; seconds = d.seconds; isReviewMode = d.isReviewMode;
+    
+    // Restore Timers
+    qTimers = d.qTimers || {}; 
+    lastQTime = Date.now(); // Reset timestamp to now so we don't count offline time
+    
+    initExamUI();
+}
 
     function submitExam(force=false) {
         if(!force && !confirm("End Exam?")) return;
-        clearInterval(timer); localStorage.removeItem(KEY);
+        clearInterval(timer);
+
+        // CAPTURE TIME FOR FINAL QUESTION
+        const now = Date.now();
+        if (lastQTime !== 0) {
+        qTimers[currIdx] = (qTimers[currIdx] || 0) + ((now - lastQTime) / 1000);
+        }
+        lastQTime = 0; // Reset
+        localStorage.removeItem(KEY);
 
         let score=0, cor=0, wrg=0, skip=0;
         let tStats={}, cStats={ '100% Sure':{c:0,w:0}, '50:50':{c:0,w:0}, 'Logical':{c:0,w:0}, 'Guess':{c:0,w:0} };
@@ -981,29 +1061,39 @@ function renderGrid() {
 
         const rev = document.getElementById('review-list'); rev.innerHTML = '';
         questions.forEach((q, i) => {
-            const ans = responses[i]; const userConf = confidence[i] || 'None';
-            let cls = 'skip', uAns = 'Skipped', status = 'Skipped';
-            if(ans !== undefined) {
-                if(ans === q.answer) { cls='correct'; uAns=q.options[ans]; status='Correct'; }
-                else { cls='wrong'; uAns=q.options[ans]; status='Wrong'; }
-            }
-            
-            rev.innerHTML += `
-                <div class="review-item ${cls}">
-                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:5px; border-bottom:1px solid #eee;">
-                        <span style="font-weight:bold;">Q${i+1} (${status})</span>
+        const ans = responses[i]; const userConf = confidence[i] || 'None';
+        
+        // FORMAT TIME
+        let timeSec = Math.round(qTimers[i] || 0);
+        let timeString = timeSec + 's';
+        if(timeSec > 60) timeString = Math.floor(timeSec/60) + 'm ' + (timeSec%60) + 's';
+
+        let cls = 'skip', uAns = 'Skipped', status = 'Skipped';
+        if(ans !== undefined) {
+            if(ans === q.answer) { cls='correct'; uAns=q.options[ans]; status='Correct'; }
+            else { cls='wrong'; uAns=q.options[ans]; status='Wrong'; }
+        }
+        
+        rev.innerHTML += `
+            <div class="review-item ${cls}">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:5px; border-bottom:1px solid #eee;">
+                    <span style="font-weight:bold;">Q${i+1} (${status})</span>
+                    <div style="display:flex; gap:10px;">
+                        <span style="font-size:0.8rem; background:#eee; color:#333; padding:2px 8px; border-radius:4px;">⏱ ${timeString}</span>
                         ${ans !== undefined ? `<span style="font-size:0.8rem; background:#333; color:#fff; padding:2px 8px; border-radius:4px;">${userConf}</span>` : ''}
                     </div>
-                    <div style="margin-bottom:10px; font-size:1.05rem;">${q.question}</div>
-                    <div style="font-size:0.95rem;">
-                        You: <b>${uAns}</b> <br>
-                        Ans: <span class="txt-green">${q.options[q.answer]}</span>
-                    </div>
-                    <div style="margin-top:10px; padding:10px; background:#f9f9f9; font-size:0.9rem; border-radius:4px;">
-                        <b>Exp:</b> ${q.explanation}
-                    </div>
-                </div>`;
-        });
+                </div>
+                <div style="margin-bottom:10px; font-size:1.05rem;">${q.question}</div>
+                <div style="font-size:0.95rem;">
+                    You: <b>${uAns}</b> <br>
+                    Ans: <span class="txt-green">${q.options[q.answer]}</span>
+                </div>
+                <div style="margin-top:10px; padding:10px; background:#f9f9f9; font-size:0.9rem; border-radius:4px;">
+                    <b>Exp:</b> ${q.explanation}
+                </div>
+            </div>`;
+    });
+});
     }
 
     function toggleSidebar() { 
