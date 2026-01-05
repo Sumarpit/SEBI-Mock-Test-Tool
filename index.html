@@ -270,7 +270,7 @@
         <div class="footer-left">
             <div class="radio-group">
                 <label class="radio-item"><input type="radio" name="pMode" value="auto" checked> Auto</label>
-                <label class="radio-item"><input type="radio" name="pMode" value="1"> P1(+1)</label>
+                <label class="radio-item"><input type="radio" name="pMode" value="1"> P1(+1.25)</label>
                 <label class="radio-item"><input type="radio" name="pMode" value="2"> P2(+2)</label>
             </div>
             <div class="time-row">
@@ -893,7 +893,7 @@ async function saveAndSync() {
             let qMark = 1, qNeg = 0.25;
 
             if (mode === '2') { qMark = 2.0; qNeg = 0.5; modeLabel = "Forced Paper 2 (+2 / -0.5)"; } 
-            else if (mode === '1') { qMark = 1.0; qNeg = 0.25; modeLabel = "Forced Paper 1 (+1 / -0.25)"; } 
+            else if (mode === '1') { qMark = 1.25; qNeg = 0.3125; modeLabel = "Paper 1 (+1.25 / -0.3125)"; } 
             else {
                 qMark = q.marks ? parseFloat(q.marks) : 1.0;
                 qNeg = q.negative ? parseFloat(q.negative) : (qMark * 0.25);
