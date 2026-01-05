@@ -31,16 +31,25 @@
         .filter-bar { margin-bottom: 20px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .exam-select { width: 100%; padding: 12px; border: 2px solid var(--accent); border-radius: 6px; font-size: 1rem; font-weight: bold; color: var(--accent); background: white; margin-bottom: 15px; cursor: pointer; outline: none; }
         .search-box { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; margin-bottom: 10px; }
-        .library-box { background: var(--card-bg); padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: center; margin-bottom: 20px; }
-        .lib-controls { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap:10px; }
-        .toggle-btn { background: #eee; color: #333; padding: 6px 12px; border-radius: 20px; cursor: pointer; border: 1px solid #ccc; font-size: 0.85rem; display: flex; align-items: center; gap: 5px; }
+        
+        .library-box { background: var(--card-bg); padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        
+        /* NEW BUTTON GROUP STYLING */
+        .lib-controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 15px; }
+        .btn-row { display: flex; gap: 10px; }
+        
+        .toggle-btn { background: #eee; color: #333; padding: 8px 16px; border-radius: 6px; cursor: pointer; border: 1px solid #ccc; font-size: 0.9rem; display: flex; align-items: center; gap: 5px; font-weight: 500; transition: 0.2s; }
+        .toggle-btn:hover { background: #e0e0e0; }
         .toggle-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
-        .drop-zone { border: 2px dashed #ccc; background: #fafafa; cursor: pointer; border-radius: 6px; padding: 20px; margin-bottom: 20px; }
+        .paste-btn { background: #e3f2fd; color: var(--accent); border: 1px solid var(--accent); }
+        .upload-btn { background: #fff3e0; color: #e65100; border: 1px solid #ffb74d; }
+        
         input[type="file"] { display: none; }
 
         /* LIST VIEW */
         .file-grid { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
-        .file-card { background: #fff; border: 1px solid #eee; padding: 12px 15px; border-radius: 6px; cursor: pointer; display: flex; flex-direction: row; align-items: center; position: relative; }
+        .file-card { background: #fff; border: 1px solid #eee; padding: 12px 15px; border-radius: 6px; cursor: pointer; display: flex; flex-direction: row; align-items: center; position: relative; transition: 0.2s; }
+        .file-card:hover { border-color: var(--accent); background: #f9f9f9; }
         .file-card:not(.cloud-item) { padding-right: 45px !important; }
         .file-card.active { border: 1px solid var(--accent); background: #e3f2fd; }
         .file-name { font-weight: 600; font-size: 0.95rem; color: #333; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: 10px; }
@@ -50,6 +59,16 @@
         .status-badge { font-size: 1.2rem; margin-right: 15px; width: 25px; text-align: center; }
         .multi-check { margin-left: 10px; background: var(--accent); color: white; border-radius: 50%; width: 22px; height: 22px; display: none; align-items: center; justify-content: center; font-size: 0.7rem; }
         .file-card.multi-selected .multi-check { display: flex; }
+
+        /* HISTORY TABLE STYLING */
+        .history-box { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .styled-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-top: 10px; }
+        .styled-table thead tr { background-color: #f8f9fa; text-align: left; }
+        .styled-table th, .styled-table td { padding: 12px 15px; border-bottom: 1px solid #dddddd; }
+        .styled-table tbody tr:hover { background-color: #f1f1f1; }
+        .styled-table th { color: #555; font-weight: 600; }
+        button.retake { background: #27ae60; padding: 6px 12px; font-size: 0.8rem; color: white; border:none; border-radius:4px; cursor:pointer; font-weight: bold; }
+        button.clear { background: transparent; color: #e74c3c; text-decoration: underline; padding: 0; border: none; cursor:pointer;}
 
         /* MODAL */
         #pasteModal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 5000; align-items: center; justify-content: center; }
@@ -89,8 +108,8 @@
         .conf-box { margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 6px; pointer-events: none; opacity: 0.5; }
         .conf-box.active { pointer-events: auto; opacity: 1; background: #e3f2fd; }
         .conf-opts { display: flex; gap: 5px; margin-top: 5px; }
-        .c-btn { flex: 1; padding: 6px; border: 1px solid #ccc; background: white; text-align: center; cursor: pointer; border-radius: 4px; font-size: 0.8rem; }
-        .c-btn.sel { background: #673ab7; color: white; }
+        .c-btn { flex: 1; padding: 10px 5px; border: 1px solid #ccc; background: white; text-align: center; cursor: pointer; border-radius: 4px; font-size: 0.85rem; font-weight: 500; }
+        .c-btn.sel { background: #673ab7; color: white; border-color: #5e35b1; }
 
         /* RESULTS */
         .result-container { max-width: 850px; margin: 40px auto; padding-bottom: 50px; }
@@ -99,13 +118,19 @@
         .score-card.tot { border-color: var(--accent); }
         .score-card.cor { border-color: var(--correct); }
         .score-card.wrg { border-color: var(--wrong); }
+        .analysis-section { background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: 20px; margin-bottom: 25px; }
         .review-item { background: white; border-left: 5px solid #ccc; padding: 15px; margin-bottom: 15px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
         .review-item.correct { border-left-color: var(--correct); }
         .review-item.wrong { border-left-color: var(--wrong); }
         .txt-green { color: var(--correct); font-weight: bold; }
         .txt-red { color: var(--wrong); font-weight: bold; }
         
-        /* RESULT DROPDOWN */
+        /* Analysis Tables */
+        .data-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.9rem; }
+        .data-table th, .data-table td { padding: 10px; text-align: center; border-bottom: 1px solid #eee; }
+        .data-table th { background: #f8f9fa; color: #555; font-weight: 600; text-align: left; }
+        .data-table td:first-child { text-align: left; font-weight: 500; }
+
         .score-selector {
             margin: 0 auto 20px auto; display: block; padding: 8px; 
             border: 2px solid var(--accent); border-radius: 6px; 
@@ -153,23 +178,25 @@
 
         <div class="library-box">
             <div class="lib-controls">
-                <h1 style="font-size:1.2rem;">Library</h1>
-                <div style="display:flex; gap:10px;">
+                <h1 style="font-size:1.2rem; margin:0;">Library</h1>
+                <div class="btn-row">
                     <div class="toggle-btn paste-btn" onclick="openPasteModal()">📋 Paste</div>
+                    <label class="toggle-btn upload-btn">
+                        📂 Upload <input type="file" id="jsonFile" accept=".json" multiple onchange="loadFiles(this.files)">
+                    </label>
                     <div class="toggle-btn" id="multiToggle" onclick="toggleMultiSelect()">❑ Multi</div>
                 </div>
             </div>
             
-            <label class="drop-zone" id="dropZone">
-                <p>📂 Upload Local JSON</p>
-                <input type="file" id="jsonFile" accept=".json" multiple>
-            </label>
             <div id="file-grid" class="file-grid"></div>
         </div>
 
         <div class="history-box">
-            <h3 style="text-align:center;">History</h3>
-            <table id="history-table"><thead><tr><th>Test</th><th>Score</th><th>Action</th></tr></thead><tbody id="history-list"></tbody></table>
+            <h3 style="text-align:center; margin-bottom:10px;">Recent Performance</h3>
+            <table id="history-table" class="styled-table">
+                <thead><tr><th>Test</th><th>Score</th><th>Action</th></tr></thead>
+                <tbody id="history-list"></tbody>
+            </table>
             <div id="no-history" style="text-align:center; color:#999; margin-top:10px;">No history found.</div>
             <div style="text-align:center; margin-top:10px;"><button class="clear" onclick="clearHistory()">Clear History</button></div>
         </div>
@@ -214,9 +241,9 @@
             <div class="conf-box" id="conf-box">
                 <strong>Confidence:</strong>
                 <div class="conf-opts">
-                    <div class="c-btn" onclick="setConf('100% Sure')">100%</div>
+                    <div class="c-btn" onclick="setConf('100%')">100%</div>
                     <div class="c-btn" onclick="setConf('50:50')">50:50</div>
-                    <div class="c-btn" onclick="setConf('Logical')">Logic</div>
+                    <div class="c-btn" onclick="setConf('Logic')">Logic</div>
                     <div class="c-btn" onclick="setConf('Guess')">Guess</div>
                 </div>
             </div>
@@ -275,6 +302,26 @@
         </div>
 
         <div class="analysis-section">
+            <h3>Confidence Analysis</h3>
+            <div style="overflow-x:auto;">
+                <table id="tbl-conf" class="data-table">
+                    <thead><tr><th>Type</th><th>Correct</th><th>Wrong</th><th>Total</th><th>Accuracy</th></tr></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="analysis-section">
+            <h3>Topic Analysis</h3>
+            <div style="overflow-x:auto;">
+                <table id="tbl-topic" class="data-table">
+                    <thead><tr><th>Topic</th><th>Total</th><th>Correct</th><th>Wrong</th></tr></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="analysis-section">
             <h3>Detailed Review</h3>
             <div id="review-list"></div>
         </div>
@@ -306,8 +353,6 @@
     let timer, seconds = 0, qTimers = {}, lastQTime = 0;
     let isMultiMode = false, selectedFiles = new Set();
     let isReviewMode = false, reviewSet = [];
-    
-    // For Recalculation
     let initialScore = 0; 
 
     // --- INIT ---
@@ -470,6 +515,18 @@
         } catch(e){ alert("Invalid JSON"); }
     }
 
+    function loadFiles(files) {
+        if(!files.length) return;
+        Array.from(files).forEach(f => {
+            const r = new FileReader();
+            r.onload = e => { 
+                try { library[f.name] = JSON.parse(e.target.result); saveLibraryToStorage(); renderGrid(); } 
+                catch(x){ alert('Invalid JSON'); }
+            };
+            r.readAsText(f);
+        });
+    }
+
     // --- EXAM LOGIC ---
     function prepareQuestions(list) {
         let groups = [], cur = [];
@@ -547,10 +604,14 @@
             box.appendChild(d);
         });
 
+        // FIXED: Confidence buttons now check exact text
         const cf = document.querySelectorAll('.c-btn');
         if(responses[i]!==undefined) {
             document.getElementById('conf-box').classList.add('active');
-            cf.forEach(b => { b.classList.remove('sel'); if(b.innerText===confidence[i]) b.classList.add('sel'); });
+            cf.forEach(b => { 
+                b.classList.remove('sel'); 
+                if(b.innerText === confidence[i]) b.classList.add('sel'); 
+            });
         } else { document.getElementById('conf-box').classList.remove('active'); cf.forEach(b=>b.classList.remove('sel')); }
 
         const btn = document.getElementById('next-btn');
@@ -603,21 +664,37 @@
         if(lastQTime!==0) qTimers[currIdx] = (qTimers[currIdx]||0) + (Date.now()-lastQTime)/1000;
         localStorage.removeItem(BASE_KEY+'resume_'+currentProfile);
 
-        // DEFAULT SCORING (Auto)
         let score=0, cor=0, wrg=0, skip=0;
+        // RESTORED: Stats Objects for Tables
+        let tStats={}, cStats={ '100%':{c:0,w:0}, '50:50':{c:0,w:0}, 'Logic':{c:0,w:0}, 'Guess':{c:0,w:0} };
         reviewSet = [];
         
         questions.forEach((q, i) => {
-            const ans = responses[i];
+            const ans = responses[i]; const conf = confidence[i];
+            
+            // Topic Logic
+            const top = q.topic || 'Unknown';
+            if(!tStats[top]) tStats[top] = {t:0, c:0, w:0}; 
+            tStats[top].t++;
+
             let qMark = q.marks ? parseFloat(q.marks) : EXAM_PROFILES[currentProfile].marks;
             let qNeg = q.negative ? parseFloat(q.negative) : (q.marks ? parseFloat(q.marks)*0.25 : EXAM_PROFILES[currentProfile].neg);
             
             if(ans === undefined) { skip++; reviewSet.push(q); }
-            else if(ans === q.answer) { score += qMark; cor++; }
-            else { score -= qNeg; wrg++; reviewSet.push(q); }
+            else if(ans === q.answer) { 
+                score += qMark; cor++; 
+                tStats[top].c++;
+                if(conf && cStats[conf]) cStats[conf].c++;
+            }
+            else { 
+                score -= qNeg; wrg++; 
+                tStats[top].w++;
+                if(conf && cStats[conf]) cStats[conf].w++;
+                reviewSet.push(q); 
+            }
         });
 
-        initialScore = score; // Save for dropdown restore
+        initialScore = score; 
 
         // Save History
         if(!isReviewMode) {
@@ -627,21 +704,32 @@
             localStorage.setItem(HIST_KEY, JSON.stringify(h));
         }
 
-        // Render Result
         document.getElementById('exam-screen').classList.remove('active');
         document.getElementById('result-screen').classList.add('active');
         
         document.getElementById('res-fname').innerText = activeFile.replace(/\.json$/i, '');
-        document.getElementById('scoreSelector').value = 'initial'; // Reset Dropdown
+        document.getElementById('scoreSelector').value = 'initial'; 
         
-        // Populate Cards
         updateResultCards(score, cor, wrg, skip);
         
-        // Smart Review Btn
+        // RESTORED: POPULATE TABLES
+        const tConf = document.getElementById('tbl-conf').querySelector('tbody'); tConf.innerHTML='';
+        Object.keys(cStats).forEach(k => {
+            const d = cStats[k], tot = d.c+d.w;
+            if(tot > 0) { // Only show used confidence levels
+                tConf.innerHTML += `<tr><td>${k}</td><td class="txt-green">${d.c}</td><td class="txt-red">${d.w}</td><td>${tot}</td><td>${Math.round((d.c/tot)*100)}%</td></tr>`;
+            }
+        });
+
+        const tTopic = document.getElementById('tbl-topic').querySelector('tbody'); tTopic.innerHTML='';
+        Object.keys(tStats).forEach(k => {
+            const d = tStats[k];
+            tTopic.innerHTML += `<tr><td>${k}</td><td>${d.t}</td><td class="txt-green">${d.c}</td><td class="txt-red">${d.w}</td></tr>`;
+        });
+
         const rb = document.getElementById('smart-review-btn');
         if(reviewSet.length>0) { rb.style.display='inline-block'; } else rb.style.display='none';
 
-        // Render Review List
         const rev = document.getElementById('review-list'); rev.innerHTML = '';
         questions.forEach((q, i) => {
             const ans = responses[i]; const conf = confidence[i]||'';
@@ -667,31 +755,18 @@
         });
     }
 
-    // --- RECALCULATE SCORE (Formula Based) ---
     function recalcScore() {
         const type = document.getElementById('scoreSelector').value;
         const cor = parseInt(document.getElementById('r-cor').innerText);
         const wrg = parseInt(document.getElementById('r-wrg').innerText);
-        
         let newScore = 0;
-        
-        if (type === 'initial') {
-            newScore = initialScore;
-        } else if (type === 'raw') {
-            newScore = cor * 1;
-        } else {
-            // Define Standard Schemes
-            const schemes = {
-                'sebi1': { p: 1.25, n: 0.3125 },
-                'sebi2': { p: 2.0, n: 0.5 },
-                'ssc':   { p: 2.0, n: 0.5 },
-                'upsc':  { p: 2.0, n: 0.66 },
-                'rbi':   { p: 1.0, n: 0.25 }
-            };
+        if (type === 'initial') newScore = initialScore;
+        else if (type === 'raw') newScore = cor * 1;
+        else {
+            const schemes = { 'sebi1': { p: 1.25, n: 0.3125 }, 'sebi2': { p: 2.0, n: 0.5 }, 'ssc': { p: 2.0, n: 0.5 }, 'upsc': { p: 2.0, n: 0.66 }, 'rbi': { p: 1.0, n: 0.25 } };
             const s = schemes[type];
             if(s) newScore = (cor * s.p) - (wrg * s.n);
         }
-        
         document.getElementById('r-score').innerText = newScore.toFixed(2);
     }
 
