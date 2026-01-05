@@ -1,0 +1,703 @@
+[
+  {
+    "section": "Accountancy",
+    "topic": "Accounting Standards (Ind AS)",
+    "question": "Which Indian Accounting Standard (Ind AS) deals with 'Revenue from Contracts with Customers', which outlines the five-step model for revenue recognition?",
+    "options": [
+      "Ind AS 18",
+      "Ind AS 115",
+      "Ind AS 110",
+      "Ind AS 109",
+      "Ind AS 16"
+    ],
+    "answer": 1,
+    "explanation": "**Ind AS 115** deals with Revenue from Contracts with Customers. It replaced the earlier standards (Ind AS 18 and Ind AS 11) and provides a comprehensive 5-step framework for revenue recognition."
+  },
+  {
+    "section": "Accountancy",
+    "topic": "Share Capital Transactions",
+    "question": "A company forfeited 1,000 shares of ₹10 each (₹8 called up) for non-payment of allotment money of ₹3 per share. The application money of ₹2 per share had been received. What amount will be credited to the 'Share Forfeited Account'?",
+    "options": [
+      "₹2,000",
+      "₹3,000",
+      "₹5,000",
+      "₹8,000",
+      "₹10,000"
+    ],
+    "answer": 0,
+    "explanation": "The Share Forfeited Account is credited with the amount **actually received** from the shareholder. <br>Amount received = Application money = ₹2 per share.<br>Total Credit = 1,000 shares × ₹2 = **₹2,000**."
+  },
+  {
+    "section": "Accountancy",
+    "topic": "Ratio Analysis",
+    "question": "Calculate the 'Interest Coverage Ratio' from the following details: Net Profit after Tax = ₹6,00,000; Tax Rate = 40%; 10% Debentures = ₹20,00,000.",
+    "options": [
+      "3 Times",
+      "4 Times",
+      "5 Times",
+      "6 Times",
+      "2 Times"
+    ],
+    "answer": 3,
+    "explanation": "Interest = 10% of 20,00,000 = ₹2,00,000.<br>Net Profit After Tax = ₹6,00,000.<br>Net Profit Before Tax = 6,00,000 / (1 - 0.40) = 6,00,000 / 0.6 = ₹10,00,000.<br>EBIT (Earnings Before Interest & Tax) = NPBT + Interest = 10,00,000 + 2,00,000 = ₹12,00,000.<br>Interest Coverage Ratio = EBIT / Interest = 12,00,000 / 2,00,000 = **6 Times**."
+  },
+  {
+    "section": "Accountancy",
+    "topic": "Cash Flow Statement",
+    "question": "While preparing the Cash Flow Statement as per AS-3, 'Interest paid' by a non-financial enterprise (e.g., a manufacturing company) is classified as:",
+    "options": [
+      "Operating Activity",
+      "Investing Activity",
+      "Financing Activity",
+      "Extraordinary Item",
+      "Cash Equivalent"
+    ],
+    "answer": 2,
+    "explanation": "For a **non-financial enterprise**, interest paid is a cost of finance and is classified as a **Financing Activity**. (Note: For a financial enterprise, it would be Operating)."
+  },
+  {
+    "section": "Management",
+    "topic": "Leadership Theories",
+    "question": "Which leadership theory suggests that 'leaders are born, not made' and focuses on isolating characteristics that differentiate leaders from non-leaders?",
+    "options": [
+      "Contingency Theory",
+      "Trait Theory",
+      "Path-Goal Theory",
+      "Situational Theory",
+      "Behavioral Theory"
+    ],
+    "answer": 1,
+    "explanation": "**Trait Theory** (Great Man Theory) assumes that leadership capability is inherent and focuses on specific traits (physical, intellectual, personality) that leaders possess."
+  },
+  {
+    "section": "Management",
+    "topic": "Motivation",
+    "question": "In Herzberg's Two-Factor Theory, which of the following is considered a 'Hygiene Factor' (Dissatisfier)?",
+    "options": [
+      "Recognition",
+      "Responsibility",
+      "Advancement",
+      "Company Policy and Administration",
+      "Achievement"
+    ],
+    "answer": 3,
+    "explanation": "**Company Policy and Administration** is a Hygiene Factor. Its absence causes dissatisfaction, but its presence does not necessarily motivate. The others (Recognition, Responsibility, etc.) are Motivators."
+  },
+  {
+    "section": "Management",
+    "topic": "Communication",
+    "question": "In the context of communication barriers, the use of technical jargon that the receiver does not understand is classified as which type of barrier?",
+    "options": [
+      "Psychological Barrier",
+      "Semantic Barrier",
+      "Organizational Barrier",
+      "Physical Barrier",
+      "Emotional Barrier"
+    ],
+    "answer": 1,
+    "explanation": "**Semantic Barriers** relate to language and interpretation. Using jargon, ambiguous words, or bad translation falls under this category."
+  },
+  {
+    "section": "Management",
+    "topic": "HRD Concepts",
+    "question": "Which performance appraisal method involves evaluating an employee by collecting feedback from their supervisors, peers, subordinates, and customers?",
+    "options": [
+      "Management by Objectives (MBO)",
+      "360-Degree Feedback",
+      "Assessment Centers",
+      "Behaviorally Anchored Rating Scales (BARS)",
+      "Critical Incident Method"
+    ],
+    "answer": 1,
+    "explanation": "**360-Degree Feedback** involves appraisal from all around the employee (superiors, subordinates, peers, clients) to give a holistic view."
+  },
+  {
+    "section": "Companies Act",
+    "topic": "Auditors",
+    "question": "As per Section 139(2) of the Companies Act, 2013, a listed company cannot appoint an individual as an auditor for more than:",
+    "options": [
+      "One term of 4 years",
+      "One term of 5 years",
+      "Two terms of 5 years",
+      "Two terms of 4 years",
+      "Three terms of 5 years"
+    ],
+    "answer": 1,
+    "explanation": "An **individual** auditor can be appointed for **one term of 5 years**. An **audit firm** can be appointed for **two terms of 5 years** (total 10 years). The question asks for an 'individual'."
+  },
+  {
+    "section": "Companies Act",
+    "topic": "Board of Directors",
+    "question": "Under Section 149 of the Companies Act, 2013, every listed public company must have at least what proportion of its total number of directors as 'Independent Directors'?",
+    "options": [
+      "One-half",
+      "One-third",
+      "Two-thirds",
+      "One-fourth",
+      "One-fifth"
+    ],
+    "answer": 1,
+    "explanation": "For a **listed public company**, at least **one-third** of the total number of directors must be Independent Directors."
+  },
+  {
+    "section": "Companies Act",
+    "topic": "Meetings",
+    "question": "What is the minimum quorum required for a public company having more than 1,000 but up to 5,000 members personally present at a General Meeting?",
+    "options": [
+      "5 members",
+      "15 members",
+      "30 members",
+      "50 members",
+      "10 members"
+    ],
+    "answer": 1,
+    "explanation": "Quorum for Public Company (personally present): <br>< 1,000 members: 5.<br>**1,000 - 5,000 members: 15.**<br>> 5,000 members: 30."
+  },
+  {
+    "section": "Costing",
+    "topic": "Marginal Costing - BEP",
+    "question": "Given: Fixed Cost = ₹80,000; Sales Price per unit = ₹20; Variable Cost per unit = ₹12. Calculate the Break-Even Point (BEP) in units.",
+    "options": [
+      "8,000 units",
+      "12,000 units",
+      "10,000 units",
+      "15,000 units",
+      "5,000 units"
+    ],
+    "answer": 2,
+    "explanation": "Contribution per unit = SP - VC = 20 - 12 = ₹8.<br>BEP (Units) = Fixed Cost / Contribution per unit = 80,000 / 8 = **10,000 units**."
+  },
+  {
+    "section": "Costing",
+    "topic": "Standard Costing",
+    "question": "If the Standard Price of a material is ₹4/kg, Actual Price is ₹5/kg, and Actual Quantity used is 1,000 kg. What is the Material Price Variance (MPV)?",
+    "options": [
+      "₹1,000 Favorable",
+      "₹1,000 Adverse",
+      "₹4,000 Adverse",
+      "₹5,000 Adverse",
+      "₹2,000 Favorable"
+    ],
+    "answer": 1,
+    "explanation": "MPV = (Standard Price - Actual Price) × Actual Quantity<br>MPV = (4 - 5) × 1,000 = -1 × 1,000 = **₹1,000 Adverse** (Negative implies Adverse)."
+  },
+  {
+    "section": "Costing",
+    "topic": "Lean Systems",
+    "question": "Which Japanese term in Lean Manufacturing refers to 'Continuous Improvement' involving all employees from top management to workers?",
+    "options": [
+      "Muda",
+      "Kaizen",
+      "Kanban",
+      "Poka-Yoke",
+      "Jidoka"
+    ],
+    "answer": 1,
+    "explanation": "**Kaizen** means Continuous Improvement. Muda means waste; Kanban is a signaling system; Poka-Yoke is mistake-proofing."
+  },
+  {
+    "section": "Costing",
+    "topic": "Budgeting",
+    "question": "Which type of budget is prepared for a single level of activity and does not change with the change in the volume of output?",
+    "options": [
+      "Flexible Budget",
+      "Zero-Based Budget",
+      "Fixed Budget",
+      "Master Budget",
+      "Cash Budget"
+    ],
+    "answer": 2,
+    "explanation": "A **Fixed Budget** is designed to remain unchanged regardless of the activity level. A Flexible Budget changes with the volume of output."
+  },
+  {
+    "section": "Costing",
+    "topic": "Methods of Costing",
+    "question": "Which method of costing is most suitable for the transport sector (e.g., bus/truck companies)?",
+    "options": [
+      "Process Costing",
+      "Contract Costing",
+      "Operating Costing",
+      "Job Costing",
+      "Batch Costing"
+    ],
+    "answer": 2,
+    "explanation": "**Operating Costing** (or Service Costing) is used for service industries like transport, power, and hospitals, where the service is the final product."
+  },
+  {
+    "section": "Finance",
+    "topic": "Derivatives",
+    "question": "An option that gives the holder the right, but not the obligation, to **sell** an underlying asset at a specified price is called a:",
+    "options": [
+      "Call Option",
+      "Put Option",
+      "Swap",
+      "Forward",
+      "Future"
+    ],
+    "answer": 1,
+    "explanation": "A **Put Option** gives the right to SELL. A Call Option gives the right to BUY."
+  },
+  {
+    "section": "Finance",
+    "topic": "Bond Markets",
+    "question": "A bond that pays no interest during its life but is issued at a deep discount to its face value is known as:",
+    "options": [
+      "Convertible Bond",
+      "Zero Coupon Bond",
+      "Junk Bond",
+      "Floating Rate Bond",
+      "Perpetual Bond"
+    ],
+    "answer": 1,
+    "explanation": "**Zero Coupon Bonds** do not pay periodic interest (coupon). The return is the difference between the discounted issue price and the face value redeemed at maturity."
+  },
+  {
+    "section": "Finance",
+    "topic": "Regulatory Bodies",
+    "question": "Who regulates the Housing Finance Companies (HFCs) in India currently (post-2019 amendment)?",
+    "options": [
+      "NHB (National Housing Bank)",
+      "SEBI",
+      "RBI (Reserve Bank of India)",
+      "NABARD",
+      "IRDAI"
+    ],
+    "answer": 2,
+    "explanation": "The regulation of HFCs was transferred from **NHB** to **RBI** in 2019 to ensure better oversight and liquidity management."
+  },
+  {
+    "section": "Economics",
+    "topic": "Market Structures",
+    "question": "In which market structure is the demand curve for an individual firm horizontal (perfectly elastic)?",
+    "options": [
+      "Monopoly",
+      "Oligopoly",
+      "Perfect Competition",
+      "Monopolistic Competition",
+      "Duopoly"
+    ],
+    "answer": 2,
+    "explanation": "In **Perfect Competition**, firms are price takers. They can sell any quantity at the market price, making their individual demand curve **perfectly elastic (horizontal)**."
+  },
+  {
+    "section": "Economics",
+    "topic": "Macroeconomics - Curves",
+    "question": "The **Phillips Curve** depicts the inverse relationship between which two economic variables?",
+    "options": [
+      "Tax rates and Tax revenue",
+      "Inflation and Unemployment",
+      "Growth and Inequality",
+      "Interest rates and Investment",
+      "Inflation and Interest rates"
+    ],
+    "answer": 1,
+    "explanation": "The Phillips Curve suggests an inverse trade-off between **Inflation and Unemployment** in the short run."
+  },
+  {
+    "section": "Economics",
+    "topic": "National Income",
+    "question": "Which of the following is NOT included in the calculation of National Income?",
+    "options": [
+      "Wages and Salaries",
+      "Rent income",
+      "Transfer Payments (e.g., Pensions, Scholarships)",
+      "Undistributed Profits",
+      "Mixed Income of self-employed"
+    ],
+    "answer": 2,
+    "explanation": "**Transfer Payments** (like old-age pensions, scholarships, unemployment allowance) are unilateral transfers without any corresponding production of goods/services, hence excluded from National Income."
+  },
+  {
+    "section": "Accountancy",
+    "topic": "Bonus Shares",
+    "question": "Which of the following reserves CANNOT be used for the issue of fully paid-up Bonus Shares?",
+    "options": [
+      "Free Reserves",
+      "Securities Premium Account",
+      "Capital Redemption Reserve",
+      "Revaluation Reserve",
+      "All of the above can be used"
+    ],
+    "answer": 3,
+    "explanation": "**Revaluation Reserve** is created by revaluing assets (unrealized gains) and cannot be used for issuing bonus shares. Only realized profits/cash reserves (Free Reserves, Securities Premium, CRR) can be used."
+  },
+  {
+    "section": "Companies Act",
+    "topic": "CSR",
+    "question": "If a company fails to spend the mandatory CSR amount and the amount relates to an 'Ongoing Project', it must transfer the unspent amount to a special account within how many days from the end of the financial year?",
+    "options": [
+      "30 days",
+      "6 months",
+      "30 days from the date of Board Meeting",
+      "3 months",
+      "15 days"
+    ],
+    "answer": 0,
+    "explanation": "For an **Ongoing Project**, unspent CSR funds must be transferred to a special 'Unspent CSR Account' within **30 days** from the end of the financial year."
+  },
+  {
+    "section": "Management",
+    "topic": "Control",
+    "question": "Which principle of management control states that 'Management should focus its attention on significant deviations from the standard, rather than minor ones'?",
+    "options": [
+      "Unity of Command",
+      "Management by Exception",
+      "Span of Control",
+      "Scalar Chain",
+      "Critical Path Method"
+    ],
+    "answer": 1,
+    "explanation": "**Management by Exception** suggests that managers should only be notified of significant deviations (exceptions) from the plan to save time and focus on critical issues."
+  }
+,
+  {
+    "section": "Companies Act",
+    "topic": "Definitions - Small Company",
+    "question": "As per the latest amendment to the Companies Act, 2013, a 'Small Company' is defined as a company (other than a public company) whose paid-up share capital does not exceed ₹4 crore and turnover does not exceed:",
+    "options": [
+      "₹20 crore",
+      "₹40 crore",
+      "₹50 crore",
+      "₹100 crore",
+      "₹10 crore"
+    ],
+    "answer": 1,
+    "explanation": "The definition of a Small Company was revised to facilitate ease of doing business. The limits are: Paid-up Share Capital up to **₹4 Crore** AND Turnover up to **₹40 Crore**."
+  },
+  {
+    "section": "Companies Act",
+    "topic": "Directors - Woman Director",
+    "question": "Which class of companies is mandatorily required to appoint at least one Woman Director on its Board?",
+    "options": [
+      "Every Listed Company only",
+      "Every Public Company with Paid-up Capital ≥ ₹100 Cr or Turnover ≥ ₹300 Cr",
+      "Every Listed Company and every other Public Company having Paid-up Capital ≥ ₹100 Cr or Turnover ≥ ₹300 Cr",
+      "Every Company with Net Worth > ₹500 Cr",
+      "All Public Companies"
+    ],
+    "answer": 2,
+    "explanation": "Rule 3 of Companies (Appointment and Qualification of Directors) Rules requires: (i) Every **Listed Company**, AND (ii) Every other Public Company with Paid-up Capital ≥ ₹100 Cr OR Turnover ≥ ₹300 Cr."
+  },
+  {
+    "section": "Costing",
+    "topic": "Marginal Costing - Formulas",
+    "question": "If the Profit-Volume (P/V) Ratio is 40% and the Margin of Safety is 30%, what is the net profit percentage on Sales?",
+    "options": [
+      "10%",
+      "12%",
+      "70%",
+      "7.5%",
+      "15%"
+    ],
+    "answer": 1,
+    "explanation": "Profit % = P/V Ratio × Margin of Safety Ratio.<br>Profit % = 40% × 30% = 0.40 × 0.30 = 0.12 = **12%**."
+  },
+  {
+    "section": "Costing",
+    "topic": "Process Costing",
+    "question": "In Process Costing, if the Normal Loss is 10% of input, Input is 5,000 units, and Actual Output is 4,400 units, what is the 'Abnormal Loss'?",
+    "options": [
+      "100 units",
+      "500 units",
+      "600 units",
+      "No Abnormal Loss",
+      "400 units"
+    ],
+    "answer": 0,
+    "explanation": "Normal Loss = 10% of 5,000 = 500 units.<br>Expected Output = 5,000 - 500 = 4,500 units.<br>Actual Output = 4,400 units.<br>Abnormal Loss = Expected Output - Actual Output = 4,500 - 4,400 = **100 units**."
+  },
+  {
+    "section": "Finance",
+    "topic": "Capital Budgeting",
+    "question": "Which Capital Budgeting technique assumes that the intermediate cash inflows are reinvested at the project's Internal Rate of Return (IRR)?",
+    "options": [
+      "Net Present Value (NPV)",
+      "Internal Rate of Return (IRR)",
+      "Profitability Index (PI)",
+      "Payback Period",
+      "Modified IRR (MIRR)"
+    ],
+    "answer": 1,
+    "explanation": "A major criticism of the **IRR** method is the implicit assumption that cash flows can be reinvested at the IRR itself. The NPV method assumes reinvestment at the Cost of Capital (Discount Rate)."
+  },
+  {
+    "section": "Finance",
+    "topic": "Financial System - Instruments",
+    "question": "Which of the following is an unsecured money market instrument issued in the form of a promissory note by highly rated corporates to meet short-term liabilities?",
+    "options": [
+      "Certificate of Deposit (CD)",
+      "Treasury Bill",
+      "Commercial Paper (CP)",
+      "Repo",
+      "Dated Securities"
+    ],
+    "answer": 2,
+    "explanation": "**Commercial Paper (CP)** is an unsecured money market instrument issued by corporates. CDs are issued by Banks."
+  },
+  {
+    "section": "Economics",
+    "topic": "Fiscal Policy",
+    "question": "The phenomenon where increased government borrowing raises interest rates, thereby reducing private investment, is known as:",
+    "options": [
+      "Liquidity Trap",
+      "Crowding Out Effect",
+      "Multiplier Effect",
+      "Fiscal Drag",
+      "Pump Priming"
+    ],
+    "answer": 1,
+    "explanation": "**Crowding Out** occurs when government borrowing absorbs the available lending capacity in the economy, driving up interest rates and making it expensive for the private sector to borrow/invest."
+  },
+  {
+    "section": "Economics",
+    "topic": "Balance of Payments",
+    "question": "Which of the following transactions is recorded in the 'Capital Account' of the Balance of Payments?",
+    "options": [
+      "Export of Goods",
+      "Unilateral Transfers (Remittances)",
+      "Income from Investments (Dividends)",
+      "Foreign Direct Investment (FDI)",
+      "Tourism Expenditure"
+    ],
+    "answer": 3,
+    "explanation": "**FDI** involves the movement of capital/assets and is part of the Capital Account. Exports, Remittances, and Investment Income (Dividends/Interest) are part of the **Current Account**."
+  },
+  {
+    "section": "Management",
+    "topic": "Motivation Theories",
+    "question": "Alderfer’s ERG Theory condenses Maslow’s five needs into three categories. What does 'ERG' stand for?",
+    "options": [
+      "Existence, Relatedness, Growth",
+      "Esteem, Relatedness, Goals",
+      "Energy, Responsibility, Growth",
+      "Existence, Resources, Goals",
+      "Efficiency, Reliability, Growth"
+    ],
+    "answer": 0,
+    "explanation": "ERG stands for **Existence** (Physiological/Safety), **Relatedness** (Social/External Esteem), and **Growth** (Self-Actualization/Internal Esteem)."
+  },
+  {
+    "section": "Management",
+    "topic": "Leadership Styles",
+    "question": "Which leadership style involves the leader inspiring followers to transcend their own self-interests for the good of the organization and is capable of having a profound and extraordinary effect on followers?",
+    "options": [
+      "Transactional Leadership",
+      "Laissez-Faire Leadership",
+      "Transformational Leadership",
+      "Bureaucratic Leadership",
+      "Autocratic Leadership"
+    ],
+    "answer": 2,
+    "explanation": "**Transformational Leadership** inspires and motivates followers to achieve extraordinary outcomes and personal growth, differing from Transactional Leadership which is based on rewards/punishments."
+  },
+  {
+    "section": "Accountancy",
+    "topic": "Inventory Valuation",
+    "question": "As per Ind AS 2 (Inventories), inventory should be valued at:",
+    "options": [
+      "Historical Cost",
+      "Selling Price",
+      "Lower of Cost and Net Realizable Value (NRV)",
+      "Higher of Cost and NRV",
+      "Fair Value"
+    ],
+    "answer": 2,
+    "explanation": "The fundamental principle of inventory valuation (Prudence) is **Lower of Cost and Net Realizable Value (NRV)**."
+  },
+  {
+    "section": "Accountancy",
+    "topic": "Partnership Accounts",
+    "question": "In the absence of a Partnership Deed, what is the interest rate payable on a loan advanced by a partner to the firm?",
+    "options": [
+      "12% p.a.",
+      "10% p.a.",
+      "6% p.a.",
+      "Market Rate",
+      "No interest is payable"
+    ],
+    "answer": 2,
+    "explanation": "As per the Indian Partnership Act, 1932, if the deed is silent, interest on a partner's loan is payable at **6% p.a.** (Note: No interest is allowed on Capital)."
+  },
+  {
+    "section": "Accountancy",
+    "topic": "ESOPs",
+    "question": "When employees exercise their stock options (ESOPs), the difference between the Market Price and the Exercise Price (which was earlier recognized as expense) is adjusted. The account 'Employee Stock Options Outstanding' is transferred to:",
+    "options": [
+      "Profit & Loss Account",
+      "General Reserve",
+      "Securities Premium",
+      "Share Capital",
+      "Share Capital (Face Value) and Securities Premium (Excess)"
+    ],
+    "answer": 4,
+    "explanation": "When options are exercised: The 'Bank A/c' is debited (Exercise Price), 'ESOP Outstanding A/c' is debited (Value of option), 'Share Capital' is credited (Face Value), and the balance goes to **Securities Premium**."
+  },
+  {
+    "section": "Costing",
+    "topic": "Overheads - ABC",
+    "question": "In Activity Based Costing (ABC), what is the term used for a factor that causes a change in the cost of an activity (e.g., number of machine setups, number of inspections)?",
+    "options": [
+      "Cost Pool",
+      "Cost Driver",
+      "Cost Center",
+      "Cost Unit",
+      "Allocation Base"
+    ],
+    "answer": 1,
+    "explanation": "A **Cost Driver** is the factor that influences or contributes to the cost of an activity (e.g., Number of Purchase Orders drives the Purchasing Cost)."
+  },
+  {
+    "section": "Costing",
+    "topic": "Cost Sheet",
+    "question": "In a Cost Sheet, 'Prime Cost' is calculated as the sum of:",
+    "options": [
+      "Direct Materials + Direct Labor + Factory Overheads",
+      "Direct Materials + Direct Labor + Direct Expenses",
+      "Cost of Production + Selling Expenses",
+      "Works Cost + Admin Overheads",
+      "Direct Materials + Factory Overheads"
+    ],
+    "answer": 1,
+    "explanation": "**Prime Cost** is the aggregate of all direct costs: Direct Material + Direct Labor + Direct Expenses."
+  },
+  {
+    "section": "Finance",
+    "topic": "Ratios - DuPont",
+    "question": "In the DuPont Analysis (3-step model), Return on Equity (ROE) is calculated as: Net Profit Margin × Asset Turnover × _______?",
+    "options": [
+      "Debt Equity Ratio",
+      "Financial Leverage (Equity Multiplier)",
+      "Current Ratio",
+      "Interest Coverage Ratio",
+      "Return on Assets"
+    ],
+    "answer": 1,
+    "explanation": "DuPont Formula: ROE = (Net Profit/Sales) × (Sales/Assets) × (Assets/Equity). The third component (Assets/Equity) is the **Equity Multiplier** or Financial Leverage."
+  },
+  {
+    "section": "Finance",
+    "topic": "Risk Management",
+    "question": "Which Greek letter is used to denote the sensitivity of an option's price to a change in the price of the underlying asset?",
+    "options": [
+      "Theta",
+      "Vega",
+      "Delta",
+      "Rho",
+      "Gamma"
+    ],
+    "answer": 2,
+    "explanation": "**Delta** measures the rate of change of the option price with respect to changes in the underlying asset's price."
+  },
+  {
+    "section": "Companies Act",
+    "topic": "Audit Committee",
+    "question": "Which of the following companies is NOT required to constitute an Audit Committee under Section 177?",
+    "options": [
+      "Listed Public Companies",
+      "Public Companies with Paid-up Capital ≥ ₹10 Cr",
+      "Public Companies with Turnover ≥ ₹100 Cr",
+      "Private Limited Companies",
+      "Public Companies with Outstanding loans/borrowings > ₹50 Cr"
+    ],
+    "answer": 3,
+    "explanation": "The requirement for an Audit Committee applies to all Listed companies and certain classes of Public companies. **Private Limited Companies** are generally exempt from this requirement."
+  },
+  {
+    "section": "Companies Act",
+    "topic": "Independent Directors - Databank",
+    "question": "Independent Directors are required to pass an online proficiency self-assessment test conducted by which institute notified by the Central Government?",
+    "options": [
+      "ICAI (Institute of Chartered Accountants of India)",
+      "ICSI (Institute of Company Secretaries of India)",
+      "IICA (Indian Institute of Corporate Affairs)",
+      "NISM (National Institute of Securities Markets)",
+      "SEBI"
+    ],
+    "answer": 2,
+    "explanation": "The **Indian Institute of Corporate Affairs (IICA)** at Manesar maintains the databank and conducts the proficiency test for Independent Directors."
+  },
+  {
+    "section": "Economics",
+    "topic": "Demand & Supply",
+    "question": "If the demand for a product is 'Inelastic' (Ed < 1), an increase in the price of the product will lead to:",
+    "options": [
+      "Decrease in Total Revenue",
+      "Increase in Total Revenue",
+      "No change in Total Revenue",
+      "Decrease in Quantity Demanded to zero",
+      "Infinite increase in Quantity"
+    ],
+    "answer": 1,
+    "explanation": "If demand is **Inelastic**, the percentage drop in quantity is less than the percentage rise in price. Therefore, raising the price increases the **Total Revenue**."
+  },
+  {
+    "section": "Economics",
+    "topic": "Business Cycles",
+    "question": "Which phase of the business cycle is characterized by falling prices, high unemployment, low levels of aggregate demand, and negative growth rates?",
+    "options": [
+      "Boom",
+      "Recovery",
+      "Recession",
+      "Depression",
+      "Slowdown"
+    ],
+    "answer": 3,
+    "explanation": "While Recession is a slowdown, **Depression** is a severe and prolonged downturn characterized by deflation (falling prices), massive unemployment, and negative growth."
+  },
+  {
+    "section": "Management",
+    "topic": "Conflict Management",
+    "question": "According to the Thomas-Kilmann Conflict Mode Instrument, which style is characterized by 'High Assertiveness' and 'Low Cooperativeness'?",
+    "options": [
+      "Collaborating",
+      "Accommodating",
+      "Competing",
+      "Avoiding",
+      "Compromising"
+    ],
+    "answer": 2,
+    "explanation": "**Competing** (or Forcing) is assertive and uncooperative—pursuing one's own concerns at the other person's expense."
+  },
+  {
+    "section": "Management",
+    "topic": "Organizational Structure",
+    "question": "Which organizational structure violates the principle of 'Unity of Command' by having employees report to two bosses (Functional Manager and Project Manager)?",
+    "options": [
+      "Line Organization",
+      "Functional Organization",
+      "Matrix Organization",
+      "Divisional Organization",
+      "Line and Staff Organization"
+    ],
+    "answer": 2,
+    "explanation": "The **Matrix Organization** structure involves dual reporting relationships, explicitly violating Unity of Command to maximize resource utilization."
+  },
+  {
+    "section": "Accountancy",
+    "topic": "GST Concepts",
+    "question": "Under the Goods and Services Tax (GST) regime, 'Input Tax Credit' (ITC) can be claimed by a registered person only if:",
+    "options": [
+      "He has received the goods/services",
+      "He possesses a tax invoice",
+      "The supplier has paid the tax to the government",
+      "He has furnished the return",
+      "All of the above"
+    ],
+    "answer": 4,
+    "explanation": "To claim ITC, **All** conditions must be met: possession of invoice, receipt of goods, tax paid by supplier, and return furnished."
+  },
+  {
+    "section": "General / Finance",
+    "topic": "SEBI Act",
+    "question": "Under the SEBI Act, 1992, who has the power to supersede the Board of SEBI if the Board is unable to discharge its functions?",
+    "options": [
+      "The Supreme Court of India",
+      "The Central Government",
+      "The Reserve Bank of India",
+      "The President of India",
+      "Parliament"
+    ],
+    "answer": 1,
+    "explanation": "The **Central Government** has the power to supersede the SEBI Board under extraordinary circumstances (Section 17 of SEBI Act)."
+  }
+]
