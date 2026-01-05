@@ -401,31 +401,32 @@
     const REPO_OWNER = "Sumarpit";
     const REPO_NAME = "SEBI-Mock-Test-Tool";
     
-    // --- EXAM PROFILES CONFIGURATION ---
+    // --- EXAM PROFILES CONFIGURATION (Updated with Duration) ---
+    // Time format: [Hours, Minutes, Seconds]
     const EXAM_PROFILES = {
-        'SEBI':   { name: 'SEBI Grade A', folder: 'tests/sebi',   marks: 1.25, neg: 0.3125 },
-        'RBI':    { name: 'RBI Grade B',  folder: 'tests/rbi',    marks: 1.0,  neg: 0.25 },
-        'NABARD': { name: 'NABARD Gr A',  folder: 'tests/nabard', marks: 1.0,  neg: 0.25 },
-        'SSC':    { name: 'SSC CGL',      folder: 'tests/ssc',    marks: 2.0,  neg: 0.50 },
-        'UPSC':   { name: 'UPSC CSE',     folder: 'tests/upsc',   marks: 2.0,  neg: 0.66 }
+        'SEBI':   { name: 'SEBI Grade A', folder: 'tests/sebi',   marks: 1.25, neg: 0.3125, time: [1, 0, 0] },
+        'RBI':    { name: 'RBI Grade B',  folder: 'tests/rbi',    marks: 1.0,  neg: 0.25,   time: [2, 0, 0] },
+        'NABARD': { name: 'NABARD Gr A',  folder: 'tests/nabard', marks: 1.0,  neg: 0.25,   time: [2, 0, 0] },
+        'SSC':    { name: 'SSC CGL',      folder: 'tests/ssc',    marks: 2.0,  neg: 0.50,   time: [1, 0, 0] },
+        'UPSC':   { name: 'UPSC CSE',     folder: 'tests/upsc',   marks: 2.0,  neg: 0.66,   time: [2, 0, 0] }
     };
 
-    // --- VARIABLES ---
-    const KEY = 'sebi_v1_data';
-    const HIST = 'sebi_v1_hist';
-    const LIB_KEY = 'sebi_v1_library';
-    
+    // --- DYNAMIC VARIABLES ---
+    const BASE_KEY = 'sebi_v40_'; 
     let currentProfile = 'SEBI'; 
+    
+    // These keys are now Dynamic (changed by switchExam)
+    let LIB_KEY = BASE_KEY + 'lib_SEBI';
+    let HIST_KEY = BASE_KEY + 'hist_SEBI';
+
     let library = {}, cloudList = [], activeFile = '', questions = [], currIdx = 0;
     let responses = {}, confidence = {}, visited = {};
     let timer, seconds = 0;
     let isMultiMode = false, selectedFiles = new Set();
     let isReviewMode = false, reviewSet = [];
-    
-    // Timer Variables
-    let qTimers = {}; 
-    let lastQTime = 0;
+    let qTimers = {}; let lastQTime = 0;
 
+    // --- INITIALIZATION ---
     if ('launchQueue' in window) {
         window.launchQueue.setConsumer(async (launchParams) => {
             if (!launchParams.files.length) return;
@@ -435,34 +436,44 @@
     }
     if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
 
-    let touchStartX=0, touchEndX=0;
-    
     window.onload = () => { 
         try { 
-            // 1. Initialize Profile
-            const savedProfile = localStorage.getItem('sebi_exam_profile');
+            // 1. Load Last Used Profile
+            const savedProfile = localStorage.getItem(BASE_KEY + 'profile');
             if (savedProfile && EXAM_PROFILES[savedProfile]) {
                 currentProfile = savedProfile;
             }
-            initExamSelector(); 
+            
+            // 2. Set Keys based on Profile
+            updateKeys();
 
+            // 3. Initialize UI
+            initExamSelector(); 
+            updateTimerUI(); // Set the default time for this profile
             loadLibraryFromStorage();
             loadFromGitHubAPI(); 
             loadHistory(); 
             checkResume(); 
             
+            // 4. Swipe Listeners
+            let touchStartX=0, touchEndX=0;
             const ta = document.getElementById('touch-area');
             ta.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX);
-            ta.addEventListener('touchend', e => { touchEndX = e.changedTouches[0].screenX; handleSwipe(); });
+            ta.addEventListener('touchend', e => { touchEndX = e.changedTouches[0].screenX; handleSwipe(touchStartX, touchEndX); });
         } catch(e){ console.error(e); } 
     };
 
-    function handleSwipe() {
-        if (touchStartX - touchEndX > 50) nextQ();
-        else if (touchEndX - touchStartX > 50) prevQ();
+    function updateKeys() {
+        LIB_KEY = BASE_KEY + 'lib_' + currentProfile;
+        HIST_KEY = BASE_KEY + 'hist_' + currentProfile;
     }
 
-    // --- EXAM SWITCHER LOGIC ---
+    function handleSwipe(start, end) {
+        if (start - end > 50) nextQ();
+        else if (end - start > 50) prevQ();
+    }
+
+    // --- PROFILE SWITCHER LOGIC ---
     function initExamSelector() {
         const sel = document.getElementById('examSelector');
         sel.innerHTML = '';
@@ -478,24 +489,46 @@
     function switchExam(newKey) {
         if (!EXAM_PROFILES[newKey]) return;
         
-        if (confirm(`Switch to ${EXAM_PROFILES[newKey].name}?`)) {
+        if (confirm(`Switch to ${EXAM_PROFILES[newKey].name}?\nThis will switch to a separate library.`)) {
+            // 1. Update Profile
             currentProfile = newKey;
-            localStorage.setItem('sebi_exam_profile', newKey);
-            
-            // Clear cloud list only, keep local files but maybe filter visual later? 
-            // For now, refreshing fetches new cloud files.
+            localStorage.setItem(BASE_KEY + 'profile', newKey);
+            updateKeys();
+
+            // 2. Reset Data for New Profile
+            library = {}; 
             cloudList = []; 
             activeFile = '';
+            selectedFiles.clear();
             
-            renderGrid();           
-            loadFromGitHubAPI();    
+            // 3. Load New Data
+            loadLibraryFromStorage(); // Loads local files specific to this exam
+            loadFromGitHubAPI();      // Fetches cloud files from new folder
+            loadHistory();            // Loads history specific to this exam
+            
+            // 4. Update UI
+            renderGrid();
+            updateTimerUI();
             document.getElementById('searchInput').placeholder = `🔍 Search ${EXAM_PROFILES[newKey].name}...`;
+            document.getElementById('start-btn').innerText = "SELECT TEST";
+            document.getElementById('start-btn').disabled = true;
+            
+            // Hide Resume button until checked
+            document.getElementById('resume-btn').style.display = 'none';
+            checkResume();
         } else {
             document.getElementById('examSelector').value = currentProfile;
         }
     }
 
-    // --- FETCH LIST DIRECTLY FROM GITHUB API ---
+    function updateTimerUI() {
+        const time = EXAM_PROFILES[currentProfile].time; // [h, m, s]
+        document.getElementById('hInput').value = time[0].toString().padStart(2, '0');
+        document.getElementById('mInput').value = time[1].toString().padStart(2, '0');
+        document.getElementById('sInput').value = time[2].toString().padStart(2, '0');
+    }
+
+    // --- DATA HANDLING ---
     async function loadFromGitHubAPI() {
         try {
             const folderPath = EXAM_PROFILES[currentProfile].folder;
@@ -515,7 +548,8 @@
             renderGrid();
         } catch (err) {
             console.warn("API Error:", err);
-            renderGrid(); // Fallback to local
+            cloudList = []; // Clear cloud list if fetch fails (e.g., folder empty)
+            renderGrid(); 
         }
     }
 
@@ -541,60 +575,45 @@
         }
     }
 
-    // --- PASTE JSON LOGIC (UNIFIED) ---
-    function openPasteModal() { document.getElementById('pasteModal').style.display = 'flex'; }
-    function closePasteModal() { document.getElementById('pasteModal').style.display = 'none'; }
-    
-    async function saveAndSync() {
-        const nameInput = document.getElementById('pasteFileName');
-        const contentInput = document.getElementById('pasteContent');
-        const name = nameInput.value.trim();
-        const content = contentInput.value.trim();
-        
-        if(!name || !content) { alert("Invalid Input"); return; }
-        let parsed;
-        try { parsed = JSON.parse(content); } catch(e) { alert("Invalid JSON"); return; }
+    // --- STORAGE ---
+    function loadLibraryFromStorage() {
+        const savedLib = localStorage.getItem(LIB_KEY);
+        if(savedLib) { try { library = JSON.parse(savedLib); } catch(e){} }
+        // Note: We don't call renderGrid here, usually called after Cloud load or explicitly
+    }
+    function saveLibraryToStorage() { 
+        try { localStorage.setItem(LIB_KEY, JSON.stringify(library)); } 
+        catch(e){ alert("Browser Storage Full"); } 
+    }
 
-        try {
-            const fileName = name.endsWith('.json') ? name : name + '.json';
-            library[fileName] = parsed;
+    function deleteFile(event, name) {
+        event.stopPropagation();
+        if(confirm(`Remove "${name}" from ${currentProfile} library?`)) {
+            delete library[name];
             saveLibraryToStorage();
-            
-            activeFile = fileName;
-            renderGrid(); 
-            
-            let shortName = fileName.replace(/\.json$/i,'').substring(0,10) + (fileName.length>10?'...':'');
-            document.getElementById('start-btn').innerText = 'START: ' + shortName;
-            document.getElementById('start-btn').disabled = false;
-
-            await navigator.clipboard.writeText(content);
-            
-            const title = encodeURIComponent(fileName);
-            const url = `https://github.com/${REPO_OWNER}/${REPO_NAME}/issues/new?title=${title}&labels=new-test`;
-            
-            window.open(url, '_blank');
-            closePasteModal();
-            nameInput.value = '';
-            contentInput.value = '';
-            
-            alert(`✅ Saved locally! GitHub Issue opened.\nPaste the code there to sync.`);
-        } catch(err) {
-            console.error(err);
-            alert("Saved locally.");
-            closePasteModal();
+            if(activeFile === name) {
+                activeFile = '';
+                document.getElementById('start-btn').innerText = "SELECT TEST";
+                document.getElementById('start-btn').disabled = true;
+            }
+            renderGrid();
         }
     }
 
-    // --- RENDER GRID (LIST VIEW) ---
+    // --- RENDER GRID ---
     function renderGrid() {
         const grid = document.getElementById('file-grid');
         grid.innerHTML = '';
         const search = document.getElementById('searchInput').value.toLowerCase();
         
         let masterMap = new Map();
+        
+        // 1. Cloud Files
         cloudList.forEach(item => {
             masterMap.set(item.name, { ...item, source: 'cloud', qCount: 'Tap to Load' });
         });
+        
+        // 2. Local Files (Overwrite Cloud if same name)
         Object.keys(library).forEach(name => {
             masterMap.set(name, { name: name, source: 'local', qCount: library[name].length + ' Qs' });
         });
@@ -606,7 +625,6 @@
 
         displayList.forEach(item => {
             const d = document.createElement('div');
-            // Class for hiding delete button on cloud items
             d.className = `file-card ${item.source === 'cloud' ? 'cloud-item' : ''}`;
             
             if (isMultiMode && selectedFiles.has(item.name)) d.classList.add('multi-selected');
@@ -615,9 +633,8 @@
             const icon = item.source === 'local' ? '📂' : '☁️';
             const metaColor = item.source === 'local' ? '#666' : 'var(--accent)';
             
-            // Delete Button (Local Only)
             const deleteHtml = item.source === 'local' 
-                ? `<div class="del-btn" onclick="deleteFile(event, '${item.name}')" title="Delete Local">×</div>` 
+                ? `<div class="del-btn" onclick="deleteFile(event, '${item.name}')">×</div>` 
                 : '';
 
             d.innerHTML = `
@@ -641,51 +658,8 @@
         if(displayList.length === 0) grid.innerHTML = '<div style="color:#999; padding:20px; text-align:center;">No tests found.</div>';
     }
 
-    function deleteFile(event, name) {
-        event.stopPropagation();
-        if(confirm(`Remove "${name}" from local library?`)) {
-            delete library[name];
-            saveLibraryToStorage();
-            if(activeFile === name) {
-                activeFile = '';
-                document.getElementById('start-btn').innerText = "SELECT TEST";
-                document.getElementById('start-btn').disabled = true;
-            }
-            renderGrid();
-        }
-    }
-
-    document.getElementById('jsonFile').onchange = (e) => loadFiles(e.target.files);
-    function loadLibraryFromStorage() {
-        const savedLib = localStorage.getItem(LIB_KEY);
-        if(savedLib) { try { library = JSON.parse(savedLib); renderGrid(); } catch(e){} }
-    }
-    function saveLibraryToStorage() { try { localStorage.setItem(LIB_KEY, JSON.stringify(library)); } catch(e){ alert("Full Storage"); } }
-
-    function loadFiles(files) {
-        if(!files.length) return;
-        Array.from(files).forEach(f => {
-            const r = new FileReader();
-            r.onload = e => { 
-                try { library[f.name] = JSON.parse(e.target.result); saveLibraryToStorage(); renderGrid(); } 
-                catch(x){ alert('Invalid JSON'); }
-            };
-            r.readAsText(f);
-        });
-    }
-
-    function toggleMultiSelect() {
-        isMultiMode = !isMultiMode;
-        selectedFiles.clear();
-        document.getElementById('multiToggle').classList.toggle('active');
-        renderGrid();
-        document.getElementById('start-btn').disabled = true;
-        document.getElementById('start-btn').innerText = "SELECT TEST";
-    }
-
     function handleCardClick(name) {
         if (!library[name]) return; 
-
         if (isMultiMode) {
             if (selectedFiles.has(name)) selectedFiles.delete(name);
             else selectedFiles.add(name);
@@ -705,11 +679,67 @@
         renderGrid();
     }
 
-    // --- PREPARE QUESTIONS (GROUPING & SHUFFLING) ---
+    // --- PASTE & UPLOAD ---
+    function openPasteModal() { document.getElementById('pasteModal').style.display = 'flex'; }
+    function closePasteModal() { document.getElementById('pasteModal').style.display = 'none'; }
+    
+    async function saveAndSync() {
+        const nameInput = document.getElementById('pasteFileName');
+        const contentInput = document.getElementById('pasteContent');
+        const name = nameInput.value.trim();
+        const content = contentInput.value.trim();
+        if(!name || !content) { alert("Invalid Input"); return; }
+        
+        let parsed;
+        try { parsed = JSON.parse(content); } catch(e) { alert("Invalid JSON"); return; }
+
+        try {
+            const fileName = name.endsWith('.json') ? name : name + '.json';
+            library[fileName] = parsed;
+            saveLibraryToStorage();
+            
+            activeFile = fileName;
+            renderGrid(); 
+            
+            let shortName = fileName.replace(/\.json$/i,'').substring(0,10) + (fileName.length>10?'...':'');
+            document.getElementById('start-btn').innerText = 'START: ' + shortName;
+            document.getElementById('start-btn').disabled = false;
+
+            await navigator.clipboard.writeText(content);
+            const title = encodeURIComponent(fileName);
+            const url = `https://github.com/${REPO_OWNER}/${REPO_NAME}/issues/new?title=${title}&labels=new-test`;
+            window.open(url, '_blank');
+            closePasteModal();
+            nameInput.value = ''; contentInput.value = '';
+            alert(`✅ Saved to ${currentProfile} Library! Issue tab opened.`);
+        } catch(err) { console.error(err); alert("Saved locally only."); closePasteModal(); }
+    }
+
+    function toggleMultiSelect() {
+        isMultiMode = !isMultiMode;
+        selectedFiles.clear();
+        document.getElementById('multiToggle').classList.toggle('active');
+        renderGrid();
+        document.getElementById('start-btn').disabled = true;
+        document.getElementById('start-btn').innerText = "SELECT TEST";
+    }
+
+    document.getElementById('jsonFile').onchange = (e) => loadFiles(e.target.files);
+    function loadFiles(files) {
+        if(!files.length) return;
+        Array.from(files).forEach(f => {
+            const r = new FileReader();
+            r.onload = e => { 
+                try { library[f.name] = JSON.parse(e.target.result); saveLibraryToStorage(); renderGrid(); } 
+                catch(x){ alert('Invalid JSON'); }
+            };
+            r.readAsText(f);
+        });
+    }
+
+    // --- EXAM LOGIC ---
     function prepareQuestions(sourceList) {
-        // 1. Group by Passage or GroupID
-        let groups = [];
-        let currentGroup = [];
+        let groups = [], currentGroup = [];
         sourceList.forEach((q, index) => {
             if (index === 0) { currentGroup.push(q); } 
             else {
@@ -721,22 +751,14 @@
             }
         });
         if (currentGroup.length > 0) groups.push(currentGroup);
-
-        // 2. Shuffle Groups
         for (let i = groups.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [groups[i], groups[j]] = [groups[j], groups[i]];
         }
-
-        // 3. Flatten and Shuffle Options (Conditionally)
-        let flatList = groups.flat();
-        return flatList.map(q => {
+        return groups.flat().map(q => {
             let newQ = JSON.parse(JSON.stringify(q));
-            
-            // Check for tricky options
             const trickyKeywords = ["Both", "All of", "None of", "Only A", "Only B"];
             const hasTrickyOption = newQ.options.some(opt => trickyKeywords.some(kw => opt.includes(kw)));
-            
             if (newQ.noShuffle !== true && !hasTrickyOption) {
                 let correctText = newQ.options[newQ.answer];
                 for (let i = newQ.options.length - 1; i > 0; i--) {
@@ -750,7 +772,9 @@
     }
 
     function startExam() {
-        if(localStorage.getItem(KEY)) if(!confirm("Discard current progress?")) return;
+        const ACTIVE_RESUME_KEY = BASE_KEY + 'resume_' + currentProfile;
+        if(localStorage.getItem(ACTIVE_RESUME_KEY)) if(!confirm("Discard current progress?")) return;
+        
         isReviewMode = false;
         let rawQuestions = [];
         if (isMultiMode) {
@@ -772,35 +796,6 @@
         initExamUI();
     }
 
-    function startSmartReview() {
-        if(!reviewSet || reviewSet.length === 0) return;
-        if(confirm(`Start Review Mode?`)) {
-            isReviewMode = true;
-            questions = prepareQuestions(reviewSet);
-            let baseName = activeFile.replace(/\.json$/i, '').replace(/ \(Review\)$/i, '');
-            activeFile = baseName + " (Review)";
-            responses = {}; confidence = {}; visited = {}; currIdx = 0;
-            seconds = 0; qTimers = {}; lastQTime = 0;
-            initExamUI();
-        }
-    }
-
-    function retakeTest(fname, duration) {
-        if(!library[fname] && !fname.startsWith("Combined")) { alert(`File missing.`); return; }
-        if(!confirm(`Retake "${fname}"?`)) return;
-        isReviewMode = false;
-        let rawQuestions = [];
-        if(fname.startsWith("Combined")) { alert("Re-select files."); return; } 
-        else { rawQuestions = library[fname]; activeFile = fname; }
-        questions = prepareQuestions(rawQuestions); 
-        seconds = duration || 3600;
-        const h = Math.floor(seconds/3600), m = Math.floor((seconds%3600)/60), s = seconds%60;
-        document.getElementById('hInput').value = h; document.getElementById('mInput').value = m; document.getElementById('sInput').value = s;
-        responses = {}; confidence = {}; visited = {}; qTimers = {}; lastQTime = 0; currIdx = 0;
-        if(localStorage.getItem(KEY)) localStorage.removeItem(KEY);
-        initExamUI();
-    }
-
     function initExamUI() {
         document.getElementById('upload-screen').classList.remove('active');
         document.getElementById('result-screen').classList.remove('active');
@@ -810,25 +805,16 @@
         
         const header = document.getElementById('main-header');
         const timerBox = document.getElementById('timer');
-        if(isReviewMode) {
-            header.classList.add('review-mode');
-            timerBox.classList.add('review-timer');
-        } else {
-            header.classList.remove('review-mode');
-            timerBox.classList.remove('review-timer');
-        }
+        if(isReviewMode) { header.classList.add('review-mode'); timerBox.classList.add('review-timer'); } 
+        else { header.classList.remove('review-mode'); timerBox.classList.remove('review-timer'); }
 
         questions.forEach((_,i) => visited[i]=false);
         startTimer(); loadQ(0); saveState();
     }
 
     function loadQ(i) {
-        // --- TIMER LOGIC ---
         const now = Date.now();
-        if (lastQTime !== 0) {
-            const diff = (now - lastQTime) / 1000; 
-            qTimers[currIdx] = (qTimers[currIdx] || 0) + diff; 
-        }
+        if (lastQTime !== 0) { qTimers[currIdx] = (qTimers[currIdx] || 0) + (now - lastQTime)/1000; }
         lastQTime = now; 
 
         currIdx = i; visited[i] = true;
@@ -859,10 +845,7 @@
                 b.classList.remove('sel');
                 if(b.innerText === confidence[i]) b.classList.add('sel');
             });
-        } else {
-            cBox.classList.remove('active');
-            cBtns.forEach(b => b.classList.remove('sel'));
-        }
+        } else { cBox.classList.remove('active'); cBtns.forEach(b => b.classList.remove('sel')); }
 
         const btn = document.getElementById('next-btn');
         if(i === questions.length-1) { btn.innerText = "Submit Test"; btn.style.background = "#e67e22"; }
@@ -893,46 +876,49 @@
         clearInterval(timer);
         timer = setInterval(() => {
             if(isReviewMode) seconds++; else { seconds--; if(seconds<=0) submitExam(true); }
-            
             const h = Math.floor(seconds/3600).toString().padStart(2,'0');
             const m = Math.floor((seconds%3600)/60).toString().padStart(2,'0');
             const s = (seconds%60).toString().padStart(2,'0');
-            const tEl = document.getElementById('timer');
-            tEl.innerText = `${h}:${m}:${s}`;
-            
-            if(!isReviewMode) seconds < 60 ? tEl.classList.add('critical') : tEl.classList.remove('critical');
+            document.getElementById('timer').innerText = `${h}:${m}:${s}`;
+            if(!isReviewMode) document.getElementById('timer').classList.toggle('critical', seconds < 60);
         }, 1000);
     }
 
+    // --- SAVE & RESUME ---
     function saveState() {
-        localStorage.setItem(KEY, JSON.stringify({ library, activeFile, questions, responses, confidence, visited, currIdx, seconds, isReviewMode, qTimers, lastQTime }));
+        const ACTIVE_RESUME_KEY = BASE_KEY + 'resume_' + currentProfile;
+        localStorage.setItem(ACTIVE_RESUME_KEY, JSON.stringify({ 
+            library, activeFile, questions, responses, confidence, 
+            visited, currIdx, seconds, isReviewMode, qTimers, lastQTime 
+        }));
     }
 
-    function checkResume() { if(localStorage.getItem(KEY)) document.getElementById('resume-btn').style.display = 'inline-block'; }
+    function checkResume() { 
+        const ACTIVE_RESUME_KEY = BASE_KEY + 'resume_' + currentProfile;
+        if(localStorage.getItem(ACTIVE_RESUME_KEY)) document.getElementById('resume-btn').style.display = 'inline-block';
+        else document.getElementById('resume-btn').style.display = 'none';
+    }
 
     function resumeExam() {
-        const d = JSON.parse(localStorage.getItem(KEY));
+        const ACTIVE_RESUME_KEY = BASE_KEY + 'resume_' + currentProfile;
+        const d = JSON.parse(localStorage.getItem(ACTIVE_RESUME_KEY));
         loadLibraryFromStorage();
         activeFile = d.activeFile; questions = d.questions;
         responses = d.responses; confidence = d.confidence; visited = d.visited;
         currIdx = d.currIdx; seconds = d.seconds; isReviewMode = d.isReviewMode;
-        qTimers = d.qTimers || {}; 
-        lastQTime = Date.now(); 
+        qTimers = d.qTimers || {}; lastQTime = Date.now();
         initExamUI();
     }
 
     function submitExam(force=false) {
         if(!force && !confirm("End Exam?")) return;
         clearInterval(timer); 
-
-        // Capture last question time
         const now = Date.now();
-        if (lastQTime !== 0) {
-            qTimers[currIdx] = (qTimers[currIdx] || 0) + ((now - lastQTime) / 1000);
-        }
+        if (lastQTime !== 0) { qTimers[currIdx] = (qTimers[currIdx] || 0) + (now - lastQTime)/1000; }
         lastQTime = 0; 
         
-        localStorage.removeItem(KEY);
+        const ACTIVE_RESUME_KEY = BASE_KEY + 'resume_' + currentProfile;
+        localStorage.removeItem(ACTIVE_RESUME_KEY);
 
         let score=0, cor=0, wrg=0, skip=0;
         let tStats={}, cStats={ '100% Sure':{c:0,w:0}, '50:50':{c:0,w:0}, 'Logical':{c:0,w:0}, 'Guess':{c:0,w:0} };
@@ -946,25 +932,15 @@
         questions.forEach((q, i) => {
             const ans = responses[i]; const conf = confidence[i];
             if(!tStats[q.topic]) tStats[q.topic] = {t:0, c:0, w:0}; tStats[q.topic].t++;
-            let isWrong = false; let isSkipped = false;
-            
-            let qMark = 1, qNeg = 0.25;
+            let isWrong = false, isSkipped = false, qMark = 1, qNeg = 0.25;
 
-            // SCORING LOGIC
+            // SCORING
             if (mode === '2') { qMark = 2.0; qNeg = 0.5; modeLabel = "Forced Paper 2"; } 
-            // SEBI SPECIFIC LOGIC: 1.25 / 0.3125 for P1
             else if (mode === '1') { qMark = 1.25; qNeg = 0.3125; modeLabel = "Forced P1 (+1.25)"; } 
             else {
-                // Auto Mode: Check question overrides first, then Profile Defaults
-                if (q.marks) {
-                    qMark = parseFloat(q.marks);
-                    qNeg = q.negative ? parseFloat(q.negative) : (qMark * 0.25);
-                } else {
-                    const profile = EXAM_PROFILES[currentProfile];
-                    qMark = profile.marks;
-                    qNeg = profile.neg;
-                }
-                modeLabel = `Auto (${currentProfile} Rules)`;
+                if (q.marks) { qMark = parseFloat(q.marks); qNeg = q.negative ? parseFloat(q.negative) : (qMark * 0.25); }
+                else { const p = EXAM_PROFILES[currentProfile]; qMark = p.marks; qNeg = p.neg; }
+                modeLabel = `Auto (${currentProfile})`;
             }
 
             if(ans === undefined) { skip++; isSkipped=true; } 
@@ -978,19 +954,16 @@
                     isWrong = true;
                 }
             }
-
-            if (isWrong || isSkipped || (conf === 'Guess' || conf === 'Logical')) {
-                reviewSet.push(q);
-            }
+            if (isWrong || isSkipped || (conf === 'Guess' || conf === 'Logical')) reviewSet.push(q);
         });
 
         if(!isReviewMode) {
             const totalDuration = parseInt(document.getElementById('hInput').value)*3600 + 
                                   parseInt(document.getElementById('mInput').value)*60 + 
                                   parseInt(document.getElementById('sInput').value);
-            let h = JSON.parse(localStorage.getItem(HIST)||'[]');
+            let h = JSON.parse(localStorage.getItem(HIST_KEY)||'[]');
             h.unshift({name:activeFile, score:score.toFixed(2), date:new Date().toLocaleDateString(), dur: totalDuration});
-            localStorage.setItem(HIST, JSON.stringify(h));
+            localStorage.setItem(HIST_KEY, JSON.stringify(h));
         }
 
         document.getElementById('exam-screen').classList.remove('active');
@@ -1018,16 +991,12 @@
             tTopic.innerHTML += `<tr><td>${k}</td><td>${d.t}</td><td class="txt-green">${d.c}</td><td class="txt-red">${d.w}</td></tr>`;
         });
         
-        // --- DETAILED REVIEW WITH TIMER ---
         const rev = document.getElementById('review-list'); rev.innerHTML = '';
         questions.forEach((q, i) => {
             const ans = responses[i]; const userConf = confidence[i] || 'None';
             let cls = 'skip', uAns = 'Skipped', status = 'Skipped';
-            
-            // Time Calc
             let timeSec = Math.round(qTimers[i] || 0);
-            let timeString = timeSec + 's';
-            if(timeSec > 60) timeString = Math.floor(timeSec/60) + 'm ' + (timeSec%60) + 's';
+            let timeString = timeSec > 60 ? Math.floor(timeSec/60) + 'm ' + (timeSec%60) + 's' : timeSec + 's';
 
             if(ans !== undefined) {
                 if(ans === q.answer) { cls='correct'; uAns=q.options[ans]; status='Correct'; }
@@ -1055,16 +1024,19 @@
         });
     }
 
-    function toggleSidebar() { 
-        const s = document.getElementById('pane-sidebar'); 
-        s.classList.toggle('collapsed');
-        document.querySelector('.sidebar-handle').innerText = s.classList.contains('collapsed') ? '◀' : '▶';
+    function startSmartReview() {
+        if(!reviewSet || reviewSet.length === 0) return;
+        if(confirm(`Start Review Mode?`)) {
+            isReviewMode = true;
+            questions = prepareQuestions(reviewSet);
+            activeFile = activeFile.replace(/\.json$/i, '').replace(/ \(Review\)$/i, '') + " (Review)";
+            responses = {}; confidence = {}; visited = {}; currIdx = 0; seconds = 0; qTimers = {}; lastQTime = 0;
+            initExamUI();
+        }
     }
-    function openSidebar() { document.getElementById('pane-sidebar').classList.add('open'); document.getElementById('overlay').classList.add('active'); }
-    function closeSidebar() { document.getElementById('pane-sidebar').classList.remove('open'); document.getElementById('overlay').classList.remove('active'); }
-    
+
     function loadHistory() {
-        const h = JSON.parse(localStorage.getItem(HIST)||'[]');
+        const h = JSON.parse(localStorage.getItem(HIST_KEY)||'[]');
         const l = document.getElementById('history-list'); l.innerHTML = '';
         if(h.length) {
             document.getElementById('no-history').style.display='none';
@@ -1074,14 +1046,30 @@
             });
         }
     }
-    function clearHistory() { localStorage.removeItem(HIST); loadHistory(); }
+    function clearHistory() { localStorage.removeItem(HIST_KEY); loadHistory(); }
+    
+    function retakeTest(fname, duration) {
+        if(!library[fname] && !fname.startsWith("Combined")) { alert(`File missing.`); return; }
+        if(!confirm(`Retake "${fname}"?`)) return;
+        isReviewMode = false;
+        let rawQuestions = [];
+        if(fname.startsWith("Combined")) { alert("Re-select files."); return; } 
+        else { rawQuestions = library[fname]; activeFile = fname; }
+        questions = prepareQuestions(rawQuestions); 
+        seconds = duration || 3600;
+        const h = Math.floor(seconds/3600), m = Math.floor((seconds%3600)/60), s = seconds%60;
+        document.getElementById('hInput').value = h; document.getElementById('mInput').value = m; document.getElementById('sInput').value = s;
+        responses = {}; confidence = {}; visited = {}; qTimers = {}; lastQTime = 0; currIdx = 0;
+        localStorage.removeItem(BASE_KEY + 'resume_' + currentProfile);
+        initExamUI();
+    }
     
     function returnToLibrary() {
         document.getElementById('result-screen').classList.remove('active');
         document.getElementById('upload-screen').classList.add('active');
         renderGrid(); loadHistory();
     }
-
+    
     function downloadRes() {
         const html = document.getElementById('result-screen').innerHTML;
         const css = document.getElementsByTagName('style')[0].innerText;
