@@ -1,0 +1,100 @@
+[
+  {
+    "section": "General Awareness",
+    "topic": "Capital Markets - Primary Market",
+    "question": "Which of the following abbreviations is correctly expanded in the context of Indian Capital Markets?",
+    "options": [
+      "ASBA stands for Application Supported by Booked Amount",
+      "BBB stands for Bank Boards Branch",
+      "DICGC stands for Deposit Investment and Credit Guarantee Corporation",
+      "ELSS stands for Equity Linked Secure Scheme",
+      "ASBA stands for Application Supported by Blocked Amount"
+    ],
+    "answer": 5,
+    "explanation": "**ASBA** stands for **Application Supported by Blocked Amount**. It is a process developed by SEBI for applying to IPOs where the application money remains blocked in the bank account until shares are allotted. (Correction from source PDF: Option A in source was 'Booked Amount', Option E is correct expansion)."
+  },
+  {
+    "section": "General Awareness",
+    "topic": "Money Market",
+    "question": "The call/notice/term money market facilitates lending and borrowing of funds between banks and entities like Primary Dealers. When borrowing/lending is done for a period of **2 to 14 days**, it is known as:",
+    "options": [
+      "Call money",
+      "Notice money",
+      "Term money",
+      "Capital market",
+      "Repo market"
+    ],
+    "answer": 2,
+    "explanation": "Money market classifications: \n* **Call Money:** 1 day (Overnight).\n* **Notice Money:** 2 to 14 days.\n* **Term Money:** More than 14 days."
+  },
+  {
+    "section": "General Awareness",
+    "topic": "RBI Circulars - Forex (LRS)",
+    "question": "The Liberalized Remittance Scheme (LRS) lays down the guidelines for outward remittances from India under FEMA 1999. What is the upper limit of remittance per financial year for a resident individual?",
+    "options": [
+      "Rs. 2,50,000",
+      "Rs. 1,50,000",
+      "USD 2,50,000",
+      "USD 1,50,000",
+      "USD 5,00,000"
+    ],
+    "answer": 3,
+    "explanation": "Under the **Liberalized Remittance Scheme (LRS)**, all resident individuals, including minors, are allowed to freely remit up to **USD 2,50,000** per financial year."
+  },
+  {
+    "section": "General Awareness",
+    "topic": "Financial Institutions - NBFCs",
+    "question": "Peer-to-Peer (P2P) Lending Platforms are categorized as NBFCs that provide loan facilitation services. What is the minimum **Net Owned Fund (NOF)** requirement for P2P lending platforms?",
+    "options": [
+      "₹1 Crore",
+      "₹2 Crore",
+      "₹3 Crore",
+      "₹4 Crore",
+      "₹5 Crore"
+    ],
+    "answer": 2,
+    "explanation": "The Reserve Bank of India mandates that **NBFC-P2P** lending platforms must have a minimum Net Owned Fund (NOF) of **₹2 Crore**."
+  },
+  {
+    "section": "General Awareness",
+    "topic": "International Finance",
+    "question": "The Financial Action Task Force (FATF) is an intergovernmental organization founded to combat money laundering and terrorism financing. Where is the headquarters of FATF located?",
+    "options": [
+      "Mumbai",
+      "London",
+      "New York",
+      "Paris",
+      "Geneva"
+    ],
+    "answer": 4,
+    "explanation": " The headquarters (Secretariat) of the **FATF** is located in **Paris**, France, at the OECD headquarters."
+  },
+  {
+    "section": "General Awareness",
+    "topic": "Monetary Policy",
+    "question": "The Central Government has decided to retain the inflation target for the Monetary Policy Committee (MPC) of the RBI for the period up to March 31, 2026. What is this target?",
+    "options": [
+      "3% with tolerance of +/- 2%",
+      "4% with tolerance of +/- 2%",
+      "5% with tolerance of +/- 2%",
+      "6% with tolerance of +/- 2%",
+      "2% with tolerance of +/- 2%"
+    ],
+    "answer": 2,
+    "explanation": "The inflation target is **4%** with a tolerance band of **+/- 2 percentage points** (i.e., a range of 2% to 6%)."
+  },
+  {
+    "section": "General Awareness",
+    "topic": "Financial Regulations - D-SIBs",
+    "question": "In order to be listed as a Domestic Systemically Important Bank (D-SIB) by the RBI, a bank needs to have assets that exceed what percentage of the national GDP?",
+    "options": [
+      "1%",
+      "3%",
+      "2%",
+      "5%",
+      "4%"
+    ],
+    "answer": 3,
+    "explanation": "To be classified as a **D-SIB** (Too Big To Fail), a bank must have assets exceeding **2%** of the national GDP. Currently, SBI, HDFC Bank, and ICICI Bank are D-SIBs."
+  }
+]
