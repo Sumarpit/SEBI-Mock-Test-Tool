@@ -151,6 +151,32 @@
             .fixed-footer { justify-content: center; flex-direction: column; gap: 10px; }
             #next-btn { display: none; }
         }
+
+        /* --- FIX: HIDE MOBILE ELEMENTS ON DESKTOP --- */
+
+/* 1. Hide the Bottom Mobile Navigation Bar by default */
+.mobile-nav {
+    display: none !important;
+}
+
+/* 2. Hide the Hamburger Menu in Header by default */
+.mobile-menu {
+    display: none !important;
+}
+
+/* 3. SHOW them ONLY when screen is small (Mobile/Tablet) */
+@media (max-width: 768px) {
+    .mobile-nav {
+        display: flex !important;
+    }
+    .mobile-menu {
+        display: block !important;
+    }
+    /* Hide the Desktop Sidebar Handle on mobile */
+    .sidebar-handle {
+        display: none !important;
+    }
+}
     </style>
 </head>
 <body>
