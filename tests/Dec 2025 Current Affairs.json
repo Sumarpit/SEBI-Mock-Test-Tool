@@ -1,0 +1,182 @@
+[
+  {
+    "question": "<b>Topic: SEBI (Merchant Bankers) Regulations</b><br>Under the new capital adequacy framework introduced by SEBI in December 2025, what is the minimum net worth requirement for Category 1 Merchant Bankers?",
+    "options": ["₹10 crore", "₹25 crore", "₹50 crore", "₹100 crore"],
+    "answer": 2,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Regulatory Bodies",
+    "explanation": "According to the SEBI overhaul, Category 1 Merchant Bankers now require a minimum net worth of ₹50 crore and cumulative revenue of ₹12.5 crore over the last 3 years,."
+  },
+  {
+    "question": "<b>Topic: RBI Monetary Policy</b><br>In the December 2025 Monetary Policy Committee (MPC) meeting, the Policy Repo Rate was reduced to what level?",
+    "options": ["5.50%", "5.25%", "5.00%", "5.75%"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Banking and Finance",
+    "explanation": "The RBI MPC reduced the Policy Repo Rate from 5.50% to 5.25% in its December 2025 meeting,."
+  },
+  {
+    "question": "<b>Topic: PFRDA (NPS) Regulations</b><br>As per the December 2025 amendments to NPS Exit & Withdrawal rules, what is the new threshold for 100% Lumpsum withdrawal for normal exits?",
+    "options": ["₹2 Lakh", "₹5 Lakh", "₹8 Lakh", "₹10 Lakh"],
+    "answer": 2,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Regulatory Bodies",
+    "explanation": "The 100% Lumpsum withdrawal threshold for NPS was raised to ₹8 Lakh for normal exits and ₹5 Lakh for premature exits,,."
+  },
+  {
+    "question": "<b>Topic: Banking Supervision (D-SIBs)</b><br>For the year 2025, what is the additional Common Equity Tier 1 (CET1) requirement mandated by RBI for HDFC Bank as a D-SIB?",
+    "options": ["0.20%", "0.40%", "0.60%", "0.80%"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Banking and Finance",
+    "explanation": "RBI retained the D-SIB status for three banks with specific CET1 requirements: SBI (0.80%), HDFC Bank (0.40%), and ICICI Bank (0.20%),."
+  },
+  {
+    "question": "<b>Topic: Insurance Regulatory Updates</b><br>The Insurance Laws (Amendment) Bill, 2025, approved an increase in Foreign Direct Investment (FDI) in insurance companies to what percentage?",
+    "options": ["49%", "74%", "100%", "51%"],
+    "answer": 2,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Regulatory Bodies",
+    "explanation": "The Bill approved 100% FDI in insurance companies, moving up from the previous limit of 74%."
+  },
+  {
+    "question": "<b>Topic: Banking Mergers & Acquisitions</b><br>Which payments bank received RBI's in-principle approval in December 2025 to convert into a Small Finance Bank (SFB)?",
+    "options": ["Airtel Payments Bank", "India Post Payments Bank", "Fino Payments Bank", "Paytm Payments Bank"],
+    "answer": 2,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Banking and Finance",
+    "explanation": "Fino Payments Bank became the first payments bank to receive in-principle approval from the RBI to convert into a Small Finance Bank."
+  },
+  {
+    "question": "<b>Topic: International Finance</b><br>The Asian Development Bank (ADB) approved a loan of what amount in December 2025 to support the PM Surya Ghar: Muft Bijli Yojana?",
+    "options": ["$400 million", "$500 million", "$650 million", "$750 million"],
+    "answer": 2,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Banking and Finance",
+    "explanation": "The ADB approved a $650 million loan specifically to support rooftop solar installations under the PM Surya Ghar scheme."
+  },
+  {
+    "question": "<b>Topic: SEBI FPI Regulations</b><br>The SEBI SWAGAT-FI framework, designed to simplify registration for low-risk FPIs and FVCIs, extends the compliance review periodicity to how many years?",
+    "options": ["3 years", "5 years", "7 years", "10 years"],
+    "answer": 3,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Regulatory Bodies",
+    "explanation": "The Single Window Automatic & Generalised Access for Trusted Foreign Investors (SWAGAT-FI) framework extends the compliance review periodicity to 10 years."
+  },
+  {
+    "question": "<b>Topic: Global Rankings</b><br>According to the Global AI Vibrancy Tool 2025 by Stanford University, what is India's rank in AI ecosystem activity and competitiveness?",
+    "options": ["1st", "3rd", "7th", "10th"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Indices and Reports",
+    "explanation": "India climbed to 3rd place, up from 7th, trailing only the US and China in the Global AI Vibrancy Tool 2025,."
+  },
+  {
+    "question": "<b>Topic: Global Rankings</b><br>What is India's rank in the Global Hunger Index (GHI) 2025?",
+    "options": ["94th", "102nd", "107th", "111th"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Indices and Reports",
+    "explanation": "India is ranked 102nd in the Global Hunger Index 2025 with a score of 25.8, which is categorized as a 'Serious' level."
+  },
+  {
+    "question": "<b>Topic: Government Schemes</b><br>What is the total financial outlay for the VB–G RAM G (Viksit Bharat—Guarantee for Rozgar and Ajeevika Mission) launched in December 2025?",
+    "options": ["₹86,000 Crore", "₹1,25,000 Crore", "₹1,51,282 Crore", "₹2,00,000 Crore"],
+    "answer": 2,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Government Schemes",
+    "explanation": "The VB–G RAM G scheme, which replaces MGNREGA, has a total outlay of ₹1,51,282 crore,."
+  },
+  {
+    "question": "<b>Topic: TRAI Regulations</b><br>What is the deadline for Mutual Funds and AMCs to adopt the 1600-series numbering for transactional calls as per TRAI mandate?",
+    "options": ["January 1, 2026", "February 15, 2026", "March 31, 2026", "June 1, 2026"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Regulatory Bodies",
+    "explanation": "While Commercial Banks must comply by Jan 1, 2026, Mutual Funds and AMCs have until February 15, 2026, to adopt the 1600-series numbering."
+  },
+  {
+    "question": "<b>Topic: Insurance Regulatory Updates</b><br>The Insurance Laws (Amendment) Bill, 2025, reduced the Net Owned Fund (NOF) requirement for foreign reinsurance branches from ₹5,000 crore to:",
+    "options": ["₹500 crore", "₹1,000 crore", "₹2,500 crore", "₹3,000 crore"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Regulatory Bodies",
+    "explanation": "The NOF requirement for foreign reinsurance branches was reduced significantly from ₹5,000 crore to ₹1,000 crore."
+  },
+  {
+    "question": "<b>Topic: Banking Joint Ventures</b><br>Which two banks received RBI approval to establish the Indian Digital Payment Intelligence Corporation (IDPIC) for fraud detection?",
+    "options": ["SBI and HDFC Bank", "SBI and Bank of Baroda", "ICICI Bank and Axis Bank", "HDFC Bank and ICICI Bank"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Banking and Finance",
+    "explanation": "SBI and Bank of Baroda received approval to establish IDPIC as a Section 8 non-profit company for payment fraud detection."
+  },
+  {
+    "question": "<b>Topic: National Geography Facts</b><br>As per the revised length assessment by the National Hydrographic Office in December 2025, what is the length of India's coastline?",
+    "options": ["7,516.6 km", "9,230.45 km", "11,098.81 km", "12,500.00 km"],
+    "answer": 2,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "National News",
+    "explanation": "The National Hydrographic Office revised the length assessment of India's coastline to 11,098.81 km, up from the previous 7,516.6 km."
+  },
+  {
+    "question": "<b>Topic: Corporate Investment</b><br>Which global tech giant announced a landmark investment of $17.5 Billion in India's AI and cloud infrastructure for the period 2026–2029?",
+    "options": ["Google", "Amazon", "Microsoft", "Meta"],
+    "answer": 2,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Banking and Finance",
+    "explanation": "Microsoft announced a $17.5 billion investment in India’s AI and cloud infrastructure for 2026–2029."
+  },
+  {
+    "question": "<b>Topic: Payment Systems (UPI)</b><br>Amazon Pay launched UPI Biometric Authentication in India, allowing PIN-free payments up to what amount?",
+    "options": ["₹1,000", "₹2,000", "₹5,000", "₹10,000"],
+    "answer": 2,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Banking and Finance",
+    "explanation": "Amazon Pay's UPI Biometric Authentication allows PIN-free payments up to ₹5,000 using fingerprint or facial recognition,."
+  },
+  {
+    "question": "<b>Topic: Government Budgeting</b><br>What is the total budgetary allocation for India’s first-ever digital census (Census 2027)?",
+    "options": ["₹8,500.50 Crore", "₹10,000.00 Crore", "₹11,718.24 Crore", "₹15,200.75 Crore"],
+    "answer": 2,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "National News",
+    "explanation": "The total allocation for the upcoming digital census in 2027 is ₹11,718.24 Crore."
+  },
+  {
+    "question": "<b>Topic: Space Technology</b><br>Which ISRO mission launched the 6,100 kg BlueBird Block-2 satellite, setting the record for the heaviest commercial payload launched from Indian soil?",
+    "options": ["LVM3-M3", "LVM3-M6", "PSLV-C58", "GSLV-F12"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Science and Technology",
+    "explanation": "The LVM3-M6 mission launched a 6,100 kg satellite for AST SpaceMobile, the heaviest ever from India,."
+  },
+  {
+    "question": "<b>Topic: Government Schemes (PM-MKSSY)</b><br>Of the total ₹6,000 crore allocation for the PM Matsya Kisan Samridhi Sah-Yojana, what percentage is provided as public finance by the World Bank and AFD?",
+    "options": ["25%", "50%", "75%", "100%"],
+    "answer": 1,
+    "marks": 1,
+    "section": "General Awareness",
+    "topic": "Government Schemes",
+    "explanation": "50% (₹3,000 crore) of the total ₹6,000 crore allocation is public finance from the World Bank and the AFD,."
+  }
+]
