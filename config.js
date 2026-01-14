@@ -55,6 +55,7 @@ const EXAM_PROFILES = {
         folder: 'tests/upsc',   
         marks: 2.0,  
         neg: 0.66,   
-        time: [2, 0, 0] 
+        time: [2, 0, 0]
+        shuffle: false  // <--- ADD THIS LINE (Default is true if missing)
     }
 };
